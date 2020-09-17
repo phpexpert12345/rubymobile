@@ -1,0 +1,2 @@
+rootProject.name='RubyMobile'
+include ':app'

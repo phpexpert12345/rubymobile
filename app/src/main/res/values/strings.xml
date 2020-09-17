@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RubyMobile</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign In</string>
+    <string name="onboard_one_title">Absolute Safety</string>
+    <string name="onboard_two_title">Various Services</string>
+    <string name="onboard_three_title">Easy Deposit and Withdrawal</string>
+</resources>

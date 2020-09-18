@@ -6,15 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 import com.pet.rubymobile.adapter.TutorialAdapter;
+import com.pet.rubymobile.login.LoginActivity;
 import com.pet.rubymobile.model.TutorialModel;
+import com.pet.rubymobile.signup.SignUpActivity;
 
 import java.util.ArrayList;
 

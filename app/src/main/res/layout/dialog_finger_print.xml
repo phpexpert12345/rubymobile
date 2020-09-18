@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/login_dialog_corner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="@dimen/sp_20"
+                android:background="@drawable/finger_print"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80">
+
+            </ImageView>
+            <TextView
+                android:text="@string/finger_print"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_20"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/use_finger_print"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100">
+
+                <Button
+                    android:id="@+id/btn_dialog_next"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_rounded_login_typed"
+                    android:text="@string/cancel_capital"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40">
+
+                </Button>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+    </RelativeLayout>
+</ScrollView>

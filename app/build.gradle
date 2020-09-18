@@ -55,4 +55,11 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.2.0-alpha04'
 
+
+    //for country code selection in login with flag and country code
+    implementation 'com.hbb20:ccp:2.4.0'
+
+    //for pinview otpverification page
+    implementation 'com.chaos.view:pinview:1.4.4'
+
 }

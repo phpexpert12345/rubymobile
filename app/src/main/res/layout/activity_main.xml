@@ -3,7 +3,7 @@
     android:id="@+id/cd_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/splash_new_bg_color">
+    android:background="@color/design_default_color_background">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/gif_view"

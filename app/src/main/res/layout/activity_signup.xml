@@ -15,23 +15,23 @@
         android:layout_width="match_parent"
         android:layout_height="60dp">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_centerVertical="true"
             android:background="@drawable/back_status"
             android:layout_width="@dimen/dp_25"
-            android:layout_height="@dimen/dp_25">
+            android:layout_height="@dimen/dp_25"/>
 
-        </ImageView>
-        <TextView
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_centerInParent="true"
             android:textSize="@dimen/dp_15"
             android:textColor="@color/colorWhite"
             android:text="@string/sign_up"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </TextView>
+
 
     </RelativeLayout>
 
@@ -40,36 +40,36 @@
         android:layout_below="@+id/relativeLayout_statusBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:text="@string/enter_your_phone_number"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sp_18"
             android:gravity="center"
             android:layout_marginTop="@dimen/dp_50"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </TextView>
-        <TextView
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:text="@string/use_the_phone"
             android:textColor="@color/colorGrey"
             android:textSize="@dimen/sp_13"
             android:gravity="center"
             android:layout_marginTop="@dimen/dp_5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </TextView>
-        <TextView
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:text="@string/ruby_mobile"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sp_13"
             android:gravity="center"
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </TextView>
+
 
         <LinearLayout
             android:layout_marginTop="@dimen/dp_70"
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </com.hbb20.CountryCodePicker>
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_mobileNumber"
                 android:maxLines="1"
                 android:background="@null"
@@ -90,30 +90,30 @@
                 android:inputType="number"
                 android:imeOptions="actionDone"
                 android:layout_width="@dimen/dp_135"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"/>
 
-            </EditText>
+
         </LinearLayout>
         <View
             android:layout_gravity="center"
             android:background="@color/colorGrey"
             android:layout_width="@dimen/dp_230"
-            android:layout_height="@dimen/dp_1">
+            android:layout_height="@dimen/dp_1"/>
 
-        </View>
 
-        <CheckBox
+
+        <androidx.appcompat.widget.AppCompatCheckBox
             android:textColor="@color/colorGrey"
             android:textSize="@dimen/sp_10"
             android:layout_marginTop="@dimen/dp_60"
             android:layout_gravity="center"
             android:text="@string/i_have_read"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </CheckBox>
 
-        <Button
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_next"
             android:textColor="@color/colorWhite"
             android:text="@string/next_capital"
@@ -122,9 +122,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_width="@dimen/dp_190"
-            android:layout_height="@dimen/dp_45">
+            android:layout_height="@dimen/dp_45"/>
 
-        </Button>
+
 
 
 

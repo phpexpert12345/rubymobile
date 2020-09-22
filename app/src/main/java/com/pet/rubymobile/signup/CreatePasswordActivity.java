@@ -1,6 +1,7 @@
 package com.pet.rubymobile.signup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -15,7 +16,7 @@ import com.pet.rubymobile.R;
 
 public class CreatePasswordActivity extends AppCompatActivity {
     @BindView(R.id.btn_enter)
-    Button btn_enter;
+    AppCompatButton btn_enter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

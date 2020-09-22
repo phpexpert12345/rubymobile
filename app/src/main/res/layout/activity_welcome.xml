@@ -15,23 +15,23 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:layout_marginLeft="@dimen/dp_15"
                 android:layout_centerVertical="true"
                 android:background="@drawable/back_status"
                 android:layout_width="@dimen/dp_25"
-                android:layout_height="@dimen/dp_25">
+                android:layout_height="@dimen/dp_25"/>
 
-            </ImageView>
-            <TextView
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_centerInParent="true"
                 android:textSize="@dimen/dp_15"
                 android:textColor="@color/colorWhite"
                 android:text="@string/verification_otp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"/>
 
-            </TextView>
+
 
         </RelativeLayout>
 
@@ -39,83 +39,84 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:background="@drawable/welcome_icon"
                 android:layout_marginTop="@dimen/dp_50"
                 android:layout_gravity="center"
                 android:layout_width="@dimen/dp_120"
-                android:layout_height="@dimen/dp_120">
+                android:layout_height="@dimen/dp_120"/>
 
-            </ImageView>
-            <TextView
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:text="@string/welcome"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/sp_25"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"/>
 
-            </TextView>
 
-            <TextView
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:text="K K JOHN"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_16"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"/>
 
-            </TextView>
-            <TextView
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:text="+1(256)123-456"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_12"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"/>
 
-            </TextView>
+
 
             <RelativeLayout
                 android:layout_margin="@dimen/dp_40"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70">
-              <EditText
+              <androidx.appcompat.widget.AppCompatEditText
                   android:textSize="@dimen/sp_14"
                   android:id="@+id/et_passowrd"
                   android:textColorHint="@color/colorGrey"
                   android:hint="@string/Enter_your_password"
                   android:background="@null"
                   android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
+                  android:layout_height="wrap_content"/>
 
-              </EditText>
+
                 <View
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_below="@+id/et_passowrd"
                     android:background="@color/colorGrey"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp">
+                    android:layout_height="1dp"/>
 
-                </View>
-                <ImageView
+
+                <androidx.appcompat.widget.AppCompatImageView
                     android:background="@drawable/hide_password"
                     android:layout_alignParentRight="true"
                     android:layout_width="@dimen/sp_20"
-                    android:layout_height="@dimen/sp_20">
+                    android:layout_height="@dimen/sp_20"/>
 
-                </ImageView>
-                <TextView
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvForgotPassword"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
                     android:text="@string/forgot_password"
                     android:textColor="@color/colorGrey"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"/>
 
-                </TextView>
+
             </RelativeLayout>
             <View
                 android:visibility="gone"
@@ -123,13 +124,13 @@
                 android:layout_marginRight="@dimen/dp_70"
                 android:background="@color/colorGrey"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_1">
-
-            </View>
+                android:layout_height="@dimen/dp_1"/>
 
 
 
-            <Button
+
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_next"
                 android:textColor="@color/colorWhite"
                 android:text="@string/next_capital"
@@ -137,14 +138,14 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_width="@dimen/dp_220"
-                android:layout_height="@dimen/dp_45">
-
-            </Button>
+                android:layout_height="@dimen/dp_45"/>
 
 
 
 
-            <TextView
+
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_changePhoneNumber"
                 android:layout_marginTop="@dimen/dp_20"
                 android:textSize="@dimen/dp_12"
@@ -152,9 +153,9 @@
                 android:text="@string/now_quick"
                 android:textColor="@color/colorBlack"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"/>
 
-            </TextView>
+
 
             <RelativeLayout
                 android:layout_marginTop="@dimen/dp_20"
@@ -162,22 +163,22 @@
                 android:layout_marginRight="@dimen/dp_80"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:background="@drawable/finger_print"
                     android:layout_width="@dimen/dp_60"
-                    android:layout_height="@dimen/dp_60">
+                    android:layout_height="@dimen/dp_60"/>
 
-                </ImageView>
-                <ImageView
+
+                <androidx.appcompat.widget.AppCompatImageView
                     android:layout_alignParentRight="true"
                     android:background="@drawable/faceid"
                     android:layout_width="@dimen/dp_60"
-                    android:layout_height="@dimen/dp_60">
+                    android:layout_height="@dimen/dp_60"/>
 
-                </ImageView>
+
             </RelativeLayout>
         </LinearLayout>
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_signOut"
             android:textColor="@color/colorPrimary"
             android:gravity="center"
@@ -185,9 +186,9 @@
             android:layout_marginBottom="@dimen/dp_40"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </TextView>
+
 
         <View
             android:id="@+id/view"
@@ -198,8 +199,8 @@
             android:layout_marginBottom="@dimen/dp_30"
             android:background="@color/colorPrimary"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_1">
+            android:layout_height="@dimen/dp_1"/>
 
-        </View>
+
     </RelativeLayout>
 </ScrollView>

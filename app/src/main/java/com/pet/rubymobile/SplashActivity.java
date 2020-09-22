@@ -18,8 +18,10 @@ public class SplashActivity extends Activity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, TutorialActivity.class);
-                startActivity(intent);
+
+                startActivity(new Intent(getApplicationContext(),TutorialActivity.class));
+                finish();
+
             }
         }, 3000);
     }

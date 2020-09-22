@@ -1,6 +1,8 @@
 package com.pet.rubymobile.verification_otp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -28,15 +30,14 @@ public class VerificationOtp extends AppCompatActivity {
     PinView pinview;
 
     @BindView(R.id.btn_next)
-    Button btn_next;
+    AppCompatButton btn_next;
 
- @BindView(R.id.view)
- View view;
+    @BindView(R.id.view)
+    View view;
 
 
- @BindView(R.id.tv_changePhoneNumber)
- TextView tv_changePhoneNumber;
-
+    @BindView(R.id.tv_changePhoneNumber)
+    AppCompatTextView tv_changePhoneNumber;
 
 
     @Override
@@ -80,11 +81,11 @@ public class VerificationOtp extends AppCompatActivity {
         });
 
 
-
     }
+
     @OnClick(R.id.btn_next)
-    public void btn_nextClicked(View view){
-        Intent intent=new Intent(getApplicationContext(), WelcomeActivity.class);
+    public void btn_nextClicked(View view) {
+        Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
         startActivity(intent);
     }
 

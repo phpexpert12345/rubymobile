@@ -1,6 +1,8 @@
 package com.pet.rubymobile.welcome;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -15,15 +17,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.forgot_password.ForgotPasswordActivity;
+import com.pet.rubymobile.forgot_password.IntroductionsActivity;
 import com.pet.rubymobile.login.LoginActivity;
 import com.pet.rubymobile.verification_otp.VerificationOtp;
 
 public class WelcomeActivity extends AppCompatActivity {
     @BindView(R.id.btn_next)
-    Button btn_next;
+    AppCompatButton btn_next;
 
-     @BindView(R.id.tv_signOut)
-    TextView tv_signOut;
+    @BindView(R.id.tv_signOut)
+    AppCompatTextView tv_signOut;
+    @BindView(R.id.tvForgotPassword)
+    AppCompatTextView tvForgotPassword;
 
     private Dialog dialog;
 
@@ -37,13 +43,18 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.btn_next)
-    public void btn_nextClicked(View view){
+    public void btn_nextClicked(View view) {
         dialogOpen();
     }
 
     @OnClick(R.id.tv_signOut)
-    public void tv_signOutClicked(View view){
+    public void tv_signOutClicked(View view) {
         dialogLogout();
+    }
+
+    @OnClick(R.id.tvForgotPassword)
+    public void tvForgotPasswordClicked(View view){
+        startActivity(new Intent(getApplicationContext(), IntroductionsActivity.class));
     }
 
 

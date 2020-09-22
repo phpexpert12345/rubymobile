@@ -47,4 +47,18 @@
     <string name="reference_code">Reference  Code</string>
     <string name="done">DONE</string>
     <string name="information">Information</string>
+    <string name="please_fill_in">Please fill in exactly the information provided.\nWe will send a mail to the email\naddress to registered to regain\nyour password</string>
+    <string name="your_id_number">Your ID Number</string>
+    <string name="your_email_id">Your Email ID</string>
+    <string name="suggestion">Suggestions:- johndoe@gmail.com</string>
+    <string name="sent">SENT</string>
+    <string name="instruction">Instructions to retrieve\nthe password</string>
+    <string name="please_perfor">Please  perform the following 3 steps to retrieve your\npassword</string>
+    <string name="please_fill_instruction">Please fill in exactly the information provided.We will send a\nmail to the email address to registered to regain your\npassword</string>
+    <string name="you_check_email">Your check your email and click on the authentication link\nto receive to OTP password</string>
+    <string name="use_the_new">Use the newly issued OTP password log into the\napplication, then go to settings and change\nyour new password.</string>
+    <string name="introduction">Introductions</string>
+    <string name="password_reset_eamil">Password Reset Email Sent</string>
+    <string name="an_email_has">An email has been sent to your resuce email\naddress. Follow directions in the email to\nreset your password.</string>
+    <string name="ok">OK</string>
 </resources>

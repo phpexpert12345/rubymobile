@@ -17,16 +17,16 @@
             android:orientation="vertical">
 
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:text="@string/oh_no"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/sp_20"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"/>
 
-            </TextView>
+
 
 
 
@@ -35,7 +35,7 @@
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_100">
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:layout_centerVertical="true"
                     android:id="@+id/tv_dialog_cancel"
                     android:layout_marginLeft="@dimen/dp_30"
@@ -43,10 +43,10 @@
                     android:text="@string/naah_just_kidding"
                     android:textColor="@color/colorPrimary"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"/>
 
-                </TextView>
-                <Button
+
+                <androidx.appcompat.widget.AppCompatButton
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
                     android:id="@+id/btn_dialog_next"
@@ -56,9 +56,9 @@
                     android:text="@string/yes_log_me_out"
                     android:textColor="@color/colorWhite"
                     android:layout_width="@dimen/dp_135"
-                    android:layout_height="@dimen/dp_40">
+                    android:layout_height="@dimen/dp_40"/>
 
-                </Button>
+
 
             </RelativeLayout>
 
@@ -68,8 +68,8 @@
             android:visibility="gone"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-        </ProgressBar>
+
     </RelativeLayout>
 </ScrollView>

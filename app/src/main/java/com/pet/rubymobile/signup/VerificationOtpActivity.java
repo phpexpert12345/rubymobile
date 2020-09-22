@@ -1,10 +1,13 @@
 package com.pet.rubymobile.signup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -24,17 +27,17 @@ public class VerificationOtpActivity extends AppCompatActivity {
     PinView pinview;
 
     @BindView(R.id.btn_next)
-    Button btn_next;
+    AppCompatButton btn_next;
 
     @BindView(R.id.view)
     View view;
 
 
     @BindView(R.id.tv_changePhoneNumber)
-    TextView tv_changePhoneNumber;
+    AppCompatTextView tv_changePhoneNumber;
 
     @BindView(R.id.tv_send_otp_again)
-    TextView tv_send_otp_again;
+    AppCompatTextView tv_send_otp_again;
 
     Dialog dialog;
 

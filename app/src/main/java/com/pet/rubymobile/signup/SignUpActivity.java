@@ -17,15 +17,17 @@ import com.pet.rubymobile.verification_otp.VerificationOtp;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatEditText;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class SignUpActivity extends AppCompatActivity {
     @BindView(R.id.et_mobileNumber)
-    EditText et_mobileNumber;
+    AppCompatEditText et_mobileNumber;
     @BindView(R.id.btn_next)
-    Button btn_next;
+    AppCompatButton btn_next;
 
     Dialog dialog;
     @Override

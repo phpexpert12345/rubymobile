@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="@dimen/dp_20"
+    android:layout_marginLeft="@dimen/dp_5"
+    android:layout_marginRight="@dimen/dp_5"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="@dimen/dp_20"
+        app:cardElevation="@dimen/dp_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:scaleType="fitXY"
+            android:id="@+id/ivCategory"
+            app:srcCompat="@drawable/grocery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+   
+
+
+
+
+</RelativeLayout>

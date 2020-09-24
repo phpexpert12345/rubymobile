@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ivCategory"
+        app:srcCompat="@drawable/airtime_data"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:fontFamily="@font/playfairdisplayregular"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_below="@+id/ivCategory"
+        android:text="Electricity"
+        android:textSize="@dimen/sp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</RelativeLayout>

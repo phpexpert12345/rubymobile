@@ -164,12 +164,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivFingerPrint"
                     android:background="@drawable/finger_print"
                     android:layout_width="@dimen/dp_60"
                     android:layout_height="@dimen/dp_60"/>
 
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivFaceId"
                     android:layout_alignParentRight="true"
                     android:background="@drawable/faceid"
                     android:layout_width="@dimen/dp_60"

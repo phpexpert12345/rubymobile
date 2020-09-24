@@ -7,6 +7,8 @@
     <color name="colorBlack">#000000</color>
     <color name="colorGrey">#9B9B9B</color>
     <color name="colorLightGrey">#EFEFEF</color>
+    <color name="colorSilverGrey">#C0C0C0</color>
+    <color name="colorPureGrey">#DCDCDC</color>
     <color name="untyped_button_color">#a6d7db</color>
     <color name="red">#FF0000</color>
 </resources>

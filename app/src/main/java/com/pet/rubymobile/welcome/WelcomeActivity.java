@@ -2,6 +2,7 @@ package com.pet.rubymobile.welcome;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -12,15 +13,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.pet.rubymobile.R;
-import com.pet.rubymobile.forgot_password.ForgotPasswordActivity;
+import com.pet.rubymobile.expandable_recycler.ExpandableAcitivity;
 import com.pet.rubymobile.forgot_password.IntroductionsActivity;
-import com.pet.rubymobile.login.LoginActivity;
-import com.pet.rubymobile.verification_otp.VerificationOtp;
+import com.pet.rubymobile.home.HomeActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
     @BindView(R.id.btn_next)
@@ -30,6 +28,11 @@ public class WelcomeActivity extends AppCompatActivity {
     AppCompatTextView tv_signOut;
     @BindView(R.id.tvForgotPassword)
     AppCompatTextView tvForgotPassword;
+
+    @BindView(R.id.ivFingerPrint)
+    AppCompatImageView ivFingerPrint;
+    @BindView(R.id.ivFaceId)
+    AppCompatImageView ivFaceId;
 
     private Dialog dialog;
 
@@ -53,8 +56,18 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.tvForgotPassword)
-    public void tvForgotPasswordClicked(View view){
+    public void tvForgotPasswordClicked(View view) {
         startActivity(new Intent(getApplicationContext(), IntroductionsActivity.class));
+    }
+
+    @OnClick(R.id.ivFingerPrint)
+    public void fingerPrintLogin(View view) {
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+    }
+
+    @OnClick(R.id.ivFaceId)
+    public void ivFaceIdClicked(View view){
+        startActivity(new Intent(getApplicationContext(), ExpandableAcitivity.class));
     }
 
 

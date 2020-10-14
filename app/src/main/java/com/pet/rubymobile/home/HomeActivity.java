@@ -10,8 +10,12 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.pet.rubymobile.R;
 
+
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -19,6 +23,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -30,7 +36,12 @@ public class HomeActivity extends AppCompatActivity {
     @BindView(R.id.ivNavigation)
     AppCompatImageView ivNavigation;
 
+    @BindView(R.id.rvNavigationDrawer)
+    RecyclerView rvNavigationDrawer;
+
     DrawerLayout drawer;
+
+    DrawerAdapater drawerAdapater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
 
-         drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.bringToFront();
         // Passing each menu ID as a set of Ids because each
@@ -53,6 +64,14 @@ public class HomeActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        viewFinds();
+    }
+
+    private void viewFinds() {
+        drawerAdapater = new DrawerAdapater(getApplicationContext(),HomeActivity.this);
+        rvNavigationDrawer.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
+        rvNavigationDrawer.setAdapter(drawerAdapater);
     }
 
     @Override
@@ -64,7 +83,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     @OnClick(R.id.rlNavigation)
-    public void ivNavigationClicked(View view){
+    public void ivNavigationClicked(View view) {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(Gravity.LEFT);
         } else {
@@ -78,4 +97,29 @@ public class HomeActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void callFragment(Fragment fragment) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.home_frame_layout, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+        drawer.closeDrawer(Gravity.LEFT);
+    }
+    public void callFragmentTopInvisible(Fragment fragment) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.homeFrameTopInvisble, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+        drawer.closeDrawer(Gravity.LEFT);
+    } public void callFragmentFullScreen(Fragment fragment) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+        drawer.closeDrawer(Gravity.LEFT);
+    }
+
 }

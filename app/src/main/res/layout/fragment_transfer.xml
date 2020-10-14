@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_20"
+    android:background="@color/colorLightGrey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".drawer_wallet.PersonalInformationFragment">
+    <RelativeLayout
+        android:id="@+id/relativeLayout_statusBar"
+        android:background="@drawable/status_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_status"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/colorWhite"
+            android:text="@string/transfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textAllCaps="true"
+           android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:text="@string/chooseThe"
+            android:textColor="@color/textForColorGreen"
+            android:textSize="@dimen/sp_13" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFormList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:id="@+id/rlFilter"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/status_bar_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginRight="@dimen/dp_25"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/filter_new"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:textSize="@dimen/dp_10"
+                android:textColor="@color/colorWhite"
+                android:text="@string/recentHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+               <androidx.appcompat.widget.AppCompatTextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/dp_55"
+                android:textSize="@dimen/dp_10"
+                android:textColor="@color/colorWhite"
+                android:text="@string/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecentHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

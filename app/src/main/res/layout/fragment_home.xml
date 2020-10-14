@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/textForColorGreen"
+    android:layout_marginBottom="@dimen/dp_90"
     tools:context=".home.ui.home.HomeFragment">
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -31,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.AppCompatTextView
-                android:fontFamily="@font/playfairdisplayregular"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:textSize="@dimen/sp_13"
                 android:text="@string/recharge"
                 android:textColor="@color/colorBlack"
@@ -69,7 +75,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.AppCompatTextView
-                android:fontFamily="@font/playfairdisplayregular"
+
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:textSize="@dimen/sp_13"
                 android:text="@string/financial_service"
                 android:textColor="@color/colorBlack"
@@ -99,3 +106,4 @@
     </LinearLayout>
 
 </RelativeLayout>
+</ScrollView>

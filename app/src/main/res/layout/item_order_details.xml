@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rvOrders">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                     android:textSize="@dimen/sp_10"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="Apple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/dp_5"
+                     android:textSize="@dimen/sp_8"
+                    android:textColor="@color/textForColorGrey"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="Apple iPhone 128GB Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/dp_5"
+                     android:textSize="@dimen/sp_14"
+                    android:textColor="@color/colorLightGreen"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="UGX 2000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/dp_10"
+                     android:textSize="@dimen/sp_8"
+                    android:textColor="@color/color_orange"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="Delivery On Sep 1 2020"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+            <ImageView
+               android:layout_marginRight="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="match_parent"
+                android:background="@drawable/iphone"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

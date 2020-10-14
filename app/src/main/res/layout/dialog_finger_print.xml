@@ -25,8 +25,9 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:text="@string/finger_print"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/textForColorGreen"
                 android:textSize="@dimen/sp_20"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
@@ -36,9 +37,10 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_regular"
                 android:layout_marginTop="@dimen/dp_5"
                 android:text="@string/use_finger_print"
-                android:textColor="@color/colorGrey"
+                android:textColor="@color/textForColorGrey"
                 android:textSize="@dimen/sp_12"
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -52,6 +54,7 @@
                 android:layout_height="@dimen/dp_100">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:id="@+id/btn_dialog_next"
                     android:layout_centerInParent="true"
                     android:background="@drawable/button_rounded_login_typed"

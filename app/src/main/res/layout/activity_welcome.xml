@@ -48,8 +48,9 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_bold"
                 android:text="@string/welcome"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/textForColorGreen"
                 android:textSize="@dimen/sp_25"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
@@ -59,6 +60,7 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:text="K K JOHN"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_16"
@@ -68,6 +70,7 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_regular"
                 android:text="+1(256)123-456"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_12"
@@ -83,9 +86,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_70">
               <androidx.appcompat.widget.AppCompatEditText
+                  android:fontFamily="@font/sanfransiso_regular"
                   android:textSize="@dimen/sp_14"
                   android:id="@+id/et_passowrd"
-                  android:textColorHint="@color/colorGrey"
+                  android:textColorHint="@color/textForColorGrey"
                   android:hint="@string/Enter_your_password"
                   android:background="@null"
                   android:layout_width="match_parent"
@@ -95,7 +99,7 @@
                 <View
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_below="@+id/et_passowrd"
-                    android:background="@color/colorGrey"
+                    android:background="@color/textForColorGrey"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"/>
 
@@ -108,11 +112,12 @@
 
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:id="@+id/tvForgotPassword"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
                     android:text="@string/forgot_password"
-                    android:textColor="@color/colorGrey"
+                    android:textColor="@color/textForColorGrey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -122,7 +127,7 @@
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/dp_65"
                 android:layout_marginRight="@dimen/dp_70"
-                android:background="@color/colorGrey"
+                android:background="@color/textForColorGrey"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_1"/>
 
@@ -131,6 +136,7 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
+                android:fontFamily="@font/sanfransiso_regular"
                 android:id="@+id/btn_next"
                 android:textColor="@color/colorWhite"
                 android:text="@string/next_capital"
@@ -146,6 +152,7 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_regular"
                 android:id="@+id/tv_changePhoneNumber"
                 android:layout_marginTop="@dimen/dp_20"
                 android:textSize="@dimen/dp_12"
@@ -181,8 +188,9 @@
             </RelativeLayout>
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_regular"
             android:id="@+id/tv_signOut"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/textForColorGreen"
             android:gravity="center"
              android:text="@string/sign_out"
             android:layout_marginBottom="@dimen/dp_40"
@@ -199,7 +207,7 @@
             android:layout_alignParentBottom="true"
 
             android:layout_marginBottom="@dimen/dp_30"
-            android:background="@color/colorPrimary"
+            android:background="@color/textForColorGreen"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_1"/>
 

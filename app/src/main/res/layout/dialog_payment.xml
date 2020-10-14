@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/login_dialog_corner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginTop="@dimen/sp_20"
+                android:background="@drawable/paying"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_semibold"
+                android:text="@string/youArePaying"
+                android:textColor="@color/textForColorGreen"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_regular"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="UGX 2000"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="@dimen/sp_20"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_80">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnProceed"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_rounded_login_typed"
+                    android:text="@string/proceed"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_40"/>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+</ScrollView>

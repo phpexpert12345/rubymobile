@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:background="@drawable/round_view"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/view"
+                android:id="@+id/tvOrdered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_12"
+                android:text="Ordered"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginLeft="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/tvOrdered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textForColorGrey"
+                android:textSize="@dimen/sp_8"
+                android:text="Thu 1 sep 2020"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_below="@+id/tvOrdered"
+                android:id="@+id/tvOrderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_10"
+                android:text="Your Order has been placed"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginLeft="@dimen/dp_20"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/tvOrderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textForColorGrey"
+                android:textSize="@dimen/sp_8"
+                android:text="Thu 1 sep 2020"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

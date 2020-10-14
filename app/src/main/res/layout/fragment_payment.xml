@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorLightGrey"
+    tools:context=".drawer_ecommerce.singleDetails.SingleDetailsFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_20"
+        android:id="@+id/relativeLayout_statusBar"
+        android:background="@drawable/status_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_status"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/colorWhite"
+            android:text="@string/payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/relativeLayout_statusBar"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvRMW"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80">
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ruby_mobile"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_60"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:textSize="@dimen/sp_15"
+                            android:text="Ruby Mobile Wallet"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/right_aero"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80">
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ruby_mobile"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_60"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:textSize="@dimen/sp_15"
+                            android:text="Debit/Credit Card"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/right_aero"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80">
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ruby_mobile"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_60"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:textSize="@dimen/sp_15"
+                            android:text="Net Banking"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/right_aero"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80">
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ruby_mobile"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_60"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:textSize="@dimen/sp_15"
+                            android:text="EMI"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/right_aero"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80">
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ruby_mobile"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_60"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:textSize="@dimen/sp_15"
+                            android:text="Gift Card"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/right_aero"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80">
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ruby_mobile"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_60"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:textSize="@dimen/sp_15"
+                            android:text="Cash on Delivery"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/right_aero"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:background="@drawable/add_new_address"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textForColorGreen"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:textSize="@dimen/sp_15"
+                        android:text="@string/addPaymentMethod"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

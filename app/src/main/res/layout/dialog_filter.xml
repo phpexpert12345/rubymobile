@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:background="@drawable/login_dialog_corner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/filter"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_13" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:fontFamily="@font/sanfransiso_regular"
+                        android:text="@string/your_search"
+                        android:textColor="@color/textForColorGrey"
+                        android:textSize="@dimen/sp_13" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/price"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_13" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:fontFamily="@font/sanfransiso_regular"
+                        android:text="@string/range"
+                        android:textColor="@color/textForColorGrey"
+                        android:textSize="@dimen/sp_13" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/sb_range_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:rsb_indicator_background_color="@color/textForColorGrey"
+
+
+                    app:rsb_min_interval="50"
+                    app:rsb_mode="range"
+                    app:rsb_progress_color="@color/red"
+
+                    app:rsb_thumb_drawable="@drawable/circle_filter"
+                    app:rsb_tick_mark_mode="number"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="@string/color"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_13" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/textForColorGrey"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/red"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/textForColorGrey"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/red"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/textForColorGrey"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/red"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/textForColorGrey"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/red"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+                    <net.igenius.customcheckbox.CustomCheckBox
+                        app:color_unchecked="@color/textForColorGrey"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        app:color_checked="@color/textForColorGrey"
+                        app:color_tick="@color/colorWhite"
+                        app:small_tick="true" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="@string/brand"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_13" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBrand"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="@string/internalMemory"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_13" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInternalMemory"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:gravity="center"
+                        android:id="@+id/tv_dialog_cancel"
+                        android:layout_marginLeft="@dimen/dp_50"
+                        android:textSize="@dimen/dp_16"
+                        android:text="@string/close"
+                        android:textColor="@color/textForColorGreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_centerVertical="true"
+                        android:id="@+id/btn_dialog_next"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_rounded_login_typed"
+                        android:text="@string/apply"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="@dimen/dp_40"/>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

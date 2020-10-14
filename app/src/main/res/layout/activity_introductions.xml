@@ -44,7 +44,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:text="@string/instruction"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/textForColorGreen"
                 android:textSize="@dimen/sp_18"
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_marginLeft="@dimen/dp_10"
                     android:text="@string/please_fill_instruction"
-                    android:textColor="@color/colorGrey"
+                    android:textColor="@color/textForColorGrey"
                     android:textSize="@dimen/sp_10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -100,7 +100,7 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_marginLeft="@dimen/dp_10"
                     android:text="@string/you_check_email"
-                    android:textColor="@color/colorGrey"
+                    android:textColor="@color/textForColorGrey"
                     android:textSize="@dimen/sp_10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -123,7 +123,7 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_marginLeft="@dimen/dp_10"
                     android:text="@string/use_the_new"
-                    android:textColor="@color/colorGrey"
+                    android:textColor="@color/textForColorGrey"
                     android:textSize="@dimen/sp_10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorLightGrey"
+    tools:context=".drawer_ecommerce.singleDetails.SingleDetailsFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_20"
+        android:id="@+id/relativeLayout_statusBar"
+        android:background="@drawable/status_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_status"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_regular"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/colorWhite"
+            android:text="@string/payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/relativeLayout_statusBar"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_marginTop="@dimen/dp_40"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_semibold"
+                android:textSize="@dimen/sp_25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ruby_mobile_color"
+                />
+            <androidx.appcompat.widget.AppCompatEditText
+
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:background="@null"
+                android:textColor="@color/textForColorGreen"
+                android:layout_marginTop="@dimen/dp_50"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:textSize="@dimen/sp_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_phone_number"
+                android:textColorHint="@color/textForColorGreen"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/textForColorGrey"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:textSize="@dimen/sp_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_name"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:textColor="@color/textForColorGreen"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:textSize="@dimen/sp_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ruby_mobile"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/dp_40"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:textSize="@dimen/sp_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="K.K. Jain"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                />
+            <View
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/colorBlack"/>
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:textColor="@color/colorLightGreen"
+                android:layout_marginTop="@dimen/dp_30"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:textSize="@dimen/sp_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UGX 2,000"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                />
+            <View
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/colorBlack"/>
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPaySecurely"
+                android:textColor="@color/colorWhite"
+                android:text="@string/paySecurely"
+                android:background="@drawable/button_rounded_login_typed"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dp_210"
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

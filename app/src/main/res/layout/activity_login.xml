@@ -37,8 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_semibold"
             android:text="@string/enter_your_phone_number"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/textForColorGreen"
             android:textSize="@dimen/sp_18"
             android:gravity="center"
             android:layout_marginTop="@dimen/dp_50"
@@ -47,8 +48,9 @@
 
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_regular"
             android:text="@string/use_the_phone"
-            android:textColor="@color/colorGrey"
+            android:textColor="@color/textForColorGrey"
             android:textSize="@dimen/sp_13"
             android:gravity="center"
             android:layout_marginTop="@dimen/dp_5"
@@ -57,8 +59,9 @@
 
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_regular"
             android:text="@string/ruby_mobile"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/textForColorGreen"
             android:textSize="@dimen/sp_13"
             android:gravity="center"
 
@@ -79,6 +82,7 @@
                android:layout_height="wrap_content">
            </com.hbb20.CountryCodePicker>
             <androidx.appcompat.widget.AppCompatEditText
+                android:fontFamily="@font/sanfransiso_regular"
                 android:id="@+id/et_mobileNumber"
                 android:maxLines="1"
                 android:background="@null"
@@ -92,13 +96,14 @@
         </LinearLayout>
         <View
             android:layout_gravity="center"
-            android:background="@color/colorGrey"
+            android:background="@color/textForColorGrey"
             android:layout_width="@dimen/dp_230"
             android:layout_height="@dimen/dp_1">
 
         </View>
         
         <androidx.appcompat.widget.AppCompatButton
+            android:fontFamily="@font/sanfransiso_regular"
             android:id="@+id/btn_next"
             android:textColor="@color/colorWhite"
             android:text="@string/next_capital"

@@ -16,7 +16,7 @@ import android.view.Window;
 import android.widget.LinearLayout;
 
 import com.pet.rubymobile.R;
-import com.pet.rubymobile.expandable_recycler.ExpandableAcitivity;
+
 import com.pet.rubymobile.forgot_password.IntroductionsActivity;
 import com.pet.rubymobile.home.HomeActivity;
 
@@ -67,7 +67,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     @OnClick(R.id.ivFaceId)
     public void ivFaceIdClicked(View view){
-        startActivity(new Intent(getApplicationContext(), ExpandableAcitivity.class));
+       //startActivity(new Intent(getApplicationContext(), ExpandableAcitivity.class));
     }
 
 

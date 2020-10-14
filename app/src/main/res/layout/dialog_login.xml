@@ -12,12 +12,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-
-
             android:orientation="vertical">
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:text="@string/login_with_phone_number"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/textForColorGreen"
                 android:textSize="@dimen/sp_20"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
@@ -26,7 +25,7 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
-
+                android:fontFamily="@font/sanfransiso_regular"
                 android:text="+1(256)123-456"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_15"
@@ -37,8 +36,9 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_regular"
                 android:text="@string/send_authentication"
-                android:textColor="@color/colorGrey"
+                android:textColor="@color/textForColorGrey"
                 android:textSize="@dimen/sp_12"
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -51,16 +51,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_100">
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:id="@+id/tv_dialog_cancel"
                     android:layout_marginLeft="@dimen/dp_70"
                     android:textSize="@dimen/dp_16"
                     android:text="@string/cancel_capital"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/textForColorGreen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:id="@+id/btn_dialog_next"
                     android:layout_marginRight="@dimen/dp_50"
                     android:layout_alignParentRight="true"

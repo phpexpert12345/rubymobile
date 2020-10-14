@@ -66,8 +66,8 @@ public class VerificationOtp extends AppCompatActivity {
             public void afterTextChanged(Editable editable) {
                 if (editable != null && editable.length() > 0) {
                     btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
-                    tv_changePhoneNumber.setTextColor(getResources().getColor(R.color.colorPrimary));
-                    view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    tv_changePhoneNumber.setTextColor(getResources().getColor(R.color.textForColorGreen));
+                    view.setBackgroundColor(getResources().getColor(R.color.textForColorGreen));
 
                 } else {
                     btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));

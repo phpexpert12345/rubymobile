@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/login_dialog_corner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/sp_30"
+                android:background="@drawable/choose_profile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_semibold"
+                android:text="@string/choosePrfl"
+                android:textColor="@color/textForColorGreen"
+                android:textSize="@dimen/sp_20"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_80">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:fontFamily="@font/sanfransiso_regular"
+                    android:id="@+id/btnChooseGlr"
+                    android:background="@drawable/button_rounded_login_typed"
+                    android:text="@string/chooseGlry"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="@dimen/dp_140"
+                    android:layout_height="@dimen/dp_40"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:fontFamily="@font/sanfransiso_regular"
+                    android:id="@+id/btnTakePic"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_rounded_login_typed"
+                    android:text="@string/takePhoto"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="@dimen/dp_140"
+                    android:layout_height="@dimen/dp_40"/>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginBottom="@dimen/dp_280"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/sp_30"
+            android:background="@drawable/cut" />
+    </RelativeLayout>
+</ScrollView>

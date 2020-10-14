@@ -24,6 +24,7 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_regular"
                 android:layout_centerInParent="true"
                 android:textSize="@dimen/dp_15"
                 android:textColor="@color/colorWhite"
@@ -50,6 +51,7 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_regular"
                 android:text="@string/this_information"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_15"
@@ -69,12 +71,13 @@
                 android:layout_height="@dimen/dp_150">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:drawableRight="@drawable/drawable_right_full_name"
                     android:textSize="@dimen/sp_14"
                     android:id="@+id/et_passowrd"
-                    android:textColorHint="@color/colorGrey"
+                    android:textColorHint="@color/textForColorGrey"
                     android:hint="@string/full_name"
                     android:background="@null"
                     android:layout_width="match_parent"
@@ -85,12 +88,13 @@
                     android:id="@+id/view_first"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_below="@+id/et_passowrd"
-                    android:background="@color/colorGrey"
+                    android:background="@color/textForColorGrey"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"/>
 
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
                     android:layout_marginTop="@dimen/dp_20"
@@ -98,7 +102,7 @@
                     android:drawableRight="@drawable/drawable_right_email"
                     android:textSize="@dimen/sp_14"
                     android:layout_below="@+id/view_first"
-                    android:textColorHint="@color/colorGrey"
+                    android:textColorHint="@color/textForColorGrey"
                     android:hint="@string/email"
                     android:background="@null"
                     android:layout_width="match_parent"
@@ -109,13 +113,14 @@
                 android:id="@+id/view_second"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_below="@+id/et_re_enter_password"
-                    android:background="@color/colorGrey"
+                    android:background="@color/textForColorGrey"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"/>
 
 
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:imeOptions="actionDone"
                     android:inputType="text"
                     android:layout_marginTop="@dimen/dp_20"
@@ -123,7 +128,7 @@
                     android:drawableRight="@drawable/drawable_right_reference_code"
                     android:textSize="@dimen/sp_14"
                     android:layout_below="@+id/view_second"
-                    android:textColorHint="@color/colorGrey"
+                    android:textColorHint="@color/textForColorGrey"
                     android:hint="@string/reference_code"
                     android:background="@null"
                     android:layout_width="match_parent"
@@ -134,7 +139,7 @@
 
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_below="@+id/et_referenceCode"
-                    android:background="@color/colorGrey"
+                    android:background="@color/textForColorGrey"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"/>
 
@@ -147,6 +152,7 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
+                android:fontFamily="@font/sanfransiso_regular"
                 android:layout_marginTop="@dimen/dp_20"
                 android:id="@+id/btn_next"
                 android:textColor="@color/colorWhite"

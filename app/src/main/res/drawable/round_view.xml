@@ -1,11 +1,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <solid android:color="@color/untyped_button_color" />
-
-
-
-
+    <solid android:color="@color/textSkyLight" />
 
     <corners android:radius="25dp" />
 

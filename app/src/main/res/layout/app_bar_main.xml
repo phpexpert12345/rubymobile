@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.HomeActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
     <RelativeLayout
         android:gravity="center_vertical"
-        android:background="@color/colorPrimary"
+        android:background="@color/textForColorGreen"
         android:layout_width="match_parent"
         android:layout_height="60dp">
         <LinearLayout
@@ -32,9 +42,9 @@
             </RelativeLayout>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:fontFamily="@font/playfairdisplayregular"
+                android:fontFamily="@font/sanfransiso_regular"
                 android:drawableRight="@drawable/drawable_right_search"
-                android:textColorHint="@color/colorPrimary"
+                android:textColorHint="@color/textForColorGreen"
                 android:textSize="@dimen/dp_12"
                 android:textColor="@color/colorBlack"
                 android:paddingLeft="@dimen/dp_10"
@@ -130,12 +140,12 @@
                            android:layout_width="@dimen/dp_20"
                            android:layout_height="@dimen/dp_20"/>
                   <androidx.appcompat.widget.AppCompatTextView
-                      android:fontFamily="@font/playfairdisplayregular"
+                      android:fontFamily="@font/sanfransiso_regular"
                       android:layout_marginTop="@dimen/dp_5"
                       android:gravity="center"
                       android:textSize="@dimen/sp_6"
                       android:text="@string/scanAnyQr"
-                      android:textColor="@color/colorPrimary"
+                      android:textColor="@color/textForColorGreen"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
@@ -156,12 +166,12 @@
                            android:layout_width="@dimen/dp_20"
                            android:layout_height="@dimen/dp_20"/>
                   <androidx.appcompat.widget.AppCompatTextView
-                      android:fontFamily="@font/playfairdisplayregular"
+                      android:fontFamily="@font/sanfransiso_regular"
                       android:layout_marginTop="@dimen/dp_5"
                       android:gravity="center"
                       android:textSize="@dimen/sp_6"
                       android:text="@string/shop"
-                      android:textColor="@color/colorPrimary"
+                      android:textColor="@color/textForColorGreen"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
@@ -203,12 +213,12 @@
                            android:layout_width="@dimen/dp_20"
                            android:layout_height="@dimen/dp_20"/>
                   <androidx.appcompat.widget.AppCompatTextView
-                      android:fontFamily="@font/playfairdisplayregular"
+                      android:fontFamily="@font/sanfransiso_regular"
                       android:layout_marginTop="@dimen/dp_5"
                       android:gravity="center"
                       android:textSize="@dimen/sp_6"
                       android:text="@string/bank"
-                      android:textColor="@color/colorPrimary"
+                      android:textColor="@color/textForColorGreen"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
@@ -229,12 +239,12 @@
                            android:layout_width="@dimen/dp_20"
                            android:layout_height="@dimen/dp_20"/>
                   <androidx.appcompat.widget.AppCompatTextView
-                      android:fontFamily="@font/playfairdisplayregular"
+                      android:fontFamily="@font/sanfransiso_regular"
                       android:layout_marginTop="@dimen/dp_5"
                       android:gravity="center"
                       android:textSize="@dimen/sp_6"
                       android:text="@string/me"
-                      android:textColor="@color/colorPrimary"
+                      android:textColor="@color/textForColorGreen"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
@@ -254,6 +264,24 @@
 
 
 
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/home_frame_layout"
+        android:layout_marginBottom="@dimen/dp_65"
+        android:layout_marginTop="@dimen/dp_55"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/homeFrameTopInvisble"
+        android:layout_marginBottom="@dimen/dp_65"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
     <RelativeLayout
         android:layout_marginBottom="@dimen/dp_30"
         android:layout_centerHorizontal="true"
@@ -261,11 +289,12 @@
         android:layout_width="@dimen/dp_55"
         android:layout_height="@dimen/dp_55">
         <androidx.appcompat.widget.AppCompatImageView
-           app:srcCompat="@drawable/bottum_bar_home"
+            app:srcCompat="@drawable/bottum_bar_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
 
 
     </RelativeLayout>
+
 </RelativeLayout>

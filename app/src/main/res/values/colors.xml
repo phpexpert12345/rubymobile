@@ -9,6 +9,17 @@
     <color name="colorLightGrey">#EFEFEF</color>
     <color name="colorSilverGrey">#C0C0C0</color>
     <color name="colorPureGrey">#DCDCDC</color>
-    <color name="untyped_button_color">#a6d7db</color>
+
     <color name="red">#FF0000</color>
+    <color name="color_orange">#FF7F50</color>
+    <color name="colorLightGreen">#46b751</color>
+
+
+
+    <color name="textForColorGreen">#1b55ba</color>
+    <color name="textForColorGrey">#b2b2b2</color>
+    <color name="textSkyLight">#e9f8fd</color>
+    <color name="untyped_button_color">#90d79f</color>
+    <color name="untyped_button_color_light">#cee1ff</color>
+
 </resources>

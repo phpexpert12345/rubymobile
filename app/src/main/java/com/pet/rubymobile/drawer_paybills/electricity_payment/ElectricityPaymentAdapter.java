@@ -34,7 +34,7 @@ public class ElectricityPaymentAdapter extends RecyclerView.Adapter<ElectricityP
 
     @Override
     public void onBindViewHolder(@NonNull ElectricityPaymentAdapter.HomeProfile holder, int position) {
-        /*holder.cvMyOrder.setOnClickListener(new View.OnClickListener() {
+     /*   holder.cvMyOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PurchaseOrderFragment fragment2 = new PurchaseOrderFragment();
@@ -44,8 +44,7 @@ public class ElectricityPaymentAdapter extends RecyclerView.Adapter<ElectricityP
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
-        });
-*/
+        });*/
 
 
 

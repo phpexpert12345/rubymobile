@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -81,5 +82,10 @@ public class LinkAccountFragment extends Fragment {
         bankListAdapter = new BankListAdapter(getContext(),LinkAccountFragment.this);
         rvBankList.setLayoutManager(new GridLayoutManager(getContext(), 3));
         rvBankList.setAdapter(bankListAdapter);
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 }

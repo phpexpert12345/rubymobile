@@ -16,10 +16,16 @@
 
 
 
-    <color name="textForColorGreen">#1b55ba</color>
+    <color name="textForColorGreen">#1d56ba</color>
     <color name="textForColorGrey">#b2b2b2</color>
     <color name="textSkyLight">#e9f8fd</color>
     <color name="untyped_button_color">#90d79f</color>
     <color name="untyped_button_color_light">#cee1ff</color>
+
+
+    //custom status bar colors
+    <color name="top_color">#103576</color>
+    <color name="middle_color">#0f459f</color>
+    <color name="bottom_color">#094cbc</color>
 
 </resources>

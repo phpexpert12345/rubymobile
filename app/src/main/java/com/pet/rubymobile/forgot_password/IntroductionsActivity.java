@@ -44,6 +44,11 @@ public class IntroductionsActivity extends AppCompatActivity {
 
     }
 
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        onBackPressed();
+    }
+
 
 
 

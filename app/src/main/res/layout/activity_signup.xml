@@ -16,11 +16,12 @@
         android:layout_height="60dp">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_centerVertical="true"
             android:background="@drawable/back_status"
-            android:layout_width="@dimen/dp_25"
-            android:layout_height="@dimen/dp_25"/>
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
 
 
         <androidx.appcompat.widget.AppCompatTextView

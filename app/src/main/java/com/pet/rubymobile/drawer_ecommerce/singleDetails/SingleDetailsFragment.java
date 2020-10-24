@@ -142,4 +142,9 @@ public class SingleDetailsFragment extends Fragment {
         fragmentTransaction.commit();
     }
 
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
+    }
+
 }

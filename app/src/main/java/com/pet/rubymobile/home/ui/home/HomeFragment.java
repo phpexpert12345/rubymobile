@@ -11,6 +11,10 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.lsjwzh.widget.recyclerviewpager.RecyclerViewPager;
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.home.ui.home.home.NameAndImagesClass;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -49,6 +53,10 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
+    private List secondData;
+    private List thirdData;
+    private List fourthData;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -72,18 +80,38 @@ public class HomeFragment extends Fragment {
         //vCategoryFirst.setAdapter(categoryFirstAdapater);
 
 
-        categoryScndAdapater = new CategoryScndAdapater(getContext());
+
+        secondData=new ArrayList();
+        secondData.add("Airtime & Data");
+        secondData.add("Pay TV");
+        secondData.add("Electricity");
+        secondData.add("Water");
+        secondData.add("School Fees");
+        secondData.add("Taxes");
+        secondData.add("Cabs");
+        secondData.add("More");
+
+        categoryScndAdapater = new CategoryScndAdapater(getContext(),secondData);
         rvCategoryScnd.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rvCategoryScnd.setAdapter(categoryScndAdapater);
 
+        thirdData=new ArrayList();
+        thirdData.add("Insurance");
+        thirdData.add("Invest");
+        thirdData.add("Instant Loans");
+        thirdData.add("More");
 
-        categoryThirdAdapater = new CategoryThirdAdapater(getContext());
+        categoryThirdAdapater = new CategoryThirdAdapater(getContext(),thirdData);
         rvCategoryThird.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         rvCategoryThird.setAdapter(categoryThirdAdapater);
         rvCategoryThird.scrollToPosition(3);
 
-
-        categoryFourthAdapater = new CategoryFourthAdapater(getContext());
+        fourthData=new ArrayList();
+        fourthData.add("Insurance");
+        fourthData.add("Invest");
+        fourthData.add("Instant Loans");
+        fourthData.add("More");
+        categoryFourthAdapater = new CategoryFourthAdapater(getContext(),fourthData);
         rvCategoryFourth.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rvCategoryFourth.setAdapter(categoryFourthAdapater);
 

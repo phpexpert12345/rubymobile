@@ -21,6 +21,7 @@
             <include
                 android:id="@+id/header"
                 layout="@layout/nav_header_main" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvNavigationDrawer"
                 android:layout_width="280dp"

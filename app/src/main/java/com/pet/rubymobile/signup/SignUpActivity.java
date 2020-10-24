@@ -19,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -29,7 +30,11 @@ public class SignUpActivity extends AppCompatActivity {
     @BindView(R.id.btn_next)
     AppCompatButton btn_next;
 
+    @BindView(R.id.ivBack)
+    AppCompatImageView ivBack;
+
     Dialog dialog;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +44,6 @@ public class SignUpActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         viewFinds();
     }
-
-
-
 
 
     private void viewFinds() {
@@ -84,7 +86,7 @@ public class SignUpActivity extends AppCompatActivity {
         btn_dialog_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent verificationOTP=new Intent(getApplicationContext(), VerificationOtpActivity.class);
+                Intent verificationOTP = new Intent(getApplicationContext(), VerificationOtpActivity.class);
                 startActivity(verificationOTP);
             }
         });
@@ -94,7 +96,12 @@ public class SignUpActivity extends AppCompatActivity {
                 dialog.cancel();
             }
         });
-
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        onBackPressed();
     }
 }

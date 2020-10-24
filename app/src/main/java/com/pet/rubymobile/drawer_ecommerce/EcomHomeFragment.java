@@ -18,6 +18,9 @@ import android.view.ViewGroup;
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.home.ui.home.CategoryScndAdapater;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link EcomHomeFragment#newInstance} factory method to
@@ -35,6 +38,7 @@ public class EcomHomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     CategoryEcomAdapater categoryScndAdapater;
+    private List itemName;
 
 
     public EcomHomeFragment() {
@@ -85,7 +89,28 @@ public class EcomHomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        categoryScndAdapater = new CategoryEcomAdapater(getContext(),EcomHomeFragment.this);
+        itemName=new ArrayList();
+        itemName.add("Beauty");
+        itemName.add("Mobile Phone");
+        itemName.add("Men's Fashion");
+        itemName.add("Grocery");
+        itemName.add("Buy Electronics");
+        itemName.add("Women's Fashion");
+        itemName.add("Sport Shoes");
+        itemName.add("Kitchen");
+        itemName.add("Beauty");
+        itemName.add("Mobile Phone");
+        itemName.add("Men's Fashion");
+        itemName.add("Grocery");
+        itemName.add("Buy Electronics");
+        itemName.add("Women's Fashion");
+        itemName.add("Sport Shoes");
+        itemName.add("Kitchen");
+        itemName.add("Kitchen");
+        itemName.add("Beauty");
+        itemName.add("Mobile Phone");
+        itemName.add("Men's Fashion");
+        categoryScndAdapater = new CategoryEcomAdapater(getContext(),EcomHomeFragment.this,itemName);
         rvCategoryScnd.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rvCategoryScnd.setAdapter(categoryScndAdapater);
     }

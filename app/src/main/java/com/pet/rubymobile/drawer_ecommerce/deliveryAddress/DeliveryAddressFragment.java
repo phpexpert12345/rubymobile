@@ -96,4 +96,9 @@ public class DeliveryAddressFragment extends Fragment {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
+    }
 }

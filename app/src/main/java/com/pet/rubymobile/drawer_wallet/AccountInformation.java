@@ -92,7 +92,7 @@ public class AccountInformation extends Fragment {
                 dialogFinerPrintOpen();
             }
         });
-
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
     }
 
@@ -110,6 +110,7 @@ public class AccountInformation extends Fragment {
                 dialogFaceIdOpen();
             }
         });
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
     }
 
@@ -132,7 +133,13 @@ public class AccountInformation extends Fragment {
                 transaction.commit();
             }
         });
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 
 }

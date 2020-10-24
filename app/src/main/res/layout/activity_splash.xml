@@ -2,15 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cd_splash"
+    android:background="@drawable/splash_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
+        android:id="@+id/ivLogo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_centerInParent="true"
-        android:scaleType="fitXY" />
+        android:padding="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        app:srcCompat="@drawable/splash_logo"
+        android:layout_centerInParent="true" />
 
     <ProgressBar
         android:id="@+id/pb_loader"

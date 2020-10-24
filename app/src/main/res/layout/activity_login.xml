@@ -12,6 +12,7 @@
         android:layout_height="60dp">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_centerVertical="true"
             app:srcCompat="@drawable/back_status"
@@ -92,15 +93,13 @@
                 android:layout_width="@dimen/dp_135"
                 android:layout_height="wrap_content"/>
 
-
         </LinearLayout>
+
         <View
             android:layout_gravity="center"
             android:background="@color/textForColorGrey"
             android:layout_width="@dimen/dp_230"
-            android:layout_height="@dimen/dp_1">
-
-        </View>
+            android:layout_height="@dimen/dp_1"/>
         
         <androidx.appcompat.widget.AppCompatButton
             android:fontFamily="@font/sanfransiso_regular"
@@ -113,10 +112,6 @@
             android:gravity="center"
             android:layout_width="@dimen/dp_190"
             android:layout_height="@dimen/dp_45"/>
-
-
-
-
 
     </LinearLayout>
 

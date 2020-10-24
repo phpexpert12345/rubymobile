@@ -2,6 +2,7 @@ package com.pet.rubymobile.signup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +39,8 @@ public class VerificationOtpActivity extends AppCompatActivity {
 
     @BindView(R.id.tv_send_otp_again)
     AppCompatTextView tv_send_otp_again;
+    @BindView(R.id.ivBack)
+    AppCompatImageView ivBack;
 
     Dialog dialog;
 
@@ -86,12 +89,12 @@ public class VerificationOtpActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_next)
     public void btn_nextClicked(View view) {
-        startActivity(new Intent(getApplicationContext(),CreatePasswordActivity.class));
+        startActivity(new Intent(getApplicationContext(), CreatePasswordActivity.class));
     }
 
 
     @OnClick(R.id.tv_send_otp_again)
-    public void sendOtpAgainClicked(View view){
+    public void sendOtpAgainClicked(View view) {
         sendAgainDialogOpen();
     }
 
@@ -117,5 +120,10 @@ public class VerificationOtpActivity extends AppCompatActivity {
         });
 
         dialog.show();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        onBackPressed();
     }
 }

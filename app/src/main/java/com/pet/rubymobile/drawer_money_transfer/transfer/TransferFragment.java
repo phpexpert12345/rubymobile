@@ -1,9 +1,18 @@
 package com.pet.rubymobile.drawer_money_transfer.transfer;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+
+import com.pet.rubymobile.R;
+import com.pet.rubymobile.drawer_money_transfer.phoneBook.PhoneBookFragment;
+
+import org.jetbrains.annotations.Nullable;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,19 +21,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-
-import com.pet.rubymobile.R;
-import com.pet.rubymobile.drawer_ecommerce.myOrder.MyOrderEcomAdapater;
-import com.pet.rubymobile.drawer_ecommerce.myOrder.MyOrderFragment;
-import com.pet.rubymobile.drawer_money_transfer.phoneBook.PhoneBookFragment;
-
 
 public class TransferFragment extends Fragment {
 
@@ -114,5 +110,10 @@ public class TransferFragment extends Fragment {
         transaction.addToBackStack(null);
         transaction.commit();
 
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 }

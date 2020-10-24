@@ -8,7 +8,10 @@ import android.widget.RelativeLayout;
 
 import com.pet.rubymobile.R;
 
+import java.util.List;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,9 +19,10 @@ public class DrawerItemAdapater extends RecyclerView.Adapter<DrawerItemAdapater.
 
    Context context;
 
-
-    public DrawerItemAdapater(Context context){
+   List itemName;
+    public DrawerItemAdapater(Context context,List itemName){
         this.context=context;
+        this.itemName=itemName;
 
     }
     @NonNull
@@ -33,7 +37,7 @@ public class DrawerItemAdapater extends RecyclerView.Adapter<DrawerItemAdapater.
 
     @Override
     public void onBindViewHolder(@NonNull HomeProfile holder, int position) {
-
+    holder.tvItemName.setText(itemName.get(position).toString());
 
 
 
@@ -43,14 +47,14 @@ public class DrawerItemAdapater extends RecyclerView.Adapter<DrawerItemAdapater.
 
     @Override
     public int getItemCount() {
-        return 13;
+        return itemName.size();
     }
     public class HomeProfile extends RecyclerView.ViewHolder{
-
+     AppCompatTextView tvItemName;
 
         public HomeProfile(@NonNull View itemView) {
             super(itemView);
-
+            tvItemName=itemView.findViewById(R.id.tvItemName);
 
 
         }

@@ -126,7 +126,7 @@ public class OtpForPaymentFragment extends Fragment {
                 dialog.cancel();
             }
         });
-
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
     }
 
@@ -149,7 +149,12 @@ public class OtpForPaymentFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 }

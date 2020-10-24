@@ -43,20 +43,19 @@
                 android:textColor="@color/colorBlack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_alignParentRight="true"
-                android:background="@drawable/right_aero"
+                android:background="@drawable/ic_more"
                 android:layout_width="@dimen/dp_16"
                 android:layout_height="@dimen/dp_16"/>
 
-
-
         </RelativeLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategoryScnd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:clipToPadding="false"
@@ -67,41 +66,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-
-
-
         <RelativeLayout
             android:layout_margin="@dimen/dp_15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatTextView
 
+            <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:textSize="@dimen/sp_13"
                 android:text="@string/financial_service"
                 android:textColor="@color/colorBlack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_alignParentRight="true"
-                android:background="@drawable/right_aero"
+                android:background="@drawable/ic_more"
                 android:layout_width="@dimen/dp_16"
                 android:layout_height="@dimen/dp_16"/>
 
-
-
         </RelativeLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategoryFourth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
-
-
-
-
-
-
 
     </LinearLayout>
 

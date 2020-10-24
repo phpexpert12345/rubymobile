@@ -26,6 +26,7 @@
                 android:layout_height="60dp">
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
                     android:layout_marginLeft="@dimen/dp_15"
                     android:layout_centerVertical="true"
                     android:background="@drawable/back_status"
@@ -55,7 +56,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/bottom_color"
                 android:layout_below="@+id/relativeLayout_statusBar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_60">
@@ -164,7 +165,7 @@
                                 android:gravity="center"/>
                             <LinearLayout
                                 android:layout_marginTop="@dimen/dp_15"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@drawable/status_bar_login"
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">

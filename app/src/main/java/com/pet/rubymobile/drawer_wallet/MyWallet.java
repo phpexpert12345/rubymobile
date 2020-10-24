@@ -3,6 +3,8 @@ package com.pet.rubymobile.drawer_wallet;
 import android.app.Dialog;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -86,5 +88,8 @@ public class MyWallet extends Fragment {
 
     }
 
-
+   @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
+   }
 }

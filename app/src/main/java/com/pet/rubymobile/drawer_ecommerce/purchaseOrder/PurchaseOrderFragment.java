@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -59,5 +60,10 @@ public class PurchaseOrderFragment extends Fragment {
         ButterKnife.bind(this,view);
         return view;
 
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 }

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -82,5 +83,10 @@ public class AtmCardFragment extends Fragment {
         atmCardAdapter = new AtmCardAdapter(getContext(), AtmCardFragment.this);
         rvAtmCard.setLayoutManager(new GridLayoutManager(getContext(), 3));
         rvAtmCard.setAdapter(atmCardAdapter);
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 }

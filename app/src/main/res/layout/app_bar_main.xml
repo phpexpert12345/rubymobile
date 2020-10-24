@@ -7,25 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".home.HomeActivity">
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
 
     <RelativeLayout
         android:gravity="center_vertical"
         android:background="@color/textForColorGreen"
         android:layout_width="match_parent"
         android:layout_height="60dp">
+
         <LinearLayout
             android:weightSum="1"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <RelativeLayout
                 android:id="@+id/rlNavigation"
                 android:layout_marginLeft="@dimen/dp_10"
@@ -33,12 +31,13 @@
                 android:layout_weight=".05"
                 android:layout_width="@dimen/dp_0"
                 android:layout_height="match_parent">
-                <androidx.appcompat.widget.AppCompatImageView
 
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivNavigation"
                     android:background="@drawable/navigation_humburger"
                     android:layout_width="@dimen/dp_20"
                     android:layout_height="@dimen/dp_20"/>
+
             </RelativeLayout>
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -54,6 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_weight=".75"
                 android:layout_height="@dimen/dp_30"/>
+
             <ru.nikartm.support.ImageBadgeView
                 app:ibv_badgePosition="top_right"
                 app:ibv_fixedBadgeRadius="@dimen/dp_7"
@@ -64,7 +64,6 @@
                 android:src="@drawable/notification"
                 android:layout_width="0dp"
                 android:layout_weight=".065"
-
                 android:layout_height="@dimen/dp_22"/>
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -73,14 +72,10 @@
                 android:layout_width="0dp"
                 android:layout_weight=".065"
                 android:layout_height="@dimen/dp_22"/>
+
         </LinearLayout>
 
-
-
-
     </RelativeLayout>
-
-
 
     <com.google.android.material.appbar.AppBarLayout
         android:visibility="gone"
@@ -108,8 +103,6 @@
 
     <include layout="@layout/content_main" />
 
-
-
        <RelativeLayout
            android:background="@drawable/top_round_corner_for_home_screen"
            android:layout_alignParentBottom="true"
@@ -118,16 +111,18 @@
 
            <LinearLayout
                android:orientation="horizontal"
-               android:weightSum="3"
                android:layout_width="match_parent"
                android:layout_height="match_parent">
+
                <LinearLayout
-                   android:weightSum="2"
                    android:orientation="horizontal"
                    android:layout_width="@dimen/dp_0"
+                   android:layout_marginEnd="@dimen/dp_20"
                    android:layout_weight="1"
                    android:layout_height="match_parent">
+
                    <LinearLayout
+                       android:id="@+id/llScanAnyQr"
                        android:layout_gravity="center"
                        android:gravity="center"
                        android:orientation="vertical"
@@ -136,71 +131,59 @@
                        android:layout_height="match_parent">
 
                        <androidx.appcompat.widget.AppCompatImageView
-                           android:background="@drawable/scan_qr_color"
+                           android:background="@drawable/scan_qr"
                            android:layout_width="@dimen/dp_20"
                            android:layout_height="@dimen/dp_20"/>
+
                   <androidx.appcompat.widget.AppCompatTextView
                       android:fontFamily="@font/sanfransiso_regular"
                       android:layout_marginTop="@dimen/dp_5"
                       android:gravity="center"
-                      android:textSize="@dimen/sp_6"
+                      android:textSize="@dimen/sp_10"
                       android:text="@string/scanAnyQr"
                       android:textColor="@color/textForColorGreen"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
-
-
-
                    </LinearLayout>
+
                    <LinearLayout
+                       android:id="@+id/llShop"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_gravity="center"
-                       android:gravity="center"
-                       android:orientation="vertical"
-                       android:layout_width="0dp"
                        android:layout_weight="1"
-                       android:layout_height="match_parent">
+                       android:gravity="center"
+                       android:orientation="vertical">
 
                        <androidx.appcompat.widget.AppCompatImageView
-                           android:background="@drawable/shop"
                            android:layout_width="@dimen/dp_20"
-                           android:layout_height="@dimen/dp_20"/>
-                  <androidx.appcompat.widget.AppCompatTextView
-                      android:fontFamily="@font/sanfransiso_regular"
-                      android:layout_marginTop="@dimen/dp_5"
-                      android:gravity="center"
-                      android:textSize="@dimen/sp_6"
-                      android:text="@string/shop"
-                      android:textColor="@color/textForColorGreen"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"/>
+                           android:layout_height="@dimen/dp_20"
+                           android:background="@drawable/shop" />
 
-
-
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/dp_5"
+                           android:fontFamily="@font/font"
+                           android:gravity="center"
+                           android:text="@string/shop"
+                           android:textColor="@color/textForColorGreen"
+                           android:textSize="@dimen/sp_10" />
 
                    </LinearLayout>
 
-
                </LinearLayout>
 
                <LinearLayout
-                   android:weightSum="2"
                    android:orientation="horizontal"
                    android:layout_width="@dimen/dp_0"
+                   android:layout_marginStart="@dimen/dp_20"
                    android:layout_weight="1"
                    android:layout_height="match_parent">
 
-
-
-
-               </LinearLayout>
-               <LinearLayout
-                   android:weightSum="2"
-                   android:orientation="horizontal"
-                   android:layout_width="@dimen/dp_0"
-                   android:layout_weight="1"
-                   android:layout_height="match_parent">
                    <LinearLayout
+                       android:id="@+id/llBank"
                        android:layout_gravity="center"
                        android:gravity="center"
                        android:orientation="vertical"
@@ -212,20 +195,19 @@
                            android:background="@drawable/bank"
                            android:layout_width="@dimen/dp_20"
                            android:layout_height="@dimen/dp_20"/>
+
                   <androidx.appcompat.widget.AppCompatTextView
                       android:fontFamily="@font/sanfransiso_regular"
                       android:layout_marginTop="@dimen/dp_5"
                       android:gravity="center"
-                      android:textSize="@dimen/sp_6"
+                      android:textSize="@dimen/sp_10"
                       android:text="@string/bank"
                       android:textColor="@color/textForColorGreen"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
-
-
-
                    </LinearLayout>
+
                    <LinearLayout
                        android:layout_gravity="center"
                        android:gravity="center"
@@ -238,32 +220,25 @@
                            android:background="@drawable/me"
                            android:layout_width="@dimen/dp_20"
                            android:layout_height="@dimen/dp_20"/>
+
                   <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/llProfile"
                       android:fontFamily="@font/sanfransiso_regular"
                       android:layout_marginTop="@dimen/dp_5"
                       android:gravity="center"
-                      android:textSize="@dimen/sp_6"
+                      android:textSize="@dimen/sp_10"
                       android:text="@string/me"
                       android:textColor="@color/textForColorGreen"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"/>
 
-
-
-
                    </LinearLayout>
 
-
                </LinearLayout>
-
-
 
            </LinearLayout>
 
        </RelativeLayout>
-
-
-
 
     </RelativeLayout>
 
@@ -272,28 +247,25 @@
         android:layout_marginBottom="@dimen/dp_65"
         android:layout_marginTop="@dimen/dp_55"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-    </FrameLayout>
     <FrameLayout
         android:id="@+id/homeFrameTopInvisble"
         android:layout_marginBottom="@dimen/dp_65"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-    </FrameLayout>
     <RelativeLayout
         android:layout_marginBottom="@dimen/dp_30"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_width="@dimen/dp_55"
         android:layout_height="@dimen/dp_55">
+
         <androidx.appcompat.widget.AppCompatImageView
             app:srcCompat="@drawable/bottum_bar_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-
-
 
     </RelativeLayout>
 

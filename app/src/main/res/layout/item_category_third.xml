@@ -17,7 +17,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:scaleType="fitXY"
             android:id="@+id/ivCategory"
-            app:srcCompat="@drawable/grocery"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

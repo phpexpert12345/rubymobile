@@ -28,8 +28,8 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory"
-                android:text="Electricity"
-                android:textSize="@dimen/sp_10"
+                android:text="Payments"
+                android:textSize="@dimen/sp_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
@@ -41,7 +41,7 @@
             <androidx.appcompat.widget.AppCompatImageView
 
                 android:id="@+id/ivCategory1"
-                app:srcCompat="@drawable/payment"
+                app:srcCompat="@drawable/fund_transfer"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"/>
 
@@ -50,7 +50,7 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory1"
-                android:text="Electricity"
+                android:text="Funds Transfer"
                 android:textSize="@dimen/sp_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -63,7 +63,7 @@
             <androidx.appcompat.widget.AppCompatImageView
 
                 android:id="@+id/ivCategory2"
-                app:srcCompat="@drawable/payment"
+                app:srcCompat="@drawable/send_money"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"/>
 
@@ -72,7 +72,7 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory2"
-                android:text="Electricity"
+                android:text="Send Money"
                 android:textSize="@dimen/sp_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -85,7 +85,7 @@
             <androidx.appcompat.widget.AppCompatImageView
 
                 android:id="@+id/ivCategory3"
-                app:srcCompat="@drawable/payment"
+                app:srcCompat="@drawable/add_money"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"/>
 
@@ -94,7 +94,7 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory3"
-                android:text="Electricity"
+                android:text="Add Money"
                 android:textSize="@dimen/sp_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

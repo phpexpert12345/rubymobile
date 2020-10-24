@@ -26,6 +26,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import butterknife.BindView;
@@ -37,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
     AppCompatEditText et_mobileNumber;
     @BindView(R.id.btn_next)
     AppCompatButton btn_next;
+    @BindView(R.id.ivBack)
+    AppCompatImageView ivBack;
 
     Dialog dialog;
 
@@ -74,8 +77,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-
-
     private static RemoteViews contentView;
     private static Notification notification;
     private static NotificationManager notificationManager;
@@ -89,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
     private void RunNotification() {
 
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -97,12 +97,12 @@ public class LoginActivity extends AppCompatActivity {
 
         contentView = new RemoteViews(getPackageName(), R.layout.my_notification_layout);
         contentView.setImageViewResource(R.id.image, R.mipmap.ic_launcher);
-        contentView.setTextViewText(R.id.charging,"THis is charging");
+        contentView.setTextViewText(R.id.charging, "THis is charging");
 
 
-       // Intent switchIntent = new Intent(this, BackgroundService.switchButtonListener.class);
+        // Intent switchIntent = new Intent(this, BackgroundService.switchButtonListener.class);
         //PendingIntent pendingSwitchIntent = PendingIntent.getBroadcast(this, 1020, switchIntent, 0);
-       // contentView.setOnClickPendingIntent(R.id.flashButton, pendingSwitchIntent);
+        // contentView.setOnClickPendingIntent(R.id.flashButton, pendingSwitchIntent);
 
         mBuilder.setSmallIcon(R.drawable.ruby_mobile);
         mBuilder.setAutoCancel(false);
@@ -125,7 +125,6 @@ public class LoginActivity extends AppCompatActivity {
         notificationManager.notify(NotificationID, notification);
     }
 
-
     private void dialogOpen() {
         dialog = new Dialog(LoginActivity.this);
         dialog.setContentView(R.layout.dialog_login);
@@ -137,17 +136,23 @@ public class LoginActivity extends AppCompatActivity {
         btn_dialog_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             Intent verificationOTP=new Intent(getApplicationContext(), VerificationOtp.class);
-             startActivity(verificationOTP);
+                Intent verificationOTP = new Intent(getApplicationContext(), VerificationOtp.class);
+                startActivity(verificationOTP);
             }
         });
         tv_dialog_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            dialog.cancel();
+                dialog.cancel();
             }
         });
-
+        dialog.getWindow()
+                .getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(){
+        onBackPressed();
     }
 }

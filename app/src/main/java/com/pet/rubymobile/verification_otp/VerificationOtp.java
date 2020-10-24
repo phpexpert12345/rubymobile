@@ -89,5 +89,10 @@ public class VerificationOtp extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        onBackPressed();
+    }
+
 
 }

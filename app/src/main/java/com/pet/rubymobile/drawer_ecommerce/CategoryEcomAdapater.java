@@ -9,7 +9,10 @@ import android.widget.RelativeLayout;
 
 import com.pet.rubymobile.R;
 
+import java.util.List;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -19,10 +22,12 @@ public class CategoryEcomAdapater extends RecyclerView.Adapter<CategoryEcomAdapa
 
    Context context;
    EcomHomeFragment ecomHomeFragment;
+   private List itemName;
 
-    public CategoryEcomAdapater(Context context,EcomHomeFragment ecomHomeFragment){
+    public CategoryEcomAdapater(Context context,EcomHomeFragment ecomHomeFragment,List itemName){
         this.ecomHomeFragment=ecomHomeFragment;
         this.context=context;
+        this.itemName=itemName;
 
 
     }
@@ -38,6 +43,7 @@ public class CategoryEcomAdapater extends RecyclerView.Adapter<CategoryEcomAdapa
 
     @Override
     public void onBindViewHolder(@NonNull CategoryEcomAdapater.HomeProfile holder, int position) {
+        holder.tvName.setText(itemName.get(position).toString());
          holder.rvTop.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
@@ -68,9 +74,11 @@ public class CategoryEcomAdapater extends RecyclerView.Adapter<CategoryEcomAdapa
     }
     public class HomeProfile extends RecyclerView.ViewHolder{
               RelativeLayout rvTop;
+              AppCompatTextView tvName;
         public HomeProfile(@NonNull View itemView) {
             super(itemView);
             rvTop=itemView.findViewById(R.id.rvTop);
+            tvName=itemView.findViewById(R.id.tvName);
 
 
 

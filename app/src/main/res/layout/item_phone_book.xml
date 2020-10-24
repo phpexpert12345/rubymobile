@@ -12,28 +12,28 @@
 
 
 
-    <View
-        android:layout_centerVertical="true"
-        android:id="@+id/view"
-        android:layout_width="@dimen/dp_35"
-        android:layout_height="@dimen/dp_35"
-        android:background="@drawable/round_view" />
-    <TextView
-        android:textColor="@color/colorBlack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DK"
-        android:fontFamily="@font/sanfransiso_semibold"
-        android:textSize="@dimen/sp_11"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/dp_10"
-        />
-    <View
-        android:layout_marginTop="@dimen/dp_10"
-        android:layout_below="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/colorGrey"/>
+        <View
+            android:layout_centerVertical="true"
+            android:id="@+id/view"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:background="@drawable/round_view" />
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DK"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:textSize="@dimen/sp_11"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            />
+        <View
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/colorGrey"/>
 
         <TextView
             android:textColor="@color/colorBlack"

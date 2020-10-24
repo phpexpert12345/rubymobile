@@ -4,11 +4,17 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
+import android.widget.LinearLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.drawer_ecommerce.EcomHomeFragment;
+import com.pet.rubymobile.drawer_link_account.bank.BankFragment;
+import com.pet.rubymobile.drawer_money_transfer.transfer.TransferFragment;
+import com.pet.rubymobile.drawer_wallet.PersonalInformationFragment;
+import com.pet.rubymobile.pay_and_scan.payCode.PayCodeFragment;
 
 
 import androidx.appcompat.widget.AppCompatImageView;
@@ -38,9 +44,10 @@ public class HomeActivity extends AppCompatActivity {
 
     @BindView(R.id.rvNavigationDrawer)
     RecyclerView rvNavigationDrawer;
+    @BindView(R.id.llScanAnyQr)
+    LinearLayout llScanAnyQr;
 
     DrawerLayout drawer;
-
     DrawerAdapater drawerAdapater;
 
     @Override
@@ -69,7 +76,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void viewFinds() {
-        drawerAdapater = new DrawerAdapater(getApplicationContext(),HomeActivity.this);
+        drawerAdapater = new DrawerAdapater(getApplicationContext(), HomeActivity.this);
         rvNavigationDrawer.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         rvNavigationDrawer.setAdapter(drawerAdapater);
     }
@@ -106,6 +113,7 @@ public class HomeActivity extends AppCompatActivity {
         transaction.commit();
         drawer.closeDrawer(Gravity.LEFT);
     }
+
     public void callFragmentTopInvisible(Fragment fragment) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
@@ -113,13 +121,55 @@ public class HomeActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
         drawer.closeDrawer(Gravity.LEFT);
-    } public void callFragmentFullScreen(Fragment fragment) {
+    }
+
+    public void callFragmentFullScreen(Fragment fragment) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
         drawer.closeDrawer(Gravity.LEFT);
+    }
+
+    @OnClick(R.id.llScanAnyQr)
+    public void llScanAnyQrClicked(View view){
+        PayCodeFragment payCodeFragment=new PayCodeFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, payCodeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    @OnClick(R.id.llShop)
+    public  void llShopClicked(View view){
+        EcomHomeFragment payCodeFragment=new EcomHomeFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, payCodeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    @OnClick(R.id.llBank)
+    public void llBankClicked(View view){
+        TransferFragment payCodeFragment=new TransferFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, payCodeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    @OnClick(R.id.llProfile)
+    public void  llProfileClicked(View view){
+        PersonalInformationFragment payCodeFragment=new PersonalInformationFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, payCodeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 }

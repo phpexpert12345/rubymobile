@@ -101,6 +101,7 @@ public class PaymentNextFragment extends Fragment {
                 dialogOpenForFingerPrint();
             }
         });
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
     }
 
@@ -119,6 +120,7 @@ public class PaymentNextFragment extends Fragment {
                 dialogOpenForFaceIdForRuby();
             }
         });
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
     }
 
@@ -142,7 +144,13 @@ public class PaymentNextFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 
 }

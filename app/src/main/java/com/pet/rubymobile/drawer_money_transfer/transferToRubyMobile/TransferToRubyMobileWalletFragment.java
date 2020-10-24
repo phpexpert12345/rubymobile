@@ -92,4 +92,9 @@ public class TransferToRubyMobileWalletFragment extends Fragment {
         transaction.commit();
 
     }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
+    }
 }

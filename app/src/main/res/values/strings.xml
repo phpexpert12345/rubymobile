@@ -223,4 +223,23 @@
     <string name="payBill">Pay Bills</string>
     <string name="paid">Paid</string>
     <string name="electricityPayment">Electricity Payment</string>
+    <string name="billingInfo">Billing Information</string>
+    <string name="tradingCode">Trading Code</string>
+    <string name="recent">Recent</string>
+    <string name="securePayment">Secure  Payment</string>
+    <string name="supplier">Supplier</string>
+    <string name="customerCode">Customer Code</string>
+    <string name="customer">Customer</string>
+    <string name="paymentCycler">Payment Cycle</string>
+    <string name="paymentOf">Payment of all Electricity Bills of N.Electricity A</string>
+    <string name="how_to_get_code">How To Get Code</string>
+    <string name="check">Check</string>
+    <string name="time">Time</string>
+    <string name="paymentHistory">Payment History</string>
+    <string name="balance">Balance</string>
+    <string name="mobileNo">Mobile Number</string>
+    <string name="payCode">Pay Code</string>
+    <string name="giveThis">Give this code to the cashier for\npayment</string>
+    <string name="scanCode">Scan Code</string>
+    <string name="scanRuby">Scan Ruby Mobile or Any QR</string>
 </resources>

@@ -102,7 +102,14 @@ public class TransferToRubyMobileWalletNext extends Fragment {
                 transaction.commit();
             }
         });
+
+        dialog.getWindow()
+                .getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 
 }

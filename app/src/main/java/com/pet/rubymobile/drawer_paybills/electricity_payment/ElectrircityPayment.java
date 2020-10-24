@@ -4,11 +4,15 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -18,6 +22,8 @@ import android.view.ViewGroup;
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.drawer_money_transfer.phoneBook.PhoneBookAdapter;
 import com.pet.rubymobile.drawer_money_transfer.phoneBook.PhoneBookFragment;
+import com.pet.rubymobile.drawer_paybills.billing_information.BillingInfoFragment;
+import com.pet.rubymobile.drawer_paybills.billing_informations.BillingInformations;
 
 
 public class ElectrircityPayment extends Fragment {
@@ -33,8 +39,8 @@ public class ElectrircityPayment extends Fragment {
 
     ElectricityPaymentAdapter electricityPaymentAdapter;
 
-    @BindView(R.id.rvElectricityPaymt)
-    RecyclerView rvElectricityPaymt;
+    @BindView(R.id.btnMainScreen)
+    AppCompatButton btnMainScreen;
 
     public ElectrircityPayment() {
         // Required empty public constructor
@@ -80,8 +86,23 @@ public class ElectrircityPayment extends Fragment {
     }
 
     private void viewFinds() {
-        electricityPaymentAdapter = new ElectricityPaymentAdapter(getContext(), ElectrircityPayment.this);
+       /* electricityPaymentAdapter = new ElectricityPaymentAdapter(getContext(), ElectrircityPayment.this);
         rvElectricityPaymt.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-        rvElectricityPaymt.setAdapter(electricityPaymentAdapter);
+        rvElectricityPaymt.setAdapter(electricityPaymentAdapter);*/
+    }
+
+    @OnClick(R.id.btnMainScreen)
+    public void btnMainScreenClicked(View  view){
+        BillingInformations fragment2 = new BillingInformations();
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(android.R.id.content, fragment2);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
     }
 }

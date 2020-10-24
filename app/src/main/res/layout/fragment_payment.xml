@@ -17,6 +17,7 @@
         android:layout_height="60dp">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_centerVertical="true"
             android:background="@drawable/back_status"
@@ -118,7 +119,7 @@
                         android:layout_height="match_parent">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_centerVertical="true"
-                            app:srcCompat="@drawable/ruby_mobile"
+                            app:srcCompat="@drawable/master_card"
                             android:layout_width="@dimen/dp_50"
                             android:layout_height="@dimen/dp_60"
                             />
@@ -158,7 +159,7 @@
                         android:layout_height="match_parent">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_centerVertical="true"
-                            app:srcCompat="@drawable/ruby_mobile"
+                            app:srcCompat="@drawable/net_banking"
                             android:layout_width="@dimen/dp_50"
                             android:layout_height="@dimen/dp_60"
                             />
@@ -199,7 +200,7 @@
                         android:layout_height="match_parent">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_centerVertical="true"
-                            app:srcCompat="@drawable/ruby_mobile"
+                            app:srcCompat="@drawable/emi"
                             android:layout_width="@dimen/dp_50"
                             android:layout_height="@dimen/dp_60"
                             />
@@ -240,7 +241,7 @@
                         android:layout_height="match_parent">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_centerVertical="true"
-                            app:srcCompat="@drawable/ruby_mobile"
+                            app:srcCompat="@drawable/gift"
                             android:layout_width="@dimen/dp_50"
                             android:layout_height="@dimen/dp_60"
                             />
@@ -281,7 +282,7 @@
                         android:layout_height="match_parent">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_centerVertical="true"
-                            app:srcCompat="@drawable/ruby_mobile"
+                            app:srcCompat="@drawable/cash_on_delivery"
                             android:layout_width="@dimen/dp_50"
                             android:layout_height="@dimen/dp_60"
                             />

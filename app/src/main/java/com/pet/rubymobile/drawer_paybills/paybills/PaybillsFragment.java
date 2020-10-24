@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -41,6 +42,8 @@ public class PaybillsFragment extends Fragment {
     RecyclerView rvAddNewInvoice;
     @BindView(R.id.cvUserDetails)
     CardView cvUserDetails;
+    @BindView(R.id.ivBack)
+    AppCompatImageView ivBack;
 
     public PaybillsFragment() {
 
@@ -93,12 +96,17 @@ public class PaybillsFragment extends Fragment {
     }
 
     @OnClick(R.id.cvUserDetails)
-    public void cvUserDetailsClicked(View view){
+    public void cvUserDetailsClicked(View view) {
         ElectrircityPayment fragment2 = new ElectrircityPayment();
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(android.R.id.content, fragment2);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void backClicked(View view) {
+        getActivity().onBackPressed();
     }
 }

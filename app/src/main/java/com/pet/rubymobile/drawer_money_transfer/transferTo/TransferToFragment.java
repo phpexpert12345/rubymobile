@@ -76,4 +76,9 @@ public class TransferToFragment extends Fragment {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
+    }
 }

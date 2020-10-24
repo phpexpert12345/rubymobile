@@ -121,4 +121,9 @@ public class EcomCategoryInsideCateogryFragment extends Fragment {
 
         dialog.show();
     }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view){
+        getActivity().onBackPressed();
+    }
 }

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_20"
+    android:background="@color/colorLightGrey"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_statusBar"
+        android:background="@drawable/status_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_status"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/colorWhite"
+            android:text="@string/billingInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_margin="@dimen/dp_25"
+        android:layout_below="@+id/relativeLayout_statusBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/supplier"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="Electricity"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/textForColorGrey"/>
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/customerCode"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="+91 98-9876***"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/textForColorGrey"/>
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/customer"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="K.K. Jain"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/textForColorGrey"/>
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/address"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="10/A Madhu Vihar"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/textForColorGrey"/>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvUserDetails"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_80">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rvIdChange"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/ivImage1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:id="@+id/tvName"
+                            android:layout_marginLeft="@dimen/dp_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:text="Pay UGX 300 City Electricity A"
+                            android:textColor="@color/textForColorGreen"
+                            android:textSize="@dimen/sp_10" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUserName"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_below="@+id/tvName"
+                            android:layout_marginLeft="@dimen/dp_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="K.K Jain"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_8" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@+id/tvUserName"
+                            android:layout_marginLeft="@dimen/dp_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="KCA 8768765787****"
+                            android:textColor="@color/textForColorGrey"
+                            android:textSize="@dimen/sp_8" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textSize="@dimen/sp_10"
+                            android:textAllCaps="false"
+                            android:text="@string/paid"
+                            android:layout_margin="@dimen/dp_10"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_15"
+                            android:background="@drawable/button_rounded_login"/>
+
+
+                    </RelativeLayout>
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:background="@drawable/user_profile_picture"
+                        android:id="@+id/ivUser"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_10"
+                        />
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_below="@+id/ivUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sanfransiso_regular"
+            android:id="@+id/btnConfirm"
+            android:background="@drawable/button_rounded_login_typed"
+            android:text="@string/next"
+            android:textColor="@color/colorWhite"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_40"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

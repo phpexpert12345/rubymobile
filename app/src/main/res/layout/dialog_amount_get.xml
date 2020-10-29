@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/login_dialog_corner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginTop="@dimen/sp_20"
+                android:layout_gravity="center"
+                android:background="@drawable/faceid"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/sanfransiso_semibold"
+                android:text="@string/enterTheAmountYou"
+                android:textColor="@color/textForColorGreen"
+                android:textSize="@dimen/sp_20"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:fontFamily="@font/sanfransiso_regular"
+                android:gravity="center"
+                android:textColor="@color/textForColorGreen"
+                android:textColorHint="@color/textForColorGreen"
+                android:textSize="@dimen/sp_20"
+                android:hint="@string/ugx"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:layout_marginRight="@dimen/dp_25"
+                android:layout_marginTop="@dimen/sp_10"
+                android:background="@drawable/only_corner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_dialog_next"
+                android:layout_width="@dimen/dp_140"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@drawable/button_rounded_login_typed"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:text="@string/done"
+                android:textColor="@color/colorWhite" />
+
+
+
+
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+</ScrollView>

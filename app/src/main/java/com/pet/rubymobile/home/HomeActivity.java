@@ -147,7 +147,7 @@ public class HomeActivity extends AppCompatActivity {
         EcomHomeFragment payCodeFragment=new EcomHomeFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(android.R.id.content, payCodeFragment);
+        transaction.add(R.id.home_frame_layout, payCodeFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -167,7 +167,7 @@ public class HomeActivity extends AppCompatActivity {
         PersonalInformationFragment payCodeFragment=new PersonalInformationFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(android.R.id.content, payCodeFragment);
+        transaction.add(R.id.homeFrameTopInvisble, payCodeFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey"
+    tools:context=".drawer_money_transfer.TransferToBankList.TransfetToSelectBankFragment">
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_20"
+        android:id="@+id/relativeLayout_statusBar"
+        android:background="@drawable/status_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_status"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/colorWhite"
+            android:text="@string/allService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/relativeLayout_statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/only_corner"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45">
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/only_left_corner"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/colorWhite"
+                android:text="@string/function"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/textForColorGrey"
+                android:text="@string/receiveTransfer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:background="@drawable/only_right_corner"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/textForColorGrey"
+                android:text="@string/payBill"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_bold"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textColor="@color/textForColorGreen"
+            android:text="@string/function"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/rvAllSrvcFnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_bold"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textColor="@color/textForColorGreen"
+            android:text="@string/payBills"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/rvPayBills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

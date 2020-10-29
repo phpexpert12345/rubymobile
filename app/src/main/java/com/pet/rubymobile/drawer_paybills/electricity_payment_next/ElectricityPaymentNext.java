@@ -14,6 +14,7 @@ import butterknife.OnClick;
 import butterknife.OnTouch;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -62,6 +63,11 @@ public class ElectricityPaymentNext extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_electricity_payment_next, container, false);
+        view.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
         ButterKnife.bind(this, view);
         return view;
     }

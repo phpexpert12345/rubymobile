@@ -30,6 +30,7 @@
 
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:background="@drawable/airtime_data"
                     android:id="@+id/ivAddNewInvoice"
                     android:layout_width="45dp"
                     android:layout_height="45dp"

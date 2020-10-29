@@ -7,12 +7,17 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.deposit.deposit_into_the_wallet.DepositInToTheWalletFragment;
 import com.pet.rubymobile.drawer_ecommerce.EcomHomeFragment;
 import com.pet.rubymobile.drawer_link_account.allServices.AllServiceFragment;
 import com.pet.rubymobile.drawer_money_transfer.transfer.TransferFragment;
 import com.pet.rubymobile.drawer_paybills.paybills.PaybillsFragment;
 import com.pet.rubymobile.drawer_wallet.MyWallet;
 import com.pet.rubymobile.pay_and_scan.payCode.PayCodeFragment;
+import com.pet.rubymobile.receiveMoney.allService.AllServiceReceiveMoneyFragment;
+import com.pet.rubymobile.search.searchFirst.SearchFragment;
+import com.pet.rubymobile.setting.allServices.AllServiceSettingFragment;
+import com.pet.rubymobile.withdraw.withdraw.WithdrawFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +57,7 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
         flagOpenClose = new ArrayList();
         itemTitleName = new ArrayList();
 
-        itemTitleName.add("paybills");
+        itemTitleName.add("Paybills");
         itemTitleName.add("Money Transfer/Receive");
         itemTitleName.add("Wallet");
         itemTitleName.add("Hotel Booking");
@@ -238,34 +243,30 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
         } else if (position == 5) {
-            drawerItemAdapater = new DrawerItemAdapater(context, itemEcom);
-            holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-            holder.rvMenuItem.setAdapter(drawerItemAdapater);
-        } else if (position == 6) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemGiftCard);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
-        } else if (position == 7) {
+        } else if (position == 6) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemMySetting);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
-        } else if (position == 8) {
+        } else if (position == 7) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemManageGroupFriends);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
-        } else if (position == 9) {
+        } else if (position == 8) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemTrasactionHistory);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
-        } else if (position == 10) {
+        } else if (position == 9) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemLoyalityPoints);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
-        } else if (position == 11) {
+        } else if (position == 10) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemAgents);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
-        } else if (position == 12) {
+        } else if (position == 11) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemCreditFacility);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
@@ -295,7 +296,23 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
                     PaybillsFragment allServiceFragment = new PaybillsFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
                 } else if (position == 5) {
-                    PayCodeFragment allServiceFragment = new PayCodeFragment();
+                    DepositInToTheWalletFragment allServiceFragment = new DepositInToTheWalletFragment();
+                    homeActivity.callFragmentFullScreen(allServiceFragment);
+                }else if (position == 6) {
+                    AllServiceSettingFragment allServiceFragment = new AllServiceSettingFragment();
+                    homeActivity.callFragmentFullScreen(allServiceFragment);
+
+                }else if (position == 7) {
+                    //for withdraw flow
+                    AllServiceReceiveMoneyFragment allServiceFragment = new AllServiceReceiveMoneyFragment();
+                    homeActivity.callFragmentFullScreen(allServiceFragment);
+                }else if (position == 8) {
+                    //for withdraw flow
+                    WithdrawFragment allServiceFragment = new WithdrawFragment();
+                    homeActivity.callFragmentFullScreen(allServiceFragment);
+                }else if (position == 9) {
+                    //for withdraw flow
+                    SearchFragment allServiceFragment = new SearchFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
                 }
 

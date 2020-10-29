@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:background="@drawable/login_dialog_corner"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bottum_bar_home"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:text="@string/chooseTheBank"
+                    android:textColor="@color/textForColorGreen"
+                    android:textSize="@dimen/sp_18"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/colorLightGrey"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/ivImage1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBankName"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:layout_marginLeft="@dimen/dp_80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:text="@string/bank"
+                            android:textColor="@color/textForColorGreen"
+                            android:textSize="@dimen/sp_12" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@+id/tvBankName"
+
+                            android:layout_marginLeft="@dimen/dp_80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="Recharge"
+                            android:textColor="@color/textForColorGrey"
+                            android:textSize="@dimen/sp_10" />
+
+
+
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sbi_bank"/>
+                </RelativeLayout>  <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/colorLightGrey"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/ivImage1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBankName1"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:layout_marginLeft="@dimen/dp_80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:text="@string/bank"
+                            android:textColor="@color/textForColorGreen"
+                            android:textSize="@dimen/sp_12" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@+id/tvBankName1"
+
+                            android:layout_marginLeft="@dimen/dp_80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="Recharge"
+                            android:textColor="@color/textForColorGrey"
+                            android:textSize="@dimen/sp_10" />
+
+
+
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sbi_bank"/>
+                </RelativeLayout>
+                <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/colorLightGrey"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/ivImage1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBankName2"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:layout_marginLeft="@dimen/dp_80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_semibold"
+                            android:text="@string/bank"
+                            android:textColor="@color/textForColorGreen"
+                            android:textSize="@dimen/sp_12" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@+id/tvBankName2"
+
+                            android:layout_marginLeft="@dimen/dp_80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="Recharge"
+                            android:textColor="@color/textForColorGrey"
+                            android:textSize="@dimen/sp_10" />
+
+
+
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sbi_bank"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorLightGrey"/>
+
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_90">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:fontFamily="@font/sanfransiso_regular"
+                        android:id="@+id/btn_dialog_next"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_rounded_login_typed"
+                        android:text="@string/cancel_capital"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="@dimen/dp_200"
+                        android:layout_height="@dimen/dp_40"/>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+</ScrollView>

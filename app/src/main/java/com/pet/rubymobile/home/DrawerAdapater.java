@@ -13,6 +13,8 @@ import com.pet.rubymobile.drawer_link_account.allServices.AllServiceFragment;
 import com.pet.rubymobile.drawer_money_transfer.transfer.TransferFragment;
 import com.pet.rubymobile.drawer_paybills.paybills.PaybillsFragment;
 import com.pet.rubymobile.drawer_wallet.MyWallet;
+import com.pet.rubymobile.insentive.coupon.CouponFragment;
+import com.pet.rubymobile.notification.notificationMain.NotificationFragment;
 import com.pet.rubymobile.pay_and_scan.payCode.PayCodeFragment;
 import com.pet.rubymobile.receiveMoney.allService.AllServiceReceiveMoneyFragment;
 import com.pet.rubymobile.search.searchFirst.SearchFragment;
@@ -281,29 +283,35 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
             @Override
             public void onClick(View v) {
                 if (position == 4) {
+                    //ecommerce flow
                     EcomHomeFragment ecomHomeFragment = new EcomHomeFragment();
                     homeActivity.callFragment(ecomHomeFragment);
                 } else if (position == 2) {
+                    //wallet flow
                     MyWallet ecomHomeFragment = new MyWallet();
                     homeActivity.callFragmentTopInvisible(ecomHomeFragment);
                 } else if (position == 1) {
                     TransferFragment ecomHomeFragment = new TransferFragment();
                     homeActivity.callFragmentFullScreen(ecomHomeFragment);
                 } else if (position == 3) {
+                    //Link account flow
                     AllServiceFragment allServiceFragment = new AllServiceFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
                 } else if (position == 0) {
+                    //paybills flow
                     PaybillsFragment allServiceFragment = new PaybillsFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
                 } else if (position == 5) {
+                    //Deposit flow
                     DepositInToTheWalletFragment allServiceFragment = new DepositInToTheWalletFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
                 }else if (position == 6) {
+                    //setting flow
                     AllServiceSettingFragment allServiceFragment = new AllServiceSettingFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
 
                 }else if (position == 7) {
-                    //for withdraw flow
+                    //for Receive money  flow
                     AllServiceReceiveMoneyFragment allServiceFragment = new AllServiceReceiveMoneyFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
                 }else if (position == 8) {
@@ -311,9 +319,18 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
                     WithdrawFragment allServiceFragment = new WithdrawFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
                 }else if (position == 9) {
-                    //for withdraw flow
+                    //for Search flow
                     SearchFragment allServiceFragment = new SearchFragment();
                     homeActivity.callFragmentFullScreen(allServiceFragment);
+                }else if (position == 10) {
+                    //for Nofification Flow
+                    NotificationFragment allServiceFragment = new NotificationFragment();
+                    homeActivity.callFragmentFullScreen(allServiceFragment);
+                }
+                else if (position == 11) {
+                    //for Insentive  Flow
+                    CouponFragment allServiceFragment = new CouponFragment();
+                    homeActivity.callFragmentTopInvisible(allServiceFragment);
                 }
 
             }

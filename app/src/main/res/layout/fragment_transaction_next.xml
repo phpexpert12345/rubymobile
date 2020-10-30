@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_20"
+    android:background="@color/colorLightGrey"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_statusBar"
+        android:background="@drawable/status_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_status"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/colorWhite"
+            android:text="@string/transactionDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_margin="@dimen/dp_25"
+        android:layout_below="@+id/relativeLayout_statusBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"
+            android:layout_margin="@dimen/dp_5"
+            >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:background="@drawable/only_corner_black"
+                        android:id="@+id/rvIdChange"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/ivImage1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:id="@+id/tvName"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="Transfer money from\nMr. Jack"
+                            android:textColor="@color/textForColorGreen"
+                            android:textSize="@dimen/sp_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUserName"
+                            android:layout_below="@+id/tvName"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="Jan 20,2019"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_11" />
+
+
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textSize="@dimen/sp_10"
+                            android:textAllCaps="false"
+                            android:text="@string/successfull"
+                            android:layout_margin="@dimen/dp_10"
+                            android:layout_alignParentRight="true"
+
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_15"
+                            android:background="@drawable/button_rounded_login"/>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:layout_marginBottom="@dimen/dp_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sanfransiso_regular"
+                            android:text="UGX 300"
+                            android:textColor="@color/colorLightGreen"
+                            android:textSize="@dimen/sp_11" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_below="@+id/ivUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/only_corner_black"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/fund"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="Bank"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/textForColorGrey" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/transactioFee"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="Fee"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/textForColorGrey" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/transactionCode"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="2948577"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/textForColorGrey" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/ivImage1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="@string/time"
+                        android:textColor="@color/textForColorGreen"
+                        android:textSize="@dimen/sp_10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sanfransiso_semibold"
+                        android:text="10:20 am,Jan 20,2020"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

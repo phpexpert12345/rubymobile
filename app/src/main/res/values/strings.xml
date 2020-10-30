@@ -282,4 +282,20 @@
     <string name="allService">All Service</string>
     <string name="service">Service</string>
     <string name="fastAccess">Fast Access</string>
+    <string name="notification">Notification</string>
+    <string name="successfull">Sucessfull</string>
+    <string name="sender">Sender</string>
+    <string name="amount">Amount</string>
+    <string name="fund">Fund</string>
+    <string name="transactionCode">Transaction Code</string>
+    <string name="giftCard">Gift Card</string>
+    <string name="points_two">+200 Points</string>
+    <string name="off">50% Off On Purchases</string>
+    <string name="giftDetails">Gift Detail</string>
+    <string name="use">Use</string>
+    <string name="category">Category</string>
+    <string name="incentives">Incentives</string>
+    <string name="points_one">Points 1000</string>
+    <string name="coupons">Coupons</string>
+    <string name="all">All</string>
 </resources>

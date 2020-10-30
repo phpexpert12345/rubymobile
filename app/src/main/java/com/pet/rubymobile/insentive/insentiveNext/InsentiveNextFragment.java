@@ -1,8 +1,7 @@
-package com.pet.rubymobile.setting.settingNew;
+package com.pet.rubymobile.insentive.insentiveNext;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,18 +20,17 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 
 import com.pet.rubymobile.R;
-import com.pet.rubymobile.login.LoginActivity;
-import com.pet.rubymobile.setting.changePassword.ChangePasswordFragment;
-import com.pet.rubymobile.signup.SignUpActivity;
-import com.suke.widget.SwitchButton;
+import com.pet.rubymobile.insentive.points.PointsFragment;
+import com.pet.rubymobile.setting.settingNew.SettingFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class SettingFragment extends Fragment {
+public class InsentiveNextFragment extends Fragment {
 
 
     private static final String ARG_PARAM1 = "param1";
@@ -42,18 +40,19 @@ public class SettingFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    @BindView(R.id.sbFastPayment)
-    SwitchButton sbFastPayment;
-    @BindView(R.id.spAmount)
-    AppCompatSpinner spAmount;
+    @BindView(R.id.spCategory)
+    AppCompatSpinner spCategory;
 
-    public SettingFragment() {
+    @BindView(R.id.spSort)
+    AppCompatSpinner spSort;
+
+    public InsentiveNextFragment() {
         // Required empty public constructor
     }
 
 
-    public static SettingFragment newInstance(String param1, String param2) {
-        SettingFragment fragment = new SettingFragment();
+    public static InsentiveNextFragment newInstance(String param1, String param2) {
+        InsentiveNextFragment fragment = new InsentiveNextFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,8 +72,8 @@ public class SettingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_setting, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_insentive_next, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
@@ -89,37 +88,40 @@ public class SettingFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewFinds();
     }
-    List<String> spSmileAndList;
+
     private void viewFinds() {
-        spSmileAndList= new ArrayList<String>();
-        spSmileAndList.add("UGX 2000");
-        spSmileAndList.add("UGX 3000");
-        spSmileAndList.add("UGX 4000");
-        spSmileAndList.add("UGX 5000");
-        spSmileAndList.add("UGX 6000");
-        spSmileAndList.add("UGX 7000");
-        spSmileAndList.add("UGX 8000");
-      /*  ArrayAdapter<String> spSmileAndAdapter = new ArrayAdapter<String>(getContext(), R.layout.simple_spinner, spSmileAndList);
-        spSmileAndAdapter.setDropDownViewResource(R.layout.spinner_dropdown);
-        spAmount.setAdapter(spSmileAndAdapter);*/
-        CustomAdapter colorAttributeArrayAdapter=new CustomAdapter(getActivity(),R.layout.spinner_dropdown,R.id.tvItemName,spSmileAndList);
-        spAmount.setAdapter(colorAttributeArrayAdapter);
+        List<String> categories = new ArrayList<String>();
+        categories.add("Shopping");
+        categories.add("Restaurant");
+        categories.add("Coffee/Desert");
+        categories.add("Entertainment");
+        categories.add("Super Market");
+        categories.add("See More...");
+        CustomCategoryAdapter colorAttributeArrayAdapter1=new CustomCategoryAdapter(getActivity(),R.layout.spinner_dropdown,R.id.tvItemName,categories);
+        spCategory.setAdapter(colorAttributeArrayAdapter1);
+
+
+        List<String> sort = new ArrayList<String>();
+        sort.add("All");
+        sort.add("Most Popular");
+        sort.add("Latest");
+        sort.add("Lowest Points");
+        sort.add("Highest Point");
+        sort.add("Closest to me");
+        CustomCategoryAdapter colorAttributeArrayAdapter=new CustomCategoryAdapter(getActivity(),R.layout.spinner_dropdown,R.id.tvItemName,sort);
+        spSort.setAdapter(colorAttributeArrayAdapter);
     }
 
-
-
-
-
-
-
-    public class CustomAdapter extends ArrayAdapter<String> {
+    public class CustomCategoryAdapter extends ArrayAdapter<String> {
 
         LayoutInflater flater;
+        List<String> list;
 
-        public CustomAdapter(Activity context,int resouceId, int textviewId, List<String> list){
+        public CustomCategoryAdapter(Activity context, int resouceId, int textviewId, List<String> list){
 
             super(context,resouceId,textviewId, list);
             flater = context.getLayoutInflater();
+            this.list=list;
         }
 
         @Override
@@ -130,7 +132,7 @@ public class SettingFragment extends Fragment {
             View rowview = flater.inflate(R.layout.simple_spinner,null,true);
 
             AppCompatTextView txtTitle = rowview.findViewById(R.id.tvItemName);
-            txtTitle.setText(spSmileAndList.get(position).toString());
+            txtTitle.setText(list.get(position).toString());
 
 
 
@@ -138,17 +140,9 @@ public class SettingFragment extends Fragment {
         }
     }
 
-
-    @OnClick(R.id.btnSignOut)
-    public void btnSignOutClicked(View view){
-        Intent intent=new Intent(getContext(),LoginActivity.class);
-        startActivity(intent);
-        getActivity().finish();
-    }
-
-    @OnClick(R.id.rvChangePassword)
-    public void rvChangePasswordClicked(View view){
-        ChangePasswordFragment fragment2 = new ChangePasswordFragment();
+    @OnClick(R.id.cvFirst)
+    public void ivFirstClicked(View view){
+        PointsFragment fragment2 = new PointsFragment();
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(android.R.id.content, fragment2);

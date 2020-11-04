@@ -13,6 +13,7 @@
     <color name="red">#FF0000</color>
     <color name="color_orange">#FF7F50</color>
     <color name="colorLightGreen">#46b751</color>
+    <color name="home_bottom">#0147CB</color>
 
 
 
@@ -23,9 +24,12 @@
     <color name="untyped_button_color_light">#cee1ff</color>
 
 
-    //custom status bar colors
+    <!--//custom status bar colors-->
     <color name="top_color">#103576</color>
     <color name="middle_color">#0f459f</color>
     <color name="bottom_color">#094cbc</color>
+
+    <color name="reg_button">#1B80F6</color>
+
 
 </resources>

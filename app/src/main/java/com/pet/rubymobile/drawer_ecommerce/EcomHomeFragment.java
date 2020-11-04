@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -29,31 +30,19 @@ import java.util.List;
 public class EcomHomeFragment extends Fragment {
     @BindView(R.id.rvCategoryScnd)
     RecyclerView rvCategoryScnd;
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
     CategoryEcomAdapater categoryScndAdapater;
     private List itemName;
-
 
     public EcomHomeFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EcomHomeFragmentn.
-     */
-    // TODO: Rename and change types and number of parameters
     public static EcomHomeFragment newInstance(String param1, String param2) {
         EcomHomeFragment fragment = new EcomHomeFragment();
         Bundle args = new Bundle();
@@ -73,23 +62,21 @@ public class EcomHomeFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_ecom_home_fragmentn, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_ecom_home_fragmentn, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        itemName=new ArrayList();
+        itemName = new ArrayList();
         itemName.add("Beauty");
         itemName.add("Mobile Phone");
         itemName.add("Men's Fashion");
@@ -110,7 +97,7 @@ public class EcomHomeFragment extends Fragment {
         itemName.add("Beauty");
         itemName.add("Mobile Phone");
         itemName.add("Men's Fashion");
-        categoryScndAdapater = new CategoryEcomAdapater(getContext(),EcomHomeFragment.this,itemName);
+        categoryScndAdapater = new CategoryEcomAdapater(getContext(), EcomHomeFragment.this, itemName);
         rvCategoryScnd.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rvCategoryScnd.setAdapter(categoryScndAdapater);
     }

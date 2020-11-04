@@ -86,7 +86,7 @@ public class TutorialActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btnRegister:
-                startActivity(new Intent(TutorialActivity.this, SignUpActivity.class));
+                startActivity(new Intent(TutorialActivity.this, RegisterActivity.class)); //SignUpActivity
                 break;
             case R.id.btnSignIn:
                     startActivity(new Intent(TutorialActivity.this, LoginActivity.class));

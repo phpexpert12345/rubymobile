@@ -76,7 +76,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
     private static RemoteViews contentView;
     private static Notification notification;
     private static NotificationManager notificationManager;

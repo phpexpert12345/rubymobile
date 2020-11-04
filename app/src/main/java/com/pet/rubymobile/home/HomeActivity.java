@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -46,6 +47,14 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView rvNavigationDrawer;
     @BindView(R.id.llScanAnyQr)
     LinearLayout llScanAnyQr;
+    @BindView(R.id.ivSanCode)
+    AppCompatImageView ivSanCode;
+    @BindView(R.id.ivShop)
+    AppCompatImageView ivShop;
+    @BindView(R.id.ivBank)
+    AppCompatImageView ivBank;
+    @BindView(R.id.ivMe)
+    AppCompatImageView ivMe;
 
     DrawerLayout drawer;
     DrawerAdapater drawerAdapater;
@@ -76,6 +85,13 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void viewFinds() {
+        //for white bottom navigation images programatically
+        ivSanCode.setColorFilter(getApplicationContext().getResources().getColor(R.color.colorWhite));
+        ivShop.setColorFilter(getApplicationContext().getResources().getColor(R.color.colorWhite));
+        ivBank.setColorFilter(getApplicationContext().getResources().getColor(R.color.colorWhite));
+        ivMe.setColorFilter(getApplicationContext().getResources().getColor(R.color.colorWhite));
+
+
         drawerAdapater = new DrawerAdapater(getApplicationContext(), HomeActivity.this);
         rvNavigationDrawer.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         rvNavigationDrawer.setAdapter(drawerAdapater);
@@ -133,8 +149,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.llScanAnyQr)
-    public void llScanAnyQrClicked(View view){
-        PayCodeFragment payCodeFragment=new PayCodeFragment();
+    public void llScanAnyQrClicked(View view) {
+        PayCodeFragment payCodeFragment = new PayCodeFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, payCodeFragment);
@@ -143,8 +159,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.llShop)
-    public  void llShopClicked(View view){
-        EcomHomeFragment payCodeFragment=new EcomHomeFragment();
+    public void llShopClicked(View view) {
+        EcomHomeFragment payCodeFragment = new EcomHomeFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.home_frame_layout, payCodeFragment);
@@ -153,8 +169,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.llBank)
-    public void llBankClicked(View view){
-        TransferFragment payCodeFragment=new TransferFragment();
+    public void llBankClicked(View view) {
+        TransferFragment payCodeFragment = new TransferFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, payCodeFragment);
@@ -163,8 +179,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.llProfile)
-    public void  llProfileClicked(View view){
-        PersonalInformationFragment payCodeFragment=new PersonalInformationFragment();
+    public void llProfileClicked(View view) {
+        PersonalInformationFragment payCodeFragment = new PersonalInformationFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.homeFrameTopInvisble, payCodeFragment);

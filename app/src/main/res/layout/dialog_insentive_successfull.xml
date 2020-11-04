@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvMain"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        app:cardElevation="@dimen/dp_10"
+                        app:cardCornerRadius="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:layout_marginRight="@dimen/dp_25"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dp_60"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/successfullGift"
+                                android:textSize="@dimen/sp_15"
+                                android:fontFamily="@font/sanfransiso_regular"
+                                android:textColor="@color/textForColorGreen"
+                                android:gravity="center"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gift card are worth using words from\nAug 10/08/2020 To Oct 1008/2020"
+                                android:textSize="@dimen/sp_10"
+                                android:fontFamily="@font/sanfransiso_regular"
+                                android:textColor="@color/textForColorGrey"
+                                android:gravity="center"/>
+
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:background="@drawable/status_bar_login"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_45">
+
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:id="@+id/rvCancel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_45">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_margin="@dimen/dp_2"
+                                        android:background="@color/colorWhite"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/cancel"
+                                        android:textSize="@dimen/sp_12"
+                                        android:gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/sanfransiso_regular"
+                                        android:textColor="@color/colorBlack"
+                                        android:textAllCaps="true"
+                                        />
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/next"
+                                        android:textSize="@dimen/sp_12"
+                                        android:gravity="center"
+
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/sanfransiso_regular"
+                                        android:textColor="@color/colorWhite"
+                                        android:textAllCaps="true"
+                                        />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/rounded_for_insentive"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivFaceIdWhite"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/gift"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+</ScrollView>

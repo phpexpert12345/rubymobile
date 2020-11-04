@@ -3,7 +3,10 @@ package com.pet.rubymobile.insentive.points;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -11,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.insentive.pointsNext.PointsNextFragment;
+import com.pet.rubymobile.setting.changePassword.ChangePasswordFragment;
 
 public class PointsFragment extends Fragment {
 
@@ -56,5 +61,15 @@ public class PointsFragment extends Fragment {
         });
         ButterKnife.bind(this,view);
         return view;
+    }
+
+    @OnClick(R.id.rvDetails)
+    public  void rvDetailsClicked(View  view){
+        PointsNextFragment fragment2 = new PointsNextFragment();
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(android.R.id.content, fragment2);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

@@ -4,7 +4,8 @@
     android:fillViewport="true"
     android:background="@color/colorWhite"
     xmlns:android="http://schemas.android.com/apk/res/android" >
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,12 +13,14 @@
     android:background="@color/textForColorGreen"
     android:layout_marginBottom="@dimen/dp_90"
     tools:context=".home.ui.home.HomeFragment">
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_80">
 
     </androidx.viewpager.widget.ViewPager>
+
     <com.google.android.material.tabs.TabLayout
         android:layout_marginTop="@dimen/dp_70"
         app:tabBackground="@drawable/tab_selector_viewpager"

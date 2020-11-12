@@ -23,17 +23,11 @@ import android.view.ViewGroup;
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.drawer_paybills.electricity_payment.ElectrircityPayment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PaybillsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class PaybillsFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     AddNewInvoiceAdapter addNewInvoiceAdapter;
@@ -90,8 +84,8 @@ public class PaybillsFragment extends Fragment {
 
     private void viewFinds() {
         //for AddNewInvoice Data adapter
-        addNewInvoiceAdapter = new AddNewInvoiceAdapter(getContext(), PaybillsFragment.this);
-        rvAddNewInvoice.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        addNewInvoiceAdapter = new AddNewInvoiceAdapter(getActivity(), PaybillsFragment.this);
+        rvAddNewInvoice.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvAddNewInvoice.setAdapter(addNewInvoiceAdapter);
     }
 

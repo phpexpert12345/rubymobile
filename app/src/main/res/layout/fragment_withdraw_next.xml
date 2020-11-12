@@ -266,11 +266,12 @@
             android:id="@+id/btnNext"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_width="@dimen/dp_220"
-            android:layout_height="@dimen/dp_45"
+            android:textSize="@dimen/sp_15"
+            android:layout_height="@dimen/dp_40"
             android:background="@drawable/button_rounded_login_typed"
             android:text="@string/next"
             android:textColor="@color/colorWhite"
-            android:fontFamily="@font/sanfransiso_regular"
+            android:fontFamily="@font/sanfransiso_semibold"
             android:layout_gravity="center"/>
     </LinearLayout>
 

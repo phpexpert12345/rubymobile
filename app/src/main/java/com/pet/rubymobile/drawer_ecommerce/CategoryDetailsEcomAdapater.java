@@ -16,26 +16,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CategoryDetailsEcomAdapater extends RecyclerView.Adapter<CategoryDetailsEcomAdapater.HomeProfile> {
 
-   Context context;
+    Context context;
     EcomCatDetailsFragment ecomCatDetailsFragment;
-    public CategoryDetailsEcomAdapater(Context context){
-        this.context=context;
 
+    public CategoryDetailsEcomAdapater(Context context) {
+        this.context = context;
+    }
+
+    public CategoryDetailsEcomAdapater(Context context, EcomCatDetailsFragment ecomCatDetailsFragment) {
+        this.context = context;
+        this.ecomCatDetailsFragment = ecomCatDetailsFragment;
 
     }
 
-    public CategoryDetailsEcomAdapater(Context context,EcomCatDetailsFragment ecomCatDetailsFragment){
-        this.context=context;
-        this.ecomCatDetailsFragment=ecomCatDetailsFragment;
-
-    }
     @NonNull
     @Override
     public CategoryDetailsEcomAdapater.HomeProfile onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_ecom_category_details,parent,false);
-        CategoryDetailsEcomAdapater.HomeProfile homeProfile=new CategoryDetailsEcomAdapater.HomeProfile(view);
-
-
+        View view = LayoutInflater.from(context).inflate(R.layout.item_ecom_category_details, parent, false);
+        CategoryDetailsEcomAdapater.HomeProfile homeProfile = new CategoryDetailsEcomAdapater.HomeProfile(view);
         return homeProfile;
     }
 
@@ -52,28 +50,19 @@ public class CategoryDetailsEcomAdapater extends RecyclerView.Adapter<CategoryDe
                 fragmentTransaction.commit();
             }
         });
-
-
-
-
     }
 
     @Override
     public int getItemCount() {
         return 8;
     }
-    public class HomeProfile extends RecyclerView.ViewHolder{
+
+    public class HomeProfile extends RecyclerView.ViewHolder {
         RelativeLayout rvTopLayout;
 
         public HomeProfile(@NonNull View itemView) {
             super(itemView);
-            rvTopLayout=itemView.findViewById(R.id.rvTopLayout);
-
-
-
+            rvTopLayout = itemView.findViewById(R.id.rvTopLayout);
         }
     }
-
-
-
 }

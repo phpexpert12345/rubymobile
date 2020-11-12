@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dp_20"
     android:layout_height="wrap_content"
     android:background="@color/colorLightGrey"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -13,35 +14,26 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivBack"
-            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
             android:layout_centerVertical="true"
             android:background="@drawable/back_status"
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"/>
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_centerInParent="true"
-            android:textSize="@dimen/dp_15"
+            android:textSize="@dimen/sp_18"
+            android:fontFamily="@font/sanfransiso_semibold"
             android:textColor="@color/colorWhite"
             android:text="@string/coupons"
+            android:textAllCaps="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-
-
-
-
-
-
-
-
-
-
-
     </RelativeLayout>
+
     <LinearLayout
-        android:layout_margin="@dimen/dp_25"
+        android:layout_margin="@dimen/dp_10"
         android:layout_below="@+id/relativeLayout_statusBar"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -50,12 +42,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCoupon"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-
-
-
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

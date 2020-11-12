@@ -96,13 +96,13 @@ public class SearchFragment extends Fragment {
     }
     private void viewFinds() {
         //for Function Data adapter
-        functionSearchAdapter = new FunctionSearcAdapter(getContext(), SearchFragment.this);
-        rvAllSrvcFnc.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        functionSearchAdapter = new FunctionSearcAdapter(getActivity(), SearchFragment.this);
+        rvAllSrvcFnc.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvAllSrvcFnc.setAdapter(functionSearchAdapter);
 
         //for Function Data adapter
-        payBillsSearchAdapter = new PayBillsSearchAdapter(getContext(), SearchFragment.this);
-        rvPayBills.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        payBillsSearchAdapter = new PayBillsSearchAdapter(getActivity(), SearchFragment.this);
+        rvPayBills.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvPayBills.setAdapter(payBillsSearchAdapter);
 
 
@@ -119,14 +119,14 @@ public class SearchFragment extends Fragment {
 
 
     private void dialogOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialogsearchlist);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         RecyclerView rcSearchList=dialog.findViewById(R.id.rcSearchList);
-        SearchAdapter searchAdapter = new SearchAdapter(getContext(), SearchFragment.this);
-        rcSearchList.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        SearchAdapter searchAdapter = new SearchAdapter(getActivity(), SearchFragment.this);
+        rcSearchList.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         rcSearchList.setAdapter(searchAdapter);
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();

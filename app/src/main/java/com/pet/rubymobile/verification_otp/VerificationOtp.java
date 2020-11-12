@@ -23,6 +23,8 @@ import android.widget.Toast;
 import com.chaos.view.PinView;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.home.HomeActivity;
+import com.pet.rubymobile.view.MainActivity;
 import com.pet.rubymobile.welcome.WelcomeActivity;
 
 public class VerificationOtp extends AppCompatActivity {
@@ -32,19 +34,15 @@ public class VerificationOtp extends AppCompatActivity {
     @BindView(R.id.btn_next)
     AppCompatButton btn_next;
 
-    @BindView(R.id.view)
-    View view;
-
+//    @BindView(R.id.view)
+//    View view;
 
     @BindView(R.id.tv_changePhoneNumber)
     AppCompatTextView tv_changePhoneNumber;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_verification_otp);
         ButterKnife.bind(this);
         viewFinds();
@@ -67,15 +65,15 @@ public class VerificationOtp extends AppCompatActivity {
                 if (editable != null && editable.length() > 0) {
                     btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
                     tv_changePhoneNumber.setTextColor(getResources().getColor(R.color.textForColorGreen));
-                    view.setBackgroundColor(getResources().getColor(R.color.textForColorGreen));
+//                    view.setBackgroundColor(getResources().getColor(R.color.textForColorGreen));
 
                 } else {
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
 
 
                     tv_changePhoneNumber.setTextColor(getResources().getColor(R.color.untyped_button_color));
-                    view.setBackgroundColor(getResources().getColor(R.color.untyped_button_color));
+//                    view.setBackgroundColor(getResources().getColor(R.color.untyped_button_color));
                 }
             }
         });
@@ -85,7 +83,7 @@ public class VerificationOtp extends AppCompatActivity {
 
     @OnClick(R.id.btn_next)
     public void btn_nextClicked(View view) {
-        Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class); //HomeActivity
         startActivity(intent);
     }
 

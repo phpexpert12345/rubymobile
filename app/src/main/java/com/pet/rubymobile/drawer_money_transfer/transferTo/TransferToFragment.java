@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,7 +22,6 @@ import com.pet.rubymobile.drawer_money_transfer.transferToRubyMobileNext.Transfe
 
 public class TransferToFragment extends Fragment {
 
-
     private String mParam1;
     private String mParam2;
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +33,6 @@ public class TransferToFragment extends Fragment {
     public TransferToFragment() {
 
     }
-
 
     public static TransferToFragment newInstance(String param1, String param2) {
         TransferToFragment fragment = new TransferToFragment();
@@ -54,22 +53,20 @@ public class TransferToFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        View view= inflater.inflate(R.layout.fragment_transfer_to, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_transfer_to, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @OnClick(R.id.btnNext)
-    public void btnNextClicked(View view){
-        TransferToRubyMobileWalletNext transferFragment=new TransferToRubyMobileWalletNext();
+    public void btnNextClicked(View view) {
+        TransferToRubyMobileWalletNext transferFragment = new TransferToRubyMobileWalletNext();
         FragmentManager manager = getParentFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, transferFragment);
@@ -78,7 +75,7 @@ public class TransferToFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

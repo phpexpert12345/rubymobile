@@ -5,271 +5,278 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
     tools:context=".home.HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:gravity="center_vertical"
-        android:background="@color/textForColorGreen"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-
-        <LinearLayout
-            android:weightSum="1"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RelativeLayout
-                android:id="@+id/rlNavigation"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:gravity="center_vertical"
-                android:layout_weight=".05"
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="match_parent">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivNavigation"
-                    android:background="@drawable/navigation_humburger"
-                    android:layout_width="@dimen/dp_20"
-                    android:layout_height="@dimen/dp_20"/>
-
-            </RelativeLayout>
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:fontFamily="@font/sanfransiso_regular"
-                android:drawableRight="@drawable/drawable_right_search"
-                android:textColorHint="@color/textForColorGreen"
-                android:textSize="@dimen/dp_12"
-                android:textColor="@color/colorBlack"
-                android:paddingLeft="@dimen/dp_10"
-                android:visibility="invisible"
-                android:hint="@string/ruby_mobile"
-                android:layout_marginLeft="@dimen/dp_15"
-                android:background="@color/colorWhite"
-                android:layout_width="0dp"
-                android:layout_weight=".75"
-                android:layout_height="@dimen/dp_30"/>
+            android:layout_height="60dp"
+            android:background="@color/textForColorGreen"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_10">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNavigation"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/navigation_humburger" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivNavigation"
+                app:srcCompat="@drawable/toolbar_logo" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
-                app:srcCompat="@drawable/scan_qr"
-                android:layout_width="0dp"
-                android:layout_weight=".065"
-                android:layout_height="@dimen/dp_22"/>
+                android:layout_toLeftOf="@+id/ivSearch"
+                app:srcCompat="@drawable/scan_qr" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/ibvNotification"
+                app:srcCompat="@drawable/search_icon" />
 
             <ru.nikartm.support.ImageBadgeView
-                app:ibv_badgePosition="top_right"
-                app:ibv_fixedBadgeRadius="@dimen/dp_7"
-                app:ibv_badgeTextSize="@dimen/sp_8"
-                app:ibv_badgeValue="2"
-                app:ibv_badgeColor="@color/red"
+                android:id="@+id/ibvNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_22"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:src="@drawable/notification"
-                android:layout_width="0dp"
-                android:layout_weight=".065"
-                android:layout_height="@dimen/dp_22"/>
+                app:ibv_badgeColor="@color/red"
+                app:ibv_badgePosition="top_right"
+                app:ibv_badgeTextSize="@dimen/sp_8"
+                app:ibv_badgeValue="2"
+                app:ibv_fixedBadgeRadius="@dimen/dp_7" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
-    </RelativeLayout>
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="gone">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
 
-       <RelativeLayout
-           android:background="@color/home_bottom"
-           android:layout_alignParentBottom="true"
-           android:layout_width="match_parent"
-           android:layout_height="@dimen/dp_65">
+        <include layout="@layout/content_main" />
 
-           <LinearLayout
-               android:orientation="horizontal"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true">
 
-                   <LinearLayout
-                       android:id="@+id/llScanAnyQr"
-                       android:layout_gravity="center"
-                       android:gravity="center"
-                       android:orientation="vertical"
-                       android:layout_width="0dp"
-                       android:layout_weight="1"
-                       android:layout_height="match_parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_above="@id/bottom_navigation"
+                android:background="@drawable/shadow" />
 
-                       <androidx.appcompat.widget.AppCompatImageView
-                           android:src="@drawable/scan_qr"
-                           android:layout_width="@dimen/dp_20"
-                           android:layout_height="@dimen/dp_20"
-                           android:backgroundTint="@color/colorWhite"
-                           android:id="@+id/ivSanCode" />
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_alignParentBottom="true"
+                android:background="@color/textForColorGreen"
+                app:elevation="@dimen/dp_15"
+                app:itemIconTint="@drawable/nav_item_color_state"
+                app:itemTextColor="@drawable/nav_item_color_state"
+                app:menu="@menu/bottom_navigation_main" />
 
-                  <androidx.appcompat.widget.AppCompatTextView
-                      android:fontFamily="@font/sanfransiso_regular"
-                      android:layout_marginTop="@dimen/dp_5"
-                      android:gravity="center"
-                      android:textSize="@dimen/sp_10"
-                      android:text="@string/scanAnyQr"
-                      android:textColor="@color/colorWhite"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
 
-                   </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llScanAnyQr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                   <LinearLayout
-                       android:id="@+id/llShop"
-                       android:layout_width="wrap_content"
-                       android:layout_height="match_parent"
-                       android:layout_gravity="center"
-                       android:layout_weight="1"
-                       android:gravity="center"
-                       android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSanCode"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:backgroundTint="@color/colorWhite"
+                        android:src="@drawable/scan_qr" />
 
-                       <androidx.appcompat.widget.AppCompatImageView
-                           android:backgroundTint="@color/colorWhite"
-                           android:id="@+id/ivShop"
-                           android:layout_width="@dimen/dp_20"
-                           android:layout_height="@dimen/dp_20"
-                           app:srcCompat="@drawable/shop" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/sanfransiso_regular"
+                        android:gravity="center"
+                        android:text="@string/scanAnyQr"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_10" />
 
-                       <androidx.appcompat.widget.AppCompatTextView
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:layout_marginTop="@dimen/dp_5"
-                           android:fontFamily="@font/font"
-                           android:gravity="center"
-                           android:text="@string/shop"
-                           android:textColor="@color/colorWhite"
-                           android:textSize="@dimen/sp_10" />
+                </LinearLayout>
 
-                   </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llShop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                   <LinearLayout
-                       android:id="@+id/llHome"
-                       android:layout_width="@dimen/dp_50"
-                       android:layout_height="@dimen/dp_50"
-                       android:layout_gravity="center"
-                       android:background="@drawable/dark_blue_circle"
-                       android:gravity="center"
-                       android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivShop"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:backgroundTint="@color/colorWhite"
+                        app:srcCompat="@drawable/shop" />
 
-                       <androidx.appcompat.widget.AppCompatImageView
-                           android:layout_width="@dimen/dp_20"
-                           android:layout_height="@dimen/dp_20"
-                           app:srcCompat="@drawable/home" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/font"
+                        android:gravity="center"
+                        android:text="@string/shop"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_10" />
 
-                       <androidx.appcompat.widget.AppCompatTextView
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:layout_marginTop="@dimen/dp_5"
-                           android:fontFamily="@font/font"
-                           android:gravity="center"
-                           android:text="@string/home"
-                           android:textColor="@color/colorWhite"
-                           android:textSize="@dimen/sp_10" />
+                </LinearLayout>
 
-                   </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llHome"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dark_blue_circle"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                   <LinearLayout
-                       android:id="@+id/llBank"
-                       android:layout_gravity="center"
-                       android:gravity="center"
-                       android:orientation="vertical"
-                       android:layout_width="0dp"
-                       android:layout_weight="1"
-                       android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        app:srcCompat="@drawable/home" />
 
-                       <androidx.appcompat.widget.AppCompatImageView
-                           app:srcCompat="@drawable/bank"
-                           android:backgroundTint="@color/colorWhite"
-                           android:id="@+id/ivBank"
-                           android:layout_width="@dimen/dp_20"
-                           android:layout_height="@dimen/dp_20"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/font"
+                        android:gravity="center"
+                        android:text="@string/home"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_10" />
 
-                  <androidx.appcompat.widget.AppCompatTextView
-                      android:fontFamily="@font/sanfransiso_regular"
-                      android:layout_marginTop="@dimen/dp_5"
-                      android:gravity="center"
-                      android:textSize="@dimen/sp_10"
-                      android:text="@string/bank"
-                      android:textColor="@color/colorWhite"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"/>
+                </LinearLayout>
 
-                   </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llBank"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                   <LinearLayout
-                       android:layout_gravity="center"
-                       android:gravity="center"
-                       android:orientation="vertical"
-                       android:layout_width="0dp"
-                       android:layout_weight="1"
-                       android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBank"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:backgroundTint="@color/colorWhite"
+                        app:srcCompat="@drawable/bank" />
 
-                       <androidx.appcompat.widget.AppCompatImageView
-                           android:backgroundTint="@color/colorWhite"
-                           android:id="@+id/ivMe"
-                           app:srcCompat="@drawable/ic_profile"
-                           android:layout_width="@dimen/dp_20"
-                           android:layout_height="@dimen/dp_20"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/sanfransiso_regular"
+                        android:gravity="center"
+                        android:text="@string/bank"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_10" />
 
-                  <androidx.appcompat.widget.AppCompatTextView
-                      android:id="@+id/llProfile"
-                      android:fontFamily="@font/sanfransiso_regular"
-                      android:layout_marginTop="@dimen/dp_5"
-                      android:gravity="center"
-                      android:textSize="@dimen/sp_10"
-                      android:text="@string/me"
-                      android:textColor="@color/colorWhite"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"/>
+                </LinearLayout>
 
-                   </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-           </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMe"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:backgroundTint="@color/colorWhite"
+                        app:srcCompat="@drawable/ic_profile" />
 
-       </RelativeLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/llProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/sanfransiso_regular"
+                        android:gravity="center"
+                        android:text="@string/me"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/home_frame_layout"
-        android:layout_marginBottom="@dimen/dp_65"
-        android:layout_marginTop="@dimen/dp_55"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_65" />
 
     <FrameLayout
         android:id="@+id/homeFrameTopInvisble"
-        android:layout_marginBottom="@dimen/dp_65"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_65" />
 
 </RelativeLayout>

@@ -72,8 +72,8 @@ public class UsePointsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        receivePointsAdapter = new UsePointsAdapter(getContext(), UsePointsFragment.this);
-        rvUsePoints.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        receivePointsAdapter = new UsePointsAdapter(getActivity(), UsePointsFragment.this);
+        rvUsePoints.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         rvUsePoints.setAdapter(receivePointsAdapter);
     }
 }

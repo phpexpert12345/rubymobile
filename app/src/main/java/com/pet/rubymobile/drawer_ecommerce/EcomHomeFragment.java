@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,16 +20,12 @@ import android.view.ViewGroup;
 
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.home.ui.home.CategoryScndAdapater;
+import com.pet.rubymobile.interfaces.ItemClickViewPositionListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link EcomHomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class EcomHomeFragment extends Fragment {
+public class EcomHomeFragment extends Fragment implements ItemClickViewPositionListener {
     @BindView(R.id.rvCategoryScnd)
     RecyclerView rvCategoryScnd;
     private static final String ARG_PARAM1 = "param1";
@@ -97,8 +95,19 @@ public class EcomHomeFragment extends Fragment {
         itemName.add("Beauty");
         itemName.add("Mobile Phone");
         itemName.add("Men's Fashion");
-        categoryScndAdapater = new CategoryEcomAdapater(getContext(), EcomHomeFragment.this, itemName);
-        rvCategoryScnd.setLayoutManager(new GridLayoutManager(getContext(), 4));
+        categoryScndAdapater = new CategoryEcomAdapater(getActivity(), itemName);
+        rvCategoryScnd.setLayoutManager(new GridLayoutManager(getActivity(), 4));
         rvCategoryScnd.setAdapter(categoryScndAdapater);
+        categoryScndAdapater.setClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(View view, int position) {
+        Fragment fragment2 = new EcomCatDetailsFragment();
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(android.R.id.content, fragment2);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_20"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:gravity="center"
+            android:text="@string/scanRuby"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp_16" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            app:cardCornerRadius="@dimen/dp_20"
+            app:cardElevation="@dimen/dp_5">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_250"
+                android:layout_height="@dimen/dp_250"
+                android:layout_gravity="center"
+                android:background="@drawable/barcode_scan" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/sanfransiso_bold"
+            android:gravity="center"
+            android:text="Maecus Lattive"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sanfransiso_regular"
+            android:gravity="center"
+            android:text="Scan to pay@mercus_lattive"
+            android:textColor="@color/textForColorGrey"
+            android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPaycode"
+                    android:layout_width="@dimen/dp_65"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/pay_code" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivPaycode"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:gravity="center"
+                    android:text="@string/payCode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_16" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivScanCode"
+                    android:layout_width="@dimen/dp_65"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bar_code" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivScanCode"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:fontFamily="@font/sanfransiso_semibold"
+                    android:gravity="center"
+                    android:text="@string/scanCode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/sp_16" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

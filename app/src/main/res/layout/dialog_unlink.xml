@@ -67,8 +67,8 @@
                     android:layout_height="@dimen/dp_40"/>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:textSize="@dimen/sp_16"
-                    android:fontFamily="@font/sanfransiso_regular"
+                    android:textSize="@dimen/sp_15"
+                    android:fontFamily="@font/sanfransiso_semibold"
                     android:id="@+id/btnYes"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"

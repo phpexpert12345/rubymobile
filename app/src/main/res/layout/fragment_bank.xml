@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/dp_20"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorLightGrey">
 
@@ -129,16 +128,15 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
-
-
         <androidx.appcompat.widget.AppCompatButton
 
             android:layout_marginTop="@dimen/dp_30"
             android:layout_gravity="center"
-            android:fontFamily="@font/sanfransiso_regular"
+            android:fontFamily="@font/sanfransiso_semibold"
             android:id="@+id/btnNext"
             android:background="@drawable/button_rounded_login_typed"
             android:text="@string/next"
+            android:textSize="@dimen/sp_15"
             android:textColor="@color/colorWhite"
             android:layout_width="@dimen/dp_200"
             android:layout_height="@dimen/dp_40"/>

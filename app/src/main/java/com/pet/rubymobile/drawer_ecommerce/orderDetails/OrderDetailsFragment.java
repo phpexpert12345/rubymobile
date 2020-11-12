@@ -80,7 +80,7 @@ public class OrderDetailsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        orderDetailsEcomAdapater = new OrderDetailsEcomAdapater(getContext(),OrderDetailsFragment.this);
+        orderDetailsEcomAdapater = new OrderDetailsEcomAdapater(getActivity(),OrderDetailsFragment.this);
         rvOrderDetails.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvOrderDetails.setAdapter(orderDetailsEcomAdapater);
     }

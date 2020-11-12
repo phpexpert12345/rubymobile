@@ -84,13 +84,13 @@ public class AllServiceSettingFragment extends Fragment {
 
     private void viewFinds() {
         //for Function Data adapter
-        functionSettingAdapter = new FunctionSettingAdapter(getContext(), AllServiceSettingFragment.this);
-        rvAllSrvcFnc.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        functionSettingAdapter = new FunctionSettingAdapter(getActivity(), AllServiceSettingFragment.this);
+        rvAllSrvcFnc.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvAllSrvcFnc.setAdapter(functionSettingAdapter);
 
         //for Function Data adapter
-        payBillsSettingAdapter = new PayBillsSettingAdapter(getContext(), AllServiceSettingFragment.this);
-        rvPayBills.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        payBillsSettingAdapter = new PayBillsSettingAdapter(getActivity(), AllServiceSettingFragment.this);
+        rvPayBills.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvPayBills.setAdapter(payBillsSettingAdapter);
 
     }

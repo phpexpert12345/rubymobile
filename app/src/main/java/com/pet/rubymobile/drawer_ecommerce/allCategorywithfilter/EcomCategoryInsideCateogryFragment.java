@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -26,12 +27,9 @@ import com.pet.rubymobile.drawer_ecommerce.CategoryInsideCategoryEcomAdapater;
 
 public class EcomCategoryInsideCateogryFragment extends Fragment {
 
-
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -46,7 +44,6 @@ public class EcomCategoryInsideCateogryFragment extends Fragment {
     public EcomCategoryInsideCateogryFragment() {
 
     }
-
 
     public static EcomCategoryInsideCateogryFragment newInstance(String param1, String param2) {
         EcomCategoryInsideCateogryFragment fragment = new EcomCategoryInsideCateogryFragment();
@@ -67,8 +64,7 @@ public class EcomCategoryInsideCateogryFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ecom_category_inside_cateogry, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
@@ -88,33 +84,29 @@ public class EcomCategoryInsideCateogryFragment extends Fragment {
     }
 
     private void viewFinds() {
-        categoryDetailsEcomAdapater = new CategoryInsideCategoryEcomAdapater(getContext(),EcomCategoryInsideCateogryFragment.this);
-        rvSubCategory.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        categoryDetailsEcomAdapater = new CategoryInsideCategoryEcomAdapater(getActivity(), EcomCategoryInsideCateogryFragment.this);
+        rvSubCategory.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         rvSubCategory.setAdapter(categoryDetailsEcomAdapater);
-
-
     }
-
 
     @OnClick(R.id.llSort)
     public void llSortClicked(View view) {
         dialogOpen();
-
     }
 
     private void dialogOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_filter);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         RecyclerView rvBrand = dialog.findViewById(R.id.rvBrand);
         RecyclerView rvInternalMemory = dialog.findViewById(R.id.rvInternalMemory);
-        BrandAdapter categoryThirdAdapater = new BrandAdapter(getContext());
+        BrandAdapter categoryThirdAdapater = new BrandAdapter(getActivity());
         rvBrand.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         rvBrand.setAdapter(categoryThirdAdapater);
 
-        BrandAdapter rvInternalMemoryAdapter = new BrandAdapter(getContext());
+        BrandAdapter rvInternalMemoryAdapter = new BrandAdapter(getActivity());
         rvInternalMemory.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         rvInternalMemory.setAdapter(rvInternalMemoryAdapter);
 
@@ -123,7 +115,7 @@ public class EcomCategoryInsideCateogryFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

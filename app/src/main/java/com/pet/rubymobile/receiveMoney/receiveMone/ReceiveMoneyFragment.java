@@ -85,7 +85,7 @@ public class ReceiveMoneyFragment extends Fragment {
     }
 
     private void dialogOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_amount_get);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -108,5 +108,10 @@ public class ReceiveMoneyFragment extends Fragment {
         dialog.getWindow()
                 .getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view) {
+        getActivity().onBackPressed();
     }
 }

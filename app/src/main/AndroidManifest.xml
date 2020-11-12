@@ -8,13 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/app_main"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.Toolbar">
 
         <activity
-
             android:name=".home.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
+
         <activity android:name=".forgot_password.IntroductionsActivity" />
         <activity android:name=".forgot_password.ForgotPasswordActivity" />
         <activity android:name=".signup.InformationActivity" />
@@ -32,8 +32,15 @@
         <activity android:name=".tutorial.tutorial_activity.TutorialActivity" />
         <activity android:name=".tutorial.tutorial_activity.RegisterActivity" />
         <activity android:name=".signup.SignUpActivity" />
-        <activity android:name=".MainActivity" />
+
+        <activity android:name=".view.MainActivity"
+            android:theme="@style/AppTheme.Toolbar"/>
+
         <activity android:name=".login.LoginActivity" />
+        <activity android:name=".view.BankActivity"/>
+        <activity android:name=".view.ProfileActivity"/>
+        <activity android:name=".view.ScanQRActivity"/>
+        <activity android:name=".view.EcommerceActivity"/>
     </application>
 
 </manifest>

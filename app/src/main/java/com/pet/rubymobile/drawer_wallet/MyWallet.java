@@ -9,6 +9,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -39,7 +40,6 @@ public class MyWallet extends Fragment {
     CardView cvMain;
 
 
-
     public MyWallet() {
 
     }
@@ -64,32 +64,29 @@ public class MyWallet extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        View view= inflater.inflate(R.layout.fragment_my_wallet, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_my_wallet, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @OnClick(R.id.cvMain)
-    public void cvMainClicked(View view){
-        PersonalInformationFragment personalInformationFragment=new PersonalInformationFragment();
+    public void cvMainClicked(View view) {
+        PersonalInformationFragment personalInformationFragment = new PersonalInformationFragment();
         FragmentManager manager = getParentFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.homeFrameTopInvisble, personalInformationFragment);
+        transaction.add(android.R.id.content, personalInformationFragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
     }
 
-   @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
-   }
+    }
 }

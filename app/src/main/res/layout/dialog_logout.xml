@@ -49,9 +49,9 @@
 
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:fontFamily="@font/sanfransiso_regular"
+                    android:fontFamily="@font/sanfransiso_semibold"
                     android:layout_centerVertical="true"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_15"
                     android:id="@+id/btn_dialog_next"
                     android:layout_marginRight="@dimen/dp_30"
                     android:layout_alignParentRight="true"

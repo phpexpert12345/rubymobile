@@ -56,6 +56,8 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnProceed"
                     android:layout_centerInParent="true"
+                    android:textSize="@dimen/sp_15"
+                    android:fontFamily="@font/sanfransiso_semibold"
                     android:background="@drawable/button_rounded_login_typed"
                     android:text="@string/proceed"
                     android:textColor="@color/colorWhite"

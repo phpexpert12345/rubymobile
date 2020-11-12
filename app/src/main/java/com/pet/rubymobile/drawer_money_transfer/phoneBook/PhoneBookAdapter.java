@@ -13,11 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class PhoneBookAdapter extends RecyclerView.Adapter<PhoneBookAdapter.HomeProfile> {
 
-   Context context;
+    Context context;
     PhoneBookFragment ecomCatDetailsFragment;
-    public PhoneBookAdapter(Context context, PhoneBookFragment ecomCatDetailsFragment){
-        this.context=context;
-        this.ecomCatDetailsFragment=ecomCatDetailsFragment;
+
+    public PhoneBookAdapter(Context context, PhoneBookFragment ecomCatDetailsFragment) {
+        this.context = context;
+        this.ecomCatDetailsFragment = ecomCatDetailsFragment;
 
     }
 
@@ -25,10 +26,8 @@ public class PhoneBookAdapter extends RecyclerView.Adapter<PhoneBookAdapter.Home
     @NonNull
     @Override
     public PhoneBookAdapter.HomeProfile onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_phone_book,parent,false);
-        PhoneBookAdapter.HomeProfile homeProfile=new PhoneBookAdapter.HomeProfile(view);
-
-
+        View view = LayoutInflater.from(context).inflate(R.layout.item_phone_book, parent, false);
+        PhoneBookAdapter.HomeProfile homeProfile = new PhoneBookAdapter.HomeProfile(view);
         return homeProfile;
     }
 
@@ -48,14 +47,14 @@ public class PhoneBookAdapter extends RecyclerView.Adapter<PhoneBookAdapter.Home
 */
 
 
-
     }
 
     @Override
     public int getItemCount() {
         return 12;
     }
-    public class HomeProfile extends RecyclerView.ViewHolder{
+
+    public class HomeProfile extends RecyclerView.ViewHolder {
         //CardView cvMyOrder;
 
         public HomeProfile(@NonNull View itemView) {
@@ -63,10 +62,8 @@ public class PhoneBookAdapter extends RecyclerView.Adapter<PhoneBookAdapter.Home
             //cvMyOrder=itemView.findViewById(R.id.cvMyOrder);
 
 
-
         }
     }
-
 
 
 }

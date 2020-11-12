@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorLightGrey"
+    android:background="#F0F2F5"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -10,6 +10,10 @@
         android:orientation="vertical"
         android:background="@drawable/top_round_corner_white_bg"
         android:layout_width="match_parent"
+        android:shadowColor="#E4E3E9"
+        android:shadowDx="20"
+        android:shadowDy="10"
+        android:shadowRadius="20"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -20,10 +24,10 @@
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_150"
             android:layout_marginRight="@dimen/dp_10"
-            android:textColor="@color/textForColorGreen"
+            android:textColor="@color/top_color"
             android:layout_marginBottom="@dimen/dp_5"
             android:gravity="center"
-            android:textSize="@dimen/sp_20" />
+            android:textSize="@dimen/sp_22" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:fontFamily="@font/sanfransiso_regular"
@@ -32,15 +36,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_20"
             android:layout_below="@+id/actv_title"
-            android:textColor="@color/textForColorGrey"
-            android:layout_marginTop="@dimen/dp_15"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="@dimen/dp_20"
             android:layout_marginRight="@dimen/dp_20"
             android:paddingStart="@dimen/dp_10"
-            android:text="Dummy text"
             android:paddingEnd="@dimen/dp_10"
             android:layout_marginBottom="@dimen/dp_5"
             android:gravity="center"
-            android:textSize="@dimen/sp_15" />
+            android:textSize="@dimen/sp_17" />
 
     </RelativeLayout>
 

@@ -80,7 +80,7 @@ public class CartFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        cartEcomAdapater = new CartEcomAdapater(getContext());
+        cartEcomAdapater = new CartEcomAdapater(getActivity());
         rvItemList.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvItemList.setAdapter(cartEcomAdapater);
 

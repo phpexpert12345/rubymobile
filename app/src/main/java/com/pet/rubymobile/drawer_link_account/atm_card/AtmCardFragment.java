@@ -80,8 +80,8 @@ public class AtmCardFragment extends Fragment {
     }
 
     private void viewFinds() {
-        atmCardAdapter = new AtmCardAdapter(getContext(), AtmCardFragment.this);
-        rvAtmCard.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        atmCardAdapter = new AtmCardAdapter(getActivity(), AtmCardFragment.this);
+        rvAtmCard.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvAtmCard.setAdapter(atmCardAdapter);
     }
 

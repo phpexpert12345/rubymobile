@@ -93,7 +93,7 @@ public class PersonalInformationFragment extends Fragment {
     }
 
     private void dialogOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_personal_information);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -129,7 +129,7 @@ public class PersonalInformationFragment extends Fragment {
     }
 
     private void dialogDobOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_dob_change);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -145,7 +145,7 @@ public class PersonalInformationFragment extends Fragment {
     }
 
     private void dialogChangePswdOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_change_password);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

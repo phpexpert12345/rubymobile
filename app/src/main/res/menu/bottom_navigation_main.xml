@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_scan_qr"
+        android:enabled="true"
+        android:icon="@drawable/scan_qr"
+        android:title="@string/scanAnyQr"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_shop"
+        android:enabled="true"
+        android:icon="@drawable/shop"
+        android:title="@string/shop"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_home"
+        android:name="com.pet.rubymobile.home.ui.home.HomeFragment"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_bank"
+        android:enabled="true"
+        android:icon="@drawable/bank"
+        android:title="@string/bank"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/me"
+        app:showAsAction="ifRoom" />
+</menu>

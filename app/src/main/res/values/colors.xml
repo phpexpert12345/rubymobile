@@ -2,13 +2,16 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#103576</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGrey">#9B9B9B</color>
+    <color name="lightGrey">#dcdcdc</color>
+    <color name="darkGrey">#7c7c7c</color>
     <color name="colorLightGrey">#EFEFEF</color>
     <color name="colorSilverGrey">#C0C0C0</color>
     <color name="colorPureGrey">#DCDCDC</color>
+    <color name="colorPrimaryRipple">#423F51B5</color>
 
     <color name="red">#FF0000</color>
     <color name="color_orange">#FF7F50</color>
@@ -26,6 +29,7 @@
 
     <!--//custom status bar colors-->
     <color name="top_color">#103576</color>
+    <color name="text_color">#111111</color>
     <color name="middle_color">#0f459f</color>
     <color name="bottom_color">#094cbc</color>
 

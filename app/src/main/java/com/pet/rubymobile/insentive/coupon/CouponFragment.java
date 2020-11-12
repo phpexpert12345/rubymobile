@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -37,7 +38,6 @@ public class CouponFragment extends Fragment {
     public CouponFragment() {
         // Required empty public constructor
     }
-
 
     public static CouponFragment newInstance(String param1, String param2) {
         CouponFragment fragment = new CouponFragment();
@@ -77,8 +77,14 @@ public class CouponFragment extends Fragment {
         viewFinds();
     }
     private void viewFinds() {
-        couponAdapter = new CouponAdapter(getContext(), CouponFragment.this);
-        rvCoupon.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        couponAdapter = new CouponAdapter(getActivity(), CouponFragment.this);
+        rvCoupon.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         rvCoupon.setAdapter(couponAdapter);
+    }
+
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view) {
+        getActivity().onBackPressed();
     }
 }

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_height="match_parent">
+<RelativeLayout android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
         <RelativeLayout
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/relativeLayout_statusBar"
             android:background="@drawable/status_bar_login"
             android:layout_width="match_parent"
@@ -22,23 +19,31 @@
                 android:layout_width="@dimen/dp_25"
                 android:layout_height="@dimen/dp_25"/>
 
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_centerInParent="true"
-                android:textSize="@dimen/dp_15"
+                android:textSize="@dimen/sp_18"
                 android:textColor="@color/colorWhite"
-                android:text="@string/verification_otp"
+                android:textAllCaps="true"
+                android:text="@string/login"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-
-
         </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_next"
+        android:layout_below="@+id/relativeLayout_statusBar"
+        android:scrollbars="none"
+        android:fillViewport="true">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:background="@drawable/welcome_icon"
                 android:layout_marginTop="@dimen/dp_50"
@@ -46,28 +51,25 @@
                 android:layout_width="@dimen/dp_120"
                 android:layout_height="@dimen/dp_120"/>
 
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_bold"
                 android:text="@string/welcome"
-                android:textColor="@color/textForColorGreen"
+                android:textColor="@color/top_color"
                 android:textSize="@dimen/sp_25"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:text="K K JOHN"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_16"
+                android:layout_marginTop="@dimen/dp_10"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_regular"
@@ -75,56 +77,56 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sp_12"
                 android:gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-
-
             <RelativeLayout
-                android:layout_margin="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_70">
-              <androidx.appcompat.widget.AppCompatEditText
-                  android:inputType="textPassword"
-                  android:imeOptions="actionDone"
-                  android:fontFamily="@font/sanfransiso_regular"
-                  android:textSize="@dimen/sp_14"
-                  android:id="@+id/et_passowrd"
-                  android:textColorHint="@color/textForColorGrey"
-                  android:hint="@string/Enter_your_password"
-                  android:background="@null"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
 
-
-                <View
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:layout_below="@+id/et_passowrd"
-                    android:background="@color/textForColorGrey"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ipPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"/>
+                    app:hintTextAppearance="@style/HintText"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_height="wrap_content">
 
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_passowrd"
+                        android:layout_width="match_parent"
+                        app:backgroundTint="@color/lightGrey"
+                        android:fontFamily="@font/sanfransiso_regular"
+                        android:textSize="@dimen/sp_15"
+                        android:singleLine="true"
+                        android:drawableEnd="@drawable/hide_password"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:inputType="textPassword"
+                        android:hint="@string/Enter_your_password"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/top_color"
+                        android:layout_height="wrap_content" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:background="@drawable/hide_password"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="@dimen/sp_20"
-                    android:layout_height="@dimen/sp_20"/>
-
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:fontFamily="@font/sanfransiso_regular"
                     android:id="@+id/tvForgotPassword"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
                     android:text="@string/forgot_password"
+                    android:layout_below="@+id/ipPassword"
+                    android:textSize="@dimen/sp_15"
+                    android:padding="@dimen/dp_10"
                     android:textColor="@color/textForColorGrey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-
             </RelativeLayout>
+
             <View
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/dp_65"
@@ -133,30 +135,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_1"/>
 
-
-
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:fontFamily="@font/sanfransiso_regular"
-                android:id="@+id/btn_next"
-                android:textColor="@color/colorWhite"
-                android:text="@string/next_capital"
-                android:background="@drawable/button_rounded_login"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="@dimen/dp_220"
-                android:layout_height="@dimen/dp_45"/>
-
-
-
-
-
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_regular"
                 android:id="@+id/tv_changePhoneNumber"
-                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_30"
                 android:textSize="@dimen/dp_12"
                 android:gravity="center"
                 android:text="@string/now_quick"
@@ -164,20 +146,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-
-
             <RelativeLayout
                 android:layout_marginTop="@dimen/dp_20"
                 android:layout_marginLeft="@dimen/dp_80"
                 android:layout_marginRight="@dimen/dp_80"
+                android:layout_marginBottom="@dimen/dp_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivFingerPrint"
                     android:background="@drawable/finger_print"
                     android:layout_width="@dimen/dp_60"
                     android:layout_height="@dimen/dp_60"/>
-
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivFaceId"
@@ -186,33 +167,25 @@
                     android:layout_width="@dimen/dp_60"
                     android:layout_height="@dimen/dp_60"/>
 
-
             </RelativeLayout>
         </LinearLayout>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:fontFamily="@font/sanfransiso_regular"
-            android:id="@+id/tv_signOut"
-            android:textColor="@color/textForColorGreen"
-            android:gravity="center"
-             android:text="@string/sign_out"
-            android:layout_marginBottom="@dimen/dp_40"
+
+    </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:id="@+id/btn_next"
+            android:textColor="@color/colorWhite"
             android:layout_alignParentBottom="true"
+            android:textSize="@dimen/sp_15"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:text="@string/next_capital"
+            android:background="@color/textForColorGreen"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-
-
-        <View
-            android:id="@+id/view"
-            android:layout_marginLeft="@dimen/dp_150"
-            android:layout_marginRight="@dimen/dp_150"
-            android:layout_alignParentBottom="true"
-
-            android:layout_marginBottom="@dimen/dp_30"
-            android:background="@color/textForColorGreen"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_1"/>
-
-
     </RelativeLayout>
-</ScrollView>

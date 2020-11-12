@@ -79,8 +79,8 @@ public class IncentivesFragment extends Fragment {
     }
 
     private void viewFinds() {
-        incentivesAdapter = new IncentivesAdapter(getContext(), IncentivesFragment.this);
-        rvIncentives.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        incentivesAdapter = new IncentivesAdapter(getActivity(), IncentivesFragment.this);
+        rvIncentives.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         rvIncentives.setAdapter(incentivesAdapter);
     }
 }

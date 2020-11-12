@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -24,18 +26,10 @@ import com.pet.rubymobile.home.ui.home.FirstFragment;
 import com.pet.rubymobile.home.ui.home.FirstViewPageAdapter;
 import com.pet.rubymobile.home.ui.home.SecondFragment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link EcomCatDetailsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class EcomCatDetailsFragment extends Fragment {
-
-
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -53,7 +47,6 @@ public class EcomCatDetailsFragment extends Fragment {
     public EcomCatDetailsFragment() {
 
     }
-
 
     public static EcomCatDetailsFragment newInstance(String param1, String param2) {
         EcomCatDetailsFragment fragment = new EcomCatDetailsFragment();
@@ -74,16 +67,14 @@ public class EcomCatDetailsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_ecom_cat_details, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_ecom_cat_details, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
 
     }
@@ -95,14 +86,19 @@ public class EcomCatDetailsFragment extends Fragment {
         viewFinds();
     }
 
+
+    @OnClick(R.id.ivBack)
+    public void ivBackClicked(View view) {
+        getActivity().onBackPressed();
+    }
+
     private void viewFinds() {
-        categoryDetailsEcomAdapater = new CategoryDetailsEcomAdapater(getContext(),EcomCatDetailsFragment.this);
-        rvCategoryDetails.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        categoryDetailsEcomAdapater = new CategoryDetailsEcomAdapater(getActivity(), EcomCatDetailsFragment.this);
+        rvCategoryDetails.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         rvCategoryDetails.setAdapter(categoryDetailsEcomAdapater);
     }
 
     private void viewPageCalled() {
-
         categoryEcomViewPgAdapter = new CategoryEcomViewPgAdapter(getChildFragmentManager());
         categoryEcomViewPgAdapter.addFragment(new FirstFragment(), "");
         categoryEcomViewPgAdapter.addFragment(new SecondFragment(), "");

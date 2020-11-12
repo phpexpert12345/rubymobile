@@ -22,13 +22,14 @@ import com.pet.rubymobile.R;
 
 import com.pet.rubymobile.forgot_password.IntroductionsActivity;
 import com.pet.rubymobile.home.HomeActivity;
+import com.pet.rubymobile.verification_otp.VerificationOtp;
 
 public class WelcomeActivity extends AppCompatActivity {
     @BindView(R.id.btn_next)
     AppCompatButton btn_next;
 
-    @BindView(R.id.tv_signOut)
-    AppCompatTextView tv_signOut;
+//    @BindView(R.id.tv_signOut)
+//    AppCompatTextView tv_signOut;
     @BindView(R.id.tvForgotPassword)
     AppCompatTextView tvForgotPassword;
 
@@ -44,8 +45,6 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_welcome);
         ButterKnife.bind(this);
         viewFinds();
@@ -69,7 +68,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
 
                 } else {
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
 
                 }
             }
@@ -78,13 +77,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_next)
     public void btn_nextClicked(View view) {
-        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        startActivity(new Intent(getApplicationContext(), VerificationOtp.class));
     }
 
-    @OnClick(R.id.tv_signOut)
-    public void tv_signOutClicked(View view) {
-        dialogLogout();
-    }
+//    @OnClick(R.id.tv_signOut)
+//    public void tv_signOutClicked(View view) {
+//        dialogLogout();
+//    }
 
     @OnClick(R.id.tvForgotPassword)
     public void tvForgotPasswordClicked(View view) {

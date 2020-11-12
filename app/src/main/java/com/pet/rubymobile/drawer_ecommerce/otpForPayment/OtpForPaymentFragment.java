@@ -107,7 +107,7 @@ public class OtpForPaymentFragment extends Fragment {
 
 
     private void sendAgainDialogOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_signup_send_again);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -131,7 +131,7 @@ public class OtpForPaymentFragment extends Fragment {
     }
 
     private void dialogSure() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_sure_transaction);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

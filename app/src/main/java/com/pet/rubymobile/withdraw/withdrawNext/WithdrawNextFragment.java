@@ -76,7 +76,7 @@ public class WithdrawNextFragment extends Fragment {
         dialogChooseTheBank();
     }
     private void dialogChooseTheBank() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_choose_bank);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

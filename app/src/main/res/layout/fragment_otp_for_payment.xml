@@ -127,16 +127,17 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:fontFamily="@font/sanfransiso_regular"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:id="@+id/btnNext"
                 android:textColor="@color/colorWhite"
                 android:text="@string/next_capital"
-                android:background="@drawable/button_rounded_login"
+                android:background="@drawable/button_rounded_login_typed"
                 android:layout_marginTop="@dimen/dp_50"
                 android:layout_gravity="center"
+                android:textSize="@dimen/sp_15"
                 android:gravity="center"
                 android:layout_width="@dimen/dp_220"
-                android:layout_height="@dimen/dp_45"/>
+                android:layout_height="@dimen/dp_40"/>
 
 
 

@@ -67,12 +67,13 @@
             </LinearLayout>
            <androidx.appcompat.widget.AppCompatButton
                android:textColor="@color/colorLightGreen"
-               android:background="@drawable/button_rounded_login"
+               android:background="@drawable/button_rounded_login_typed"
                android:layout_marginRight="@dimen/dp_10"
                android:layout_marginBottom="@dimen/dp_20"
                android:layout_alignParentBottom="true"
                android:layout_alignParentRight="true"
                android:text="Delivered"
+               android:fontFamily="@font/sanfransiso_semibold"
                android:textAllCaps="false"
                android:layout_width="@dimen/dp_80"
                android:layout_height="@dimen/dp_20"/>

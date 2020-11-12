@@ -47,8 +47,6 @@ public class VerificationOtpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_verification_otp2);
         ButterKnife.bind(this);
         viewFinds();
@@ -74,8 +72,8 @@ public class VerificationOtpActivity extends AppCompatActivity {
                     view.setBackgroundColor(getResources().getColor(R.color.textForColorGreen));
 
                 } else {
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
 
 
                     tv_changePhoneNumber.setTextColor(getResources().getColor(R.color.untyped_button_color));

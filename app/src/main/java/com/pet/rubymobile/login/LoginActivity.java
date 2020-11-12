@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.verification_otp.VerificationOtp;
+import com.pet.rubymobile.welcome.WelcomeActivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,8 +47,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         viewFinds();
@@ -70,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (editable != null && editable.length() > 0) {
                     btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
                 } else {
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
                 }
             }
         });
@@ -130,12 +129,12 @@ public class LoginActivity extends AppCompatActivity {
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        Button btn_dialog_next = dialog.findViewById(R.id.btn_dialog_next);
-        TextView tv_dialog_cancel = dialog.findViewById(R.id.tv_dialog_cancel);
+        AppCompatButton btn_dialog_next = dialog.findViewById(R.id.btn_dialog_next);
+        AppCompatButton tv_dialog_cancel = dialog.findViewById(R.id.tv_dialog_cancel);
         btn_dialog_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent verificationOTP = new Intent(getApplicationContext(), VerificationOtp.class);
+                Intent verificationOTP = new Intent(getApplicationContext(), WelcomeActivity.class);
                 startActivity(verificationOTP);
             }
         });

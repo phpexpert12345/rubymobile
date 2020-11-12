@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -23,18 +19,24 @@
                 android:layout_width="@dimen/dp_20"
                 android:layout_height="@dimen/dp_20"/>
 
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_centerInParent="true"
-                android:textSize="@dimen/dp_15"
+                android:textSize="@dimen/sp_18"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:textColor="@color/colorWhite"
                 android:text="@string/introduction"
+                android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-
-
         </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout_statusBar"
+        android:layout_above="@+id/btnNext"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_marginTop="@dimen/dp_40"
@@ -45,124 +47,119 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:text="@string/instruction"
-                android:textColor="@color/textForColorGreen"
+                android:textColor="@color/top_color"
                 android:textSize="@dimen/sp_18"
+                android:lineSpacingExtra="@dimen/dp_4"
                 android:gravity="center"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:layout_marginTop="@dimen/dp_60"
-                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
                 android:text="@string/please_perfor"
                 android:textColor="@color/colorBlack"
-                android:textSize="@dimen/sp_11"
+                android:fontFamily="@font/sanfransiso_regular"
+                android:lineSpacingExtra="@dimen/dp_4"
+                android:textSize="@dimen/sp_13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-
             <LinearLayout
-                android:layout_marginTop="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <View
 
+                <View
                     android:background="@drawable/selected_dot"
                     android:layout_width="@dimen/dp_15"
                     android:layout_height="@dimen/dp_15"/>
-
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_marginLeft="@dimen/dp_10"
                     android:text="@string/please_fill_instruction"
-                    android:textColor="@color/textForColorGrey"
-                    android:textSize="@dimen/sp_10"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/sp_13"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:fontFamily="@font/sanfransiso_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
-
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginTop="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <View
 
+                <View
                     android:background="@drawable/selected_dot"
                     android:layout_width="@dimen/dp_15"
                     android:layout_height="@dimen/dp_15"/>
-
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_marginLeft="@dimen/dp_10"
                     android:text="@string/you_check_email"
-                    android:textColor="@color/textForColorGrey"
-                    android:textSize="@dimen/sp_10"
+                    android:textColor="@color/darkGrey"
+                    android:fontFamily="@font/sanfransiso_regular"
+                    android:textSize="@dimen/sp_13"
                     android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/dp_4"
                     android:layout_height="wrap_content"/>
 
-
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginTop="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <View
 
+                <View
                     android:background="@drawable/selected_dot"
                     android:layout_width="@dimen/dp_15"
                     android:layout_height="@dimen/dp_15"/>
 
-
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_marginLeft="@dimen/dp_10"
                     android:text="@string/use_the_new"
-                    android:textColor="@color/textForColorGrey"
-                    android:textSize="@dimen/sp_10"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:textColor="@color/darkGrey"
+                    android:fontFamily="@font/sanfransiso_regular"
+                    android:textSize="@dimen/sp_13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
-
             </LinearLayout>
 
+                   </LinearLayout>
 
+    </androidx.core.widget.NestedScrollView>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </LinearLayout>
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_marginBottom="@dimen/dp_50"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:id="@+id/btnNext"
-            android:background="@drawable/button_rounded_login_typed"
+            android:paddingBottom="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_20"
+            android:textSize="@dimen/sp_15"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:background="@color/textForColorGreen"
             android:text="@string/next_capital"
             android:textColor="@color/colorWhite"
-            android:layout_width="@dimen/dp_100"
-            android:layout_height="@dimen/dp_40">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         </androidx.appcompat.widget.AppCompatButton>
 
     </RelativeLayout>
-</ScrollView>

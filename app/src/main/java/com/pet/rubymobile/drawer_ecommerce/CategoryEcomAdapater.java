@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.interfaces.ItemClickViewPositionListener;
 
 import java.util.List;
 
@@ -20,16 +21,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CategoryEcomAdapater extends RecyclerView.Adapter<CategoryEcomAdapater.HomeProfile> {
 
-    Context context;
-    EcomHomeFragment ecomHomeFragment;
+    private Context context;
     private List itemName;
+    private ItemClickViewPositionListener listener;
 
-    public CategoryEcomAdapater(Context context, EcomHomeFragment ecomHomeFragment, List itemName) {
-        this.ecomHomeFragment = ecomHomeFragment;
+    public CategoryEcomAdapater(Context context, List itemName) {
         this.context = context;
         this.itemName = itemName;
-
-
     }
 
     @NonNull
@@ -40,30 +38,14 @@ public class CategoryEcomAdapater extends RecyclerView.Adapter<CategoryEcomAdapa
         return homeProfile;
     }
 
+
+    public void setClickListener(ItemClickViewPositionListener itemClickListener) {
+        this.listener = itemClickListener;
+    }
+
     @Override
     public void onBindViewHolder(@NonNull CategoryEcomAdapater.HomeProfile holder, int position) {
         holder.tvName.setText(itemName.get(position).toString());
-        holder.rvTop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EcomCatDetailsFragment fragment2 = new EcomCatDetailsFragment();
-                FragmentManager fragmentManager = ecomHomeFragment.getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.home_frame_layout, fragment2);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-
-
-
-                /* EcomCatDetailsFragment ecomCatDetailsFragment=new EcomCatDetailsFragment();
-                 FragmentManager fragmentManager = ecomCatDetailsFragment.getActivity().getSupportFragmentManager();
-                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                 fragmentTransaction.add(R.id.home_frame_layout, ecomCatDetailsFragment);
-                 fragmentTransaction.commit();*/
-            }
-        });
-
-
     }
 
     @Override
@@ -71,7 +53,7 @@ public class CategoryEcomAdapater extends RecyclerView.Adapter<CategoryEcomAdapa
         return 20;
     }
 
-    public class HomeProfile extends RecyclerView.ViewHolder {
+    public class HomeProfile extends RecyclerView.ViewHolder implements View.OnClickListener {
         RelativeLayout rvTop;
         AppCompatTextView tvName;
 
@@ -79,10 +61,13 @@ public class CategoryEcomAdapater extends RecyclerView.Adapter<CategoryEcomAdapa
             super(itemView);
             rvTop = itemView.findViewById(R.id.rvTop);
             tvName = itemView.findViewById(R.id.tvName);
+            rvTop.setOnClickListener(this);
+        }
 
-
+        @Override
+        public void onClick(View view) {
+            if (listener != null)
+                listener.onItemClick(view, getAdapterPosition());
         }
     }
-
-
 }

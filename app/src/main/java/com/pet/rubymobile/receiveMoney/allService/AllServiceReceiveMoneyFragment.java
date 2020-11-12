@@ -82,13 +82,13 @@ public class AllServiceReceiveMoneyFragment extends Fragment {
 
     private void viewFinds() {
         //for Receive/Transfer Money adapter
-        allServiceReceiveMoneyFragment = new AllServicesReceiveMoneyAdapter(getContext(), AllServiceReceiveMoneyFragment.this);
-        rvAllSrvcFnc.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        allServiceReceiveMoneyFragment = new AllServicesReceiveMoneyAdapter(getActivity(), AllServiceReceiveMoneyFragment.this);
+        rvAllSrvcFnc.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvAllSrvcFnc.setAdapter(allServiceReceiveMoneyFragment);
 
         //for PayBills Data adapter
-        payBillsAdapter = new PayBillsAdapter(getContext(), AllServiceReceiveMoneyFragment.this);
-        rvPayBills.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        payBillsAdapter = new PayBillsAdapter(getActivity(), AllServiceReceiveMoneyFragment.this);
+        rvPayBills.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvPayBills.setAdapter(payBillsAdapter);
     }
 }

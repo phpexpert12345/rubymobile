@@ -58,6 +58,8 @@
                     android:drawableLeft="@drawable/drawable_left_for_call"
                     android:id="@+id/btn_dialog_next"
                     android:layout_marginRight="@dimen/dp_50"
+                    android:textSize="@dimen/sp_15"
+                    android:fontFamily="@font/sanfransiso_semibold"
                     android:layout_alignParentRight="true"
                     android:background="@drawable/button_rounded_login_typed"
                     android:text="@string/call"

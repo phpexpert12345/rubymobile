@@ -3,24 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <LinearLayout
-        android:layout_marginLeft="@dimen/dp_10"
-        android:layout_marginRight="@dimen/dp_10"
         android:weightSum="4"
+        android:background="@color/textForColorGreen"
         android:layout_width="match_parent"
+        android:orientation="horizontal"
         android:layout_height="wrap_content">
+
         <RelativeLayout
             android:id="@+id/rlPayments"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatImageView
 
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivCategory"
                 app:srcCompat="@drawable/payment"
+                android:layout_centerHorizontal="true"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"/>
 
@@ -29,21 +31,24 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory"
+                android:gravity="center"
                 android:text="Payments"
                 android:textSize="@dimen/sp_12"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/rlFundTransefer"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatImageView
 
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivCategory1"
                 app:srcCompat="@drawable/fund_transfer"
+                android:layout_centerHorizontal="true"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"/>
 
@@ -51,19 +56,23 @@
                 android:fontFamily="@font/sanfransiso_regular"
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
+                android:gravity="center"
                 android:layout_below="@+id/ivCategory1"
                 android:text="Funds Transfer"
                 android:textSize="@dimen/sp_10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
+
         <RelativeLayout
+            android:id="@+id/rlSendMoney"
             android:gravity="center"
         android:layout_weight="1"
         android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatImageView
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_centerHorizontal="true"
                 android:id="@+id/ivCategory2"
                 app:srcCompat="@drawable/send_money"
                 android:layout_width="@dimen/dp_45"
@@ -74,19 +83,22 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory2"
+                android:gravity="center"
                 android:text="Send Money"
                 android:textSize="@dimen/sp_10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/rlAddMoney"
             android:gravity="center"
            android:layout_weight="1"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatImageView
 
+            <androidx.appcompat.widget.AppCompatImageView
+android:layout_centerHorizontal="true"
                 android:id="@+id/ivCategory3"
                 app:srcCompat="@drawable/add_money"
                 android:layout_width="@dimen/dp_45"
@@ -97,9 +109,10 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory3"
+                android:gravity="center"
                 android:text="Add Money"
                 android:textSize="@dimen/sp_10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
 

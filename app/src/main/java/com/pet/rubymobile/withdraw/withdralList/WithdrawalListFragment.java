@@ -82,7 +82,7 @@ public class WithdrawalListFragment extends Fragment {
     }
 
        private void dialogFinerPrintOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_finger_print);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -102,7 +102,7 @@ public class WithdrawalListFragment extends Fragment {
     }
 
     private void dialogFaceIdOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_faceid);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:id="@+id/rvTitle"
-        android:layout_marginLeft="@dimen/dp_15"
-        android:layout_marginRight="@dimen/dp_10"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_35">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_10">
 
-        <View
-            android:layout_centerVertical="true"
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/view"
-            android:background="@drawable/round_view"
             android:layout_width="@dimen/dp_25"
-            android:layout_height="@dimen/dp_25"/>
+            android:layout_height="@dimen/dp_25"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_backspace_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitleName"
-            app:fontFamily="@font/sanfransiso_semibold"
-            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
             android:layout_toRightOf="@+id/view"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:padding="@dimen/dp_10"
+            android:text="Paybills"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/sp_15"
-            android:fontFamily="@font/sanfransiso_semibold"
-            android:text="Paybills"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            app:fontFamily="@font/sanfransiso_semibold" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivDown"
-            android:visibility="gone"
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/down_arrow"
-            android:layout_width="@dimen/dp_15"
-            android:layout_height="@dimen/dp_15"/>
+            android:visibility="gone" />
 
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginLeft="@dimen/dp_55"
-        android:layout_marginRight="@dimen/dp_10"
-        android:layout_below="@+id/rvTitle"
-        android:visibility="gone"
         android:id="@+id/rvMenuItem"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvTitle"
+        android:layout_marginLeft="@dimen/dp_55"
+        android:layout_marginRight="@dimen/dp_10"
+        android:visibility="gone" />
 
 </RelativeLayout>

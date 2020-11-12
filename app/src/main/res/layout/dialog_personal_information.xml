@@ -46,17 +46,20 @@
                 android:layout_height="@dimen/dp_80">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:fontFamily="@font/sanfransiso_regular"
+                    android:fontFamily="@font/sanfransiso_semibold"
                     android:id="@+id/btnChooseGlr"
                     android:background="@drawable/button_rounded_login_typed"
                     android:text="@string/chooseGlry"
                     android:textColor="@color/colorWhite"
                     android:layout_width="@dimen/dp_140"
+                    android:textSize="@dimen/sp_15"
                     android:layout_height="@dimen/dp_40"/>
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:fontFamily="@font/sanfransiso_regular"
+                    android:fontFamily="@font/sanfransiso_semibold"
                     android:id="@+id/btnTakePic"
                     android:layout_alignParentRight="true"
+                    android:textSize="@dimen/sp_15"
                     android:background="@drawable/button_rounded_login_typed"
                     android:text="@string/takePhoto"
                     android:textColor="@color/colorWhite"

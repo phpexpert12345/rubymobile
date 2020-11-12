@@ -373,6 +373,8 @@
             android:id="@+id/btnBuyNow"
             android:layout_marginBottom="@dimen/dp_20"
             android:text="@string/buyNow"
+            android:textSize="@dimen/sp_15"
+            android:fontFamily="@font/sanfransiso_semibold"
             android:textColor="@color/colorWhite"
             android:background="@drawable/button_rounded_login_typed"
             android:layout_gravity="center"

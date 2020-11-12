@@ -159,8 +159,10 @@
                 android:background="@drawable/button_rounded_login_typed"
                 android:layout_marginTop="@dimen/dp_20"
                 android:layout_gravity="center"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:layout_width="@dimen/dp_210"
-                android:layout_height="@dimen/dp_45"
+                android:layout_height="@dimen/dp_40"
+                android:textSize="@dimen/sp_15"
                 />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

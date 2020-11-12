@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:scrollbars="none"
     android:background="@color/colorWhite"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
 <RelativeLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/textForColorGreen"
@@ -29,19 +30,25 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="20dp"/>
+
     <LinearLayout
+        android:id="@+id/llview"
         android:layout_marginTop="@dimen/dp_95"
         android:background="@drawable/login_dialog_corner"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
-            android:layout_margin="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
-                android:textSize="@dimen/sp_13"
+                android:textSize="@dimen/sp_15"
                 android:text="@string/recharge"
                 android:textColor="@color/colorBlack"
                 android:layout_width="wrap_content"
@@ -55,9 +62,20 @@
 
         </RelativeLayout>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/sanfransiso_regular"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="@string/lightining_fast_recharge_amp_bill_payment"
+            android:textColor="@color/colorGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategoryScnd"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_5"
             android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -76,7 +94,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
-                android:textSize="@dimen/sp_13"
+                android:textSize="@dimen/sp_15"
                 android:text="@string/financial_service"
                 android:textColor="@color/colorBlack"
                 android:layout_width="wrap_content"
@@ -93,9 +111,144 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategoryFourth"
             android:layout_width="match_parent"
+            android:paddingBottom="@dimen/dp_10"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/llview"
+    android:background="@color/lightGrey"
+    android:padding="@dimen/dp_10"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGrey"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            app:srcCompat="@drawable/ic_cashback"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCashback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cashback_amp_offers"
+                android:textColor="@color/textForColorGreen"
+                android:textSize="@dimen/sp_15"
+                android:fontFamily="@font/sanfransiso_regular"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCashback"
+                android:text="@string/view_your_scratch_cards_view_transaction_and_manage_account"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/sp_13"
+                android:fontFamily="@font/sanfransiso_regular"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/lightGrey"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_50"
+            android:scaleType="fitCenter"
+            android:layout_weight=".3"
+            app:srcCompat="@drawable/toolbar_logo"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNsdBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nsdpay_for_business"
+                android:textColor="@color/textForColorGreen"
+                android:textSize="@dimen/sp_15"
+                android:fontFamily="@font/sanfransiso_regular"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNsdBusiness"
+                android:text="@string/select_to_become_a_ruby_merchant_of_a_ruby_mobile_agent_and_earn_commissions"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/sp_13"
+                android:fontFamily="@font/sanfransiso_regular"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/lightGrey"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_50"
+            android:layout_weight=".3"
+            app:srcCompat="@drawable/electricity"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHelpSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_24_7_help_and_support"
+                android:textColor="@color/textForColorGreen"
+                android:textSize="@dimen/sp_15"
+                android:fontFamily="@font/sanfransiso_regular"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHelpSupport"
+                android:text="@string/view_your_scratch_cards_view_transaction_and_manage_account"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/sp_13"
+                android:fontFamily="@font/sanfransiso_regular"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"/>
+
+</LinearLayout>
+
 </RelativeLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

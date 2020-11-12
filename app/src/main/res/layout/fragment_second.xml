@@ -5,21 +5,25 @@
     android:gravity="center"
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <LinearLayout
         android:layout_marginLeft="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_10"
-        android:weightSum="4"
         android:layout_width="match_parent"
+        android:background="@color/textForColorGreen"
         android:layout_height="wrap_content">
+
         <RelativeLayout
+            android:id="@+id/rlRequestMoney"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatImageView
 
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivCategory"
                 app:srcCompat="@drawable/payment"
+                android:layout_centerHorizontal="true"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"/>
 
@@ -27,21 +31,25 @@
                 android:fontFamily="@font/sanfransiso_regular"
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
+                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/ivCategory"
-                android:text="Electricity"
+                android:text="Request Money"
                 android:textSize="@dimen/sp_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
+
         <RelativeLayout
+            android:id="@+id/rlGoals"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatImageView
 
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivCategory1"
                 app:srcCompat="@drawable/payment"
+                android:layout_centerHorizontal="true"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"/>
 
@@ -50,21 +58,25 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory1"
-                android:text="Electricity"
+                android:layout_centerHorizontal="true"
+                android:text="Goals"
                 android:textSize="@dimen/sp_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/rlGiftCards"
             android:gravity="center"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatImageView
 
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivCategory2"
                 app:srcCompat="@drawable/payment"
                 android:layout_width="@dimen/dp_45"
+                android:layout_centerHorizontal="true"
                 android:layout_height="@dimen/dp_45"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -72,14 +84,18 @@
                 android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/ivCategory2"
-                android:text="Electricity"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Gift Cards"
                 android:textSize="@dimen/sp_10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
+
         <RelativeLayout
             android:gravity="center"
             android:layout_weight="1"
+            android:visibility="invisible"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.AppCompatImageView
@@ -101,10 +117,5 @@
         </RelativeLayout>
 
     </LinearLayout>
-
-
-
-
-
 
 </RelativeLayout>

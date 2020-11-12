@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -40,7 +41,6 @@ public class PhoneBookFragment extends Fragment {
 
     }
 
-
     public static PhoneBookFragment newInstance(String param1, String param2) {
         PhoneBookFragment fragment = new PhoneBookFragment();
         Bundle args = new Bundle();
@@ -60,16 +60,14 @@ public class PhoneBookFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        View view= inflater.inflate(R.layout.fragment_phone_book, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_phone_book, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -80,13 +78,13 @@ public class PhoneBookFragment extends Fragment {
     }
 
     private void viewFinds() {
-        phoneBookAdapter = new PhoneBookAdapter(getContext(), PhoneBookFragment.this);
+        phoneBookAdapter = new PhoneBookAdapter(getActivity(), PhoneBookFragment.this);
         rvPhoneBook.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvPhoneBook.setAdapter(phoneBookAdapter);
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

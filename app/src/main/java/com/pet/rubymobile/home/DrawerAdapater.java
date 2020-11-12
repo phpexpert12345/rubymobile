@@ -1,6 +1,7 @@
 package com.pet.rubymobile.home;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import com.pet.rubymobile.pay_and_scan.payCode.PayCodeFragment;
 import com.pet.rubymobile.receiveMoney.allService.AllServiceReceiveMoneyFragment;
 import com.pet.rubymobile.search.searchFirst.SearchFragment;
 import com.pet.rubymobile.setting.allServices.AllServiceSettingFragment;
+import com.pet.rubymobile.view.MainActivity;
 import com.pet.rubymobile.withdraw.withdraw.WithdrawFragment;
 
 import java.util.ArrayList;
@@ -27,11 +29,14 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProfile> {
-    HomeActivity homeActivity;
     Context context;
     boolean flagOne = false;
     DrawerItemAdapater drawerItemAdapater;
@@ -52,10 +57,12 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
     List itemAgents;
     List itemCreditFacility;
     List itemOtherFeatures;
+    private DrawerLayout drawerLayout;
 
-    public DrawerAdapater(Context context, HomeActivity homeActivity) {
-        this.homeActivity = homeActivity;
+    public DrawerAdapater(Context context, DrawerLayout drawerLayout) {
         this.context = context;
+        this.drawerLayout = drawerLayout;
+
         flagOpenClose = new ArrayList();
         itemTitleName = new ArrayList();
 
@@ -227,7 +234,6 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
             drawerItemAdapater = new DrawerItemAdapater(context, itemSubCategory);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             holder.rvMenuItem.setAdapter(drawerItemAdapater);
-
         } else if (position == 1) {
             drawerItemAdapater = new DrawerItemAdapater(context, itemSubMoneyTransfer);
             holder.rvMenuItem.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
@@ -283,59 +289,56 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
             @Override
             public void onClick(View v) {
                 if (position == 4) {
-                    //ecommerce flow
-                    EcomHomeFragment ecomHomeFragment = new EcomHomeFragment();
-                    homeActivity.callFragment(ecomHomeFragment);
+                    Fragment ecomHomeFragment = new EcomHomeFragment();
+                    callFragment(ecomHomeFragment);
                 } else if (position == 2) {
                     //wallet flow
-                    MyWallet ecomHomeFragment = new MyWallet();
-                    homeActivity.callFragmentTopInvisible(ecomHomeFragment);
+                    Fragment ecomHomeFragment = new MyWallet();
+                    callFragmentTopInvisible(ecomHomeFragment);
                 } else if (position == 1) {
-                    TransferFragment ecomHomeFragment = new TransferFragment();
-                    homeActivity.callFragmentFullScreen(ecomHomeFragment);
+                    Fragment ecomHomeFragment = new TransferFragment();
+                    callFragmentFullScreen(ecomHomeFragment);
                 } else if (position == 3) {
                     //Link account flow
-                    AllServiceFragment allServiceFragment = new AllServiceFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
+                    Fragment allServiceFragment = new AllServiceFragment();
+                    callFragmentFullScreen(allServiceFragment);
                 } else if (position == 0) {
                     //paybills flow
-                    PaybillsFragment allServiceFragment = new PaybillsFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
+                    Fragment allServiceFragment = new PaybillsFragment();
+                    callFragmentFullScreen(allServiceFragment);
                 } else if (position == 5) {
                     //Deposit flow
-                    DepositInToTheWalletFragment allServiceFragment = new DepositInToTheWalletFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
-                }else if (position == 6) {
+                    Fragment allServiceFragment = new DepositInToTheWalletFragment();
+                    callFragmentFullScreen(allServiceFragment);
+                } else if (position == 6) {
                     //setting flow
-                    AllServiceSettingFragment allServiceFragment = new AllServiceSettingFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
+                    Fragment allServiceFragment = new AllServiceSettingFragment();
+                    callFragmentFullScreen(allServiceFragment);
 
-                }else if (position == 7) {
+                } else if (position == 7) {
                     //for Receive money  flow
-                    AllServiceReceiveMoneyFragment allServiceFragment = new AllServiceReceiveMoneyFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
-                }else if (position == 8) {
+                    Fragment allServiceFragment = new AllServiceReceiveMoneyFragment();
+                    callFragmentFullScreen(allServiceFragment);
+                } else if (position == 8) {
                     //for withdraw flow
-                    WithdrawFragment allServiceFragment = new WithdrawFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
-                }else if (position == 9) {
+                    Fragment allServiceFragment = new WithdrawFragment();
+                    callFragmentFullScreen(allServiceFragment);
+                } else if (position == 9) {
                     //for Search flow
-                    SearchFragment allServiceFragment = new SearchFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
-                }else if (position == 10) {
+                    Fragment allServiceFragment = new SearchFragment();
+                    callFragmentFullScreen(allServiceFragment);
+                } else if (position == 10) {
                     //for Nofification Flow
-                    NotificationFragment allServiceFragment = new NotificationFragment();
-                    homeActivity.callFragmentFullScreen(allServiceFragment);
-                }
-                else if (position == 11) {
+                    Fragment allServiceFragment = new NotificationFragment();
+                    callFragmentFullScreen(allServiceFragment);
+                } else if (position == 11) {
                     //for Insentive  Flow
-                    CouponFragment allServiceFragment = new CouponFragment();
-                    homeActivity.callFragmentTopInvisible(allServiceFragment);
+                    Fragment allServiceFragment = new CouponFragment();
+                    callFragmentTopInvisible(allServiceFragment);
                 }
 
             }
         });
-
 
         holder.rvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -354,8 +357,33 @@ public class DrawerAdapater extends RecyclerView.Adapter<DrawerAdapater.HomeProf
                 }
             }
         });
+    }
 
+    public void callFragment(Fragment fragment) {
+        FragmentManager manager = ((MainActivity) context).getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+        drawerLayout.closeDrawer(Gravity.LEFT);
+    }
 
+    public void callFragmentTopInvisible(Fragment fragment) {
+        FragmentManager manager = ((MainActivity) context).getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+        drawerLayout.closeDrawer(Gravity.LEFT);
+    }
+
+    public void callFragmentFullScreen(Fragment fragment) {
+        FragmentManager manager = ((MainActivity) context).getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+        drawerLayout.closeDrawer(Gravity.LEFT);
     }
 
     @Override

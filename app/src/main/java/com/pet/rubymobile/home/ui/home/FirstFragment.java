@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -17,6 +18,7 @@ import android.widget.RelativeLayout;
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.drawer_link_account.allServices.AllServiceFragment;
 import com.pet.rubymobile.drawer_money_transfer.transfer.TransferFragment;
+import com.pet.rubymobile.drawer_money_transfer.transferTo.TransferToFragment;
 import com.pet.rubymobile.drawer_wallet.MyWallet;
 import com.pet.rubymobile.pay_and_scan.scan_code.ScanCodeFragment;
 
@@ -49,38 +51,48 @@ public class FirstFragment extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_first, container, false);
-        ButterKnife.bind(this,view);
+        View view = inflater.inflate(R.layout.fragment_first, container, false);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @OnClick(R.id.rlAddMoney)
-    public void rlAddMoneyClicked(View view){
-        MyWallet scanCodeFragment=new MyWallet();
-        FragmentManager manager = getActivity().getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.homeFrameTopInvisble, scanCodeFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
-
-    @OnClick(R.id.rlFundTransefer)
-    public void rlFundTranseferClicked(View view){
-        TransferFragment scanCodeFragment=new TransferFragment();
+    public void rlAddMoneyClicked(View view) {
+        Fragment scanCodeFragment = new MyWallet();
         FragmentManager manager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, scanCodeFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
+    @OnClick(R.id.rlFundTransefer)
+    public void rlFundTranseferClicked(View view) {
+        Fragment scanCodeFragment = new TransferFragment();
+        FragmentManager manager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, scanCodeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
     @OnClick(R.id.rlPayments)
-    public void rlPaymentsClicked(View view){
-        AllServiceFragment scanCodeFragment=new AllServiceFragment();
+    public void rlPaymentsClicked(View view) {
+        Fragment scanCodeFragment = new ScanCodeFragment();
+        FragmentManager manager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, scanCodeFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    @OnClick(R.id.rlSendMoney)
+    public void rlSendMoneyClicked(View view) {
+        Fragment scanCodeFragment = new TransferToFragment();
         FragmentManager manager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, scanCodeFragment);

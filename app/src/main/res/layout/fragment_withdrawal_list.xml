@@ -25,6 +25,7 @@
             android:layout_centerInParent="true"
             android:textSize="@dimen/dp_15"
             android:textColor="@color/colorWhite"
+            android:fontFamily="@font/sanfransiso_semibold"
             android:text="@string/withdraw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -211,7 +212,8 @@
 
             android:layout_marginTop="@dimen/dp_40"
             android:layout_gravity="center"
-            android:fontFamily="@font/sanfransiso_regular"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:textSize="@dimen/sp_15"
             android:id="@+id/btnConfirm"
             android:background="@drawable/button_rounded_login_typed"
             android:text="@string/confirm"

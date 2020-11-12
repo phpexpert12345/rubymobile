@@ -7,7 +7,6 @@
     android:background="@color/colorWhite"
     tools:context=".drawer_ecommerce.allCategorywithfilter.EcomCategoryInsideCateogryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_20"
         android:id="@+id/relativeLayout_statusBar"
@@ -23,46 +22,42 @@
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"/>
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_centerInParent="true"
-            android:textSize="@dimen/dp_15"
+            android:textSize="@dimen/sp_18"
+            android:textAllCaps="true"
+            app:fontFamily="@font/sanfransiso_semibold"
             android:textColor="@color/colorWhite"
             android:text="@string/allSmartphones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_marginRight="@dimen/dp_70"
             android:id="@+id/ivSearch"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             app:srcCompat="@drawable/circle_search"
-            android:layout_width="@dimen/dp_20"
-            android:layout_height="@dimen/dp_20"/>
+            android:layout_marginEnd="@dimen/dp_5"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"/>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_marginRight="@dimen/dp_40"
             android:id="@+id/ivFavourite"
-
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/ivSearch"
             app:srcCompat="@drawable/favorite_circle"
-            android:layout_width="@dimen/dp_20"
-            android:layout_height="@dimen/dp_20"/>
+            android:layout_marginEnd="@dimen/dp_5"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"/>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_marginRight="@dimen/dp_10"
-            android:layout_width="@dimen/dp_20"
-            android:layout_height="@dimen/dp_20"
-            android:layout_alignParentRight="true"
+            android:id="@+id/ivCart"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_width="@dimen/dp_25"
+            android:layout_toLeftOf="@+id/ivFavourite"
+            android:layout_height="@dimen/dp_25"
             android:layout_centerVertical="true"
-
             app:srcCompat="@drawable/cart" />
-
-
-
-
 
     </RelativeLayout>
     <RelativeLayout
@@ -81,7 +76,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_marginLeft="@dimen/dp_50"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/sp_12"
+            android:textSize="@dimen/sp_13"
             android:text="@string/enter_pincode"
             app:fontFamily="@font/sanfransiso_regular"
             android:textColor="@color/colorBlack"
@@ -96,7 +91,6 @@
             android:background="@drawable/right_aero"
             android:layout_width="@dimen/dp_15"
             android:layout_height="@dimen/dp_15"/>
-
 
     </RelativeLayout>
 
@@ -115,7 +109,6 @@
         android:layout_height="@dimen/dp_55">
 
         <LinearLayout
-
             android:orientation="horizontal"
             android:weightSum="2"
             android:layout_width="match_parent"
@@ -128,52 +121,45 @@
               android:layout_width="0dp"
               android:layout_height="match_parent"
               android:layout_weight="1">
+
               <androidx.appcompat.widget.AppCompatImageView
                   android:background="@drawable/sort"
                   android:layout_width="@dimen/dp_20"
                   android:layout_height="@dimen/dp_20"/>
+
               <androidx.appcompat.widget.AppCompatTextView
                   android:layout_marginLeft="@dimen/dp_10"
-                  android:textSize="@dimen/sp_12"
+                  android:textSize="@dimen/sp_15"
                   android:textColor="@color/colorBlack"
-                  app:fontFamily="@font/sanfransiso_regular"
+                  app:fontFamily="@font/sanfransiso_semibold"
                   android:text="@string/sort"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"/>
 
-
-
-
-
           </LinearLayout>
+
             <LinearLayout
               android:orientation="horizontal"
              android:gravity="center"
               android:layout_width="0dp"
               android:layout_height="match_parent"
               android:layout_weight="1">
+
               <androidx.appcompat.widget.AppCompatImageView
                   android:background="@drawable/filter"
                   android:layout_width="@dimen/dp_20"
                   android:layout_height="@dimen/dp_20"/>
+
               <androidx.appcompat.widget.AppCompatTextView
                   android:layout_marginLeft="@dimen/dp_10"
-                  android:textSize="@dimen/sp_12"
+                  android:textSize="@dimen/sp_15"
                   android:textColor="@color/colorBlack"
-                  app:fontFamily="@font/sanfransiso_regular"
+                  app:fontFamily="@font/sanfransiso_semibold"
                   android:text="@string/filter"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"/>
 
-
-
-
-
           </LinearLayout>
-
-
-
-
 
         </LinearLayout>
 

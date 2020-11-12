@@ -1,28 +1,48 @@
 package com.pet.rubymobile.home.ui.home;
 
+import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.drawer_money_transfer.transfer.TransferFragment;
+import com.pet.rubymobile.insentive.coupon.CouponFragment;
+import com.pet.rubymobile.receiveMoney.receiveMone.ReceiveMoneyFragment;
+import com.pet.rubymobile.view.MainActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SecondFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class SecondFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
+    @BindView(R.id.ivCategory)
+    AppCompatImageView ivCategory;
+    @BindView(R.id.rlRequestMoney)
+    RelativeLayout rlRequestMoney;
+    @BindView(R.id.ivCategory1)
+    AppCompatImageView ivCategory1;
+    @BindView(R.id.rlGoals)
+    RelativeLayout rlGoals;
+    @BindView(R.id.ivCategory2)
+    AppCompatImageView ivCategory2;
+    @BindView(R.id.rlGiftCards)
+    RelativeLayout rlGiftCards;
+    @BindView(R.id.ivCategory3)
+    AppCompatImageView ivCategory3;
+    private Context mContext;
     private String mParam1;
     private String mParam2;
 
@@ -30,15 +50,6 @@ public class SecondFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SecondFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static SecondFragment newInstance(String param1, String param2) {
         SecondFragment fragment = new SecondFragment();
         Bundle args = new Bundle();
@@ -48,12 +59,40 @@ public class SecondFragment extends Fragment {
         return fragment;
     }
 
-
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
+        ButterKnife.bind(this, view);
+        return view;
+    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mContext = getActivity();
+    }
+
+    @OnClick({R.id.rlRequestMoney, R.id.rlGoals, R.id.rlGiftCards})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.rlRequestMoney:
+                Fragment scanCodeFragment = new ReceiveMoneyFragment();
+                callFragment(scanCodeFragment);
+                break;
+            case R.id.rlGoals:
+                break;
+            case R.id.rlGiftCards:
+                Fragment fragment = new CouponFragment();
+                callFragment(fragment);
+                break;
+        }
+    }
+
+    private void callFragment(Fragment fragment) {
+        FragmentManager manager = ((MainActivity) mContext).getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(android.R.id.content, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

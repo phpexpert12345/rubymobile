@@ -18,24 +18,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CategoryInsideCategoryEcomAdapater extends RecyclerView.Adapter<CategoryInsideCategoryEcomAdapater.HomeProfile> {
 
-   Context context;
+    Context context;
     EcomCategoryInsideCateogryFragment ecomCategoryInsideCateogryFragment;
-    public CategoryInsideCategoryEcomAdapater(Context context){
-        this.context=context;
+
+    public CategoryInsideCategoryEcomAdapater(Context context) {
+        this.context = context;
 
 
     }
 
-    public CategoryInsideCategoryEcomAdapater(Context context, EcomCategoryInsideCateogryFragment ecomCategoryInsideCateogryFragment){
-        this.context=context;
-        this.ecomCategoryInsideCateogryFragment=ecomCategoryInsideCateogryFragment;
+    public CategoryInsideCategoryEcomAdapater(Context context, EcomCategoryInsideCateogryFragment ecomCategoryInsideCateogryFragment) {
+        this.context = context;
+        this.ecomCategoryInsideCateogryFragment = ecomCategoryInsideCateogryFragment;
 
     }
+
     @NonNull
     @Override
     public CategoryInsideCategoryEcomAdapater.HomeProfile onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_ecom_category_details,parent,false);
-        CategoryInsideCategoryEcomAdapater.HomeProfile homeProfile=new CategoryInsideCategoryEcomAdapater.HomeProfile(view);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_ecom_category_details, parent, false);
+        CategoryInsideCategoryEcomAdapater.HomeProfile homeProfile = new CategoryInsideCategoryEcomAdapater.HomeProfile(view);
 
 
         return homeProfile;
@@ -57,26 +59,23 @@ public class CategoryInsideCategoryEcomAdapater extends RecyclerView.Adapter<Cat
         });
 
 
-
-
     }
 
     @Override
     public int getItemCount() {
         return 8;
     }
-    public class HomeProfile extends RecyclerView.ViewHolder{
+
+    public class HomeProfile extends RecyclerView.ViewHolder {
         RelativeLayout rvTopLayout;
 
         public HomeProfile(@NonNull View itemView) {
             super(itemView);
-            rvTopLayout=itemView.findViewById(R.id.rvTopLayout);
-
+            rvTopLayout = itemView.findViewById(R.id.rvTopLayout);
 
 
         }
     }
-
 
 
 }

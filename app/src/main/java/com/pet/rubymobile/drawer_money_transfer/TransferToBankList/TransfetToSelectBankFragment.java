@@ -80,8 +80,8 @@ public class TransfetToSelectBankFragment extends Fragment {
     }
 
     private void viewFinds() {
-        bankListAdapter = new BankListAdapter(getContext());
-        rvBankList.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        bankListAdapter = new BankListAdapter(getActivity());
+        rvBankList.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvBankList.setAdapter(bankListAdapter);
     }
     @OnClick(R.id.ivBack)

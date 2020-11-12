@@ -235,12 +235,13 @@
                     android:layout_height="@dimen/dp_90">
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:fontFamily="@font/sanfransiso_regular"
+                        android:fontFamily="@font/sanfransiso_semibold"
                         android:id="@+id/btn_dialog_next"
                         android:layout_centerInParent="true"
                         android:background="@drawable/button_rounded_login_typed"
                         android:text="@string/cancel_capital"
                         android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_15"
                         android:layout_width="@dimen/dp_200"
                         android:layout_height="@dimen/dp_40"/>
 

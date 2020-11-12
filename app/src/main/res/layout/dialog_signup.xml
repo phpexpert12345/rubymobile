@@ -56,13 +56,14 @@
 
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:fontFamily="@font/sanfransiso_regular"
+                    android:fontFamily="@font/sanfransiso_semibold"
                     android:id="@+id/btn_dialog_next"
                     android:layout_marginRight="@dimen/dp_50"
                     android:layout_alignParentRight="true"
                     android:background="@drawable/button_rounded_login_typed"
                     android:text="@string/login_in"
                     android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_15"
                     android:layout_width="@dimen/dp_100"
                     android:layout_height="@dimen/dp_40"/>
 

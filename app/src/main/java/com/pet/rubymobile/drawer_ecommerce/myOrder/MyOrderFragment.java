@@ -78,7 +78,7 @@ public class MyOrderFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        myOrderEcomAdapater = new MyOrderEcomAdapater(getContext(), MyOrderFragment.this);
+        myOrderEcomAdapater = new MyOrderEcomAdapater(getActivity(), MyOrderFragment.this);
         rvMyOrder.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvMyOrder.setAdapter(myOrderEcomAdapater);
     }

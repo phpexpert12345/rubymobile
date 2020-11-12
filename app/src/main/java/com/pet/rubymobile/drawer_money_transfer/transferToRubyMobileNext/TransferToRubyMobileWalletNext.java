@@ -84,7 +84,7 @@ public class TransferToRubyMobileWalletNext extends Fragment {
     }
 
     private void dialogOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_finger_print);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

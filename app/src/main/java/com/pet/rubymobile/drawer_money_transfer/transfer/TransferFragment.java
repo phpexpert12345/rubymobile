@@ -18,6 +18,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -50,7 +51,6 @@ public class TransferFragment extends Fragment {
 
     }
 
-
     public static TransferFragment newInstance(String param1, String param2) {
         TransferFragment fragment = new TransferFragment();
         Bundle args = new Bundle();
@@ -70,9 +70,7 @@ public class TransferFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_transfer, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -90,20 +88,18 @@ public class TransferFragment extends Fragment {
     }
 
     private void viewFinds() {
-
-        formlistAdapater = new FormListAdapter(getContext(), TransferFragment.this);
+        formlistAdapater = new FormListAdapter(getActivity(), TransferFragment.this);
         rvFormList.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvFormList.setAdapter(formlistAdapater);
 
-
-        recentHistoryAdapter = new RecentHistoryAdapter(getContext(), TransferFragment.this);
+        recentHistoryAdapter = new RecentHistoryAdapter(getActivity(), TransferFragment.this);
         rvRecentHistory.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvRecentHistory.setAdapter(recentHistoryAdapter);
     }
 
     @OnClick(R.id.rlFilter)
-    public void rlFilterClicked(View view){
-        PhoneBookFragment phoneBookFragment=new PhoneBookFragment();
+    public void rlFilterClicked(View view) {
+        Fragment phoneBookFragment = new PhoneBookFragment();
         FragmentManager manager = getParentFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, phoneBookFragment);
@@ -113,7 +109,7 @@ public class TransferFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

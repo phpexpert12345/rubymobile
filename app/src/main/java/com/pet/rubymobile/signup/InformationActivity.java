@@ -13,7 +13,6 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import com.pet.rubymobile.MainActivity;
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.home.HomeActivity;
 
@@ -44,8 +43,6 @@ public class InformationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_information);
         ButterKnife.bind(this);
         viewFinds();
@@ -72,7 +69,7 @@ public class InformationActivity extends AppCompatActivity {
 
 
                 } else {
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
 
                 }
             }
@@ -97,7 +94,7 @@ public class InformationActivity extends AppCompatActivity {
 
 
                 } else {
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
 
                 }
             }
@@ -122,7 +119,7 @@ public class InformationActivity extends AppCompatActivity {
 
 
                 } else {
-                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_next.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
 
                 }
             }

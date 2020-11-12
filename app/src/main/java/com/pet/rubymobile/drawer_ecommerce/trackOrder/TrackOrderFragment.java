@@ -79,7 +79,7 @@ public class TrackOrderFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        trackOrderEcomAdapater = new TrackOrderEcomAdapater(getContext());
+        trackOrderEcomAdapater = new TrackOrderEcomAdapater(getActivity());
         rvDeliveryStatus.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvDeliveryStatus.setAdapter(trackOrderEcomAdapater);
     }

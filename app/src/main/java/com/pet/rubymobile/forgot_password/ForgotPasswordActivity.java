@@ -1,6 +1,7 @@
 package com.pet.rubymobile.forgot_password;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,6 +15,7 @@ import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.login.LoginActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,13 +36,10 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_forgot_password);
         ButterKnife.bind(this);
         viewFinds();
     }
-
 
     @OnClick(R.id.btn_sent)
     public void btn_sentClicked(View view) {
@@ -66,7 +65,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                 if (editable != null && editable.length() > 0) {
                     btn_sent.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
                 } else {
-                    btn_sent.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_sent.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
                 }
             }
         });
@@ -87,7 +86,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                 if (editable != null && editable.length() > 0) {
                     btn_sent.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
                 } else {
-                    btn_sent.setBackground(getResources().getDrawable(R.drawable.button_rounded_login));
+                    btn_sent.setBackground(getResources().getDrawable(R.drawable.button_rounded_login_typed));
                 }
             }
         });
@@ -99,10 +98,18 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-
-        dialog.getWindow()
-                .getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+
+        AppCompatButton btn_dialog_next = dialog.findViewById(R.id.btn_dialog_next);
+        btn_dialog_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ForgotPasswordActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
     }
 
     @OnClick(R.id.ivBack)

@@ -78,7 +78,7 @@ public class PointsNextFragment extends Fragment {
         dialogFaceIdOpen();
     }
     private void dialogFaceIdOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_insentive_faceid);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -100,7 +100,7 @@ public class PointsNextFragment extends Fragment {
     }
 
     private void dialogFingerOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_insentive_fingerid);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -121,7 +121,7 @@ public class PointsNextFragment extends Fragment {
         dialog.show();
     }
     private void dialogConfirmOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_insentive_confirm);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -142,7 +142,7 @@ public class PointsNextFragment extends Fragment {
         dialog.show();
     }
     private void dialogSuccessOpen() {
-        dialog = new Dialog(getContext());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_insentive_successfull);
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

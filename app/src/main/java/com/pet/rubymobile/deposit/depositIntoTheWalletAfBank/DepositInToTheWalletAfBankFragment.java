@@ -84,7 +84,7 @@ public class DepositInToTheWalletAfBankFragment extends Fragment {
     }
 
     private void viewFinds() {
-        recentHistoryAdapter = new FoundsListAfBankAdapter(getContext(), DepositInToTheWalletAfBankFragment.this);
+        recentHistoryAdapter = new FoundsListAfBankAdapter(getActivity(), DepositInToTheWalletAfBankFragment.this);
         rvFounds.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvFounds.setAdapter(recentHistoryAdapter);
     }

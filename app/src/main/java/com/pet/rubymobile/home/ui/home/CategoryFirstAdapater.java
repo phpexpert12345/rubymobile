@@ -22,16 +22,11 @@ public class CategoryFirstAdapater extends RecyclerView.Adapter<CategoryFirstAda
     public CategoryFirstAdapater.HomeProfile onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.item_category_first,parent,false);
         CategoryFirstAdapater.HomeProfile homeProfile=new CategoryFirstAdapater.HomeProfile(view);
-
-
         return homeProfile;
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryFirstAdapater.HomeProfile holder, int position) {
-
-
-
 
     }
 
@@ -43,11 +38,6 @@ public class CategoryFirstAdapater extends RecyclerView.Adapter<CategoryFirstAda
 
         public HomeProfile(@NonNull View itemView) {
             super(itemView);
-
-
         }
     }
-
-
-
 }

@@ -79,8 +79,8 @@ public class NotificationFragment extends Fragment {
     }
 
     private void viewFinds() {
-        notificationAdapter = new NotificationAdapter(getContext(), NotificationFragment.this);
-        rvNotificationList.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        notificationAdapter = new NotificationAdapter(getActivity(), NotificationFragment.this);
+        rvNotificationList.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         rvNotificationList.setAdapter(notificationAdapter);
     }
 }

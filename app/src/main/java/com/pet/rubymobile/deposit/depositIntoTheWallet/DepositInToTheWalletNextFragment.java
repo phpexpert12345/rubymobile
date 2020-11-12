@@ -80,13 +80,13 @@ public class DepositInToTheWalletNextFragment extends Fragment {
     }
 
     private void viewFinds() {
-        bankListAdapter = new BankListAdapter(getContext(),DepositInToTheWalletNextFragment.this);
-        rvBankList.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        bankListAdapter = new BankListAdapter(getActivity(),DepositInToTheWalletNextFragment.this);
+        rvBankList.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvBankList.setAdapter(bankListAdapter);
 
 
-        paymentCardAdapter = new PaymentCardAdapter(getContext());
-        rvCardList.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        paymentCardAdapter = new PaymentCardAdapter(getActivity());
+        rvCardList.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvCardList.setAdapter(paymentCardAdapter);
     }
 }

@@ -2,10 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/side_nav_bar"
+    android:layout_height="@dimen/dp_150"
+    android:background="@drawable/side_nav_bar">
 
-   >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/ic_close"/>
+
     <de.hdodenhof.circleimageview.CircleImageView
         app:civ_border_color="@color/colorWhite"
         app:civ_border_width="@dimen/dp_1"
@@ -15,59 +24,58 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/dp_20"
         android:src="@drawable/user_placeholder" />
+
     <LinearLayout
-        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
         android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dp_90"
+        android:layout_toRightOf="@+id/ivCircleImage"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dp_100"
-
+                android:textSize="@dimen/sp_18"
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:text="K. K. Jain"
                 android:textColor="@color/colorWhite" />
 
             <androidx.appcompat.widget.AppCompatTextView
-
-                android:layout_marginTop="@dimen/dp_70"
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp_100"
-
-                android:fontFamily="@font/sanfransiso_regular"
+                android:layout_below="@+id/tvName"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="@dimen/sp_17"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:text="+91-98-9865**"
-                android:textColor="@color/textForColorGrey" />
+                android:textColor="@color/colorWhite" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:textSize="@dimen/sp_7"
+                android:textSize="@dimen/sp_10"
                 android:fontFamily="@font/sanfransiso_regular"
                 android:gravity="center"
                 android:background="@drawable/corner_rounde"
                 android:layout_marginLeft="@dimen/dp_25"
-                android:layout_marginTop="@dimen/dp_100"
+                android:layout_toRightOf="@+id/textView"
+                android:layout_below="@+id/tvName"
+                android:layout_marginTop="@dimen/dp_10"
                 android:textColor="@color/color_orange"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
                 android:text="KYC Verify"
-                android:layout_width="@dimen/dp_55"
-                android:layout_height="@dimen/dp_20">
-
-            </androidx.appcompat.widget.AppCompatTextView>
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"/>
 
         </RelativeLayout>
 
     </LinearLayout>
-
-
-
-
-
 
 </RelativeLayout>

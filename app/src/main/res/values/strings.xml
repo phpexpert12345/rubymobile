@@ -5,6 +5,8 @@
     <string name="onboard_one_title">Absolute Safety</string>
     <string name="onboard_two_title">Various Services</string>
     <string name="onboard_three_title">Easy Deposit and Withdrawal</string>
+    <string name="quick_money">Quick Money Transfer</string>
+    <string name="attractive_deal">Attractive Deal</string>
     <string name="login">Log In</string>
     <string name="enter_your_phone_number">Enter Your Phone Number</string>
     <string name="use_the_phone">Use the phone number to register or login</string>
@@ -53,12 +55,12 @@
     <string name="your_email_id">Your Email ID</string>
     <string name="suggestion">Suggestions:- johndoe@gmail.com</string>
     <string name="sent">SENT</string>
-    <string name="instruction">Instructions to retrieve\nthe password</string>
+    <string name="instruction">Instructions to retrieve the password</string>
     <string name="please_perfor">Please  perform the following 3 steps to retrieve your\npassword</string>
-    <string name="please_fill_instruction">Please fill in exactly the information provided.We will send a\nmail to the email address to registered to regain your\npassword</string>
+    <string name="please_fill_instruction">Please fill in exactly the information provided. We will send a mail to the email address to registered to regain your password</string>
     <string name="you_check_email">Your check your email and click on the authentication link\nto receive to OTP password</string>
-    <string name="use_the_new">Use the newly issued OTP password log into the\napplication, then go to settings and change\nyour new password.</string>
-    <string name="introduction">Introductions</string>
+    <string name="use_the_new">Use the newly issued OTP password log into the application, then go to settings and change your new password.</string>
+    <string name="introduction">Introduction</string>
     <string name="password_reset_eamil">Password Reset Email Sent</string>
     <string name="an_email_has">An email has been sent to your resuce email\naddress. Follow directions in the email to\nreset your password.</string>
     <string name="ok">OK</string>
@@ -76,7 +78,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="scanAnyQr">Scan Any  QR</string>
+    <string name="scanAnyQr">Scan QR</string>
     <string name="shop">Shop</string>
     <string name="bank">Bank</string>
     <string name="me">Me</string>
@@ -267,7 +269,7 @@
     <string name="freeWithdraw">Free withdrawals to linked bank for the first 3\ntransactions in the month learn more\nabout withdrawals<font fgcolor="#1d56ba"> HERE.</font></string>
     <string name="chooseTheBank">Choose The Bank</string>
     <string name="withdrawToBank">Withdraw to bank</string>
-    <string name="receiveMoney">Recive Money</string>
+    <string name="receiveMoney">Recieve Money</string>
     <string name="enterTheAmountYou">Enter The Amount You Want</string>
     <string name="askForAPassword">Asked For A Password When Payment</string>
     <string name="forEach">For each payment of ruby mobile wallet.You must confirm the password for payment.</string>
@@ -314,7 +316,7 @@
     <string name="_91">+91*</string>
     <string name="india">India</string>
     <string name="enter_the_code_recieved_by">Enter the code recieved by</string>
-    <string name="enter_6_digits">Enter 6 digits</string>
+    <string name="enter_6_digits">Enter 6 digits password</string>
     <string name="country">Country*</string>
     <string name="enter_your_country">Enter your Country</string>
     <string name="given_name">Given Name*</string>
@@ -324,4 +326,31 @@
     <string name="by_registering_you_agree_to_the_ruby_mobile_service_agreement_and_ruby_mobile_privacy_policy">By Registering you agree to the Ruby Mobile Service Agreement and Ruby Mobile Privacy policy</string>
     <string name="get_code">Get Code</string>
     <string name="verification">Verification*</string>
+    <string name="operator">Operator</string>
+    <string name="customer_id">Customer Id</string>
+    <string name="cashback_amp_offers"><![CDATA[Cashback & Offers]]></string>
+    <string name="view_your_scratch_cards_view_transaction_and_manage_account">View your scratch cards, view transaction and manage account</string>
+    <string name="nsdpay_for_business">\u0020 for Business</string>
+    <string name="_24_7_help_and_support">24*7 Help And Support</string>
+    <string name="select_to_become_a_ruby_merchant_of_a_ruby_mobile_agent_and_earn_commissions">Select to become a Ruby Merchant of a Ruby Mobile Agent and earn Commissions</string>
+    <string name="lightining_fast_recharge_amp_bill_payment"><![CDATA[Lightining Fast Recharge & Bill Payment]]></string>
+    <string name="please_choose_how_to_recieve_the_verification_code">Please choose how to recieve the verification code</string>
+    <string name="sms">Sms</string>
+    <string name="miss_call">Miss Call</string>
+    <string name="if_you_can_not_recieve_a_sms_please_select_the_method_of_miss_call">If you can not recieve a SMS, please select the method of miss call</string>
+    <string name="re_enter_your_password">Re-Enter your password</string>
+    <string name="search">Search</string>
+    <string name="student_unique_id">Student Unique ID</string>
+    <string name="mobile_number_of_parent">Mobile Number of Parent</string>
+    <string name="dob_of_student_ddmmyyyy">DOB of Student (DDMMYYYY)</string>
+    <string name="school_fee">School Fee</string>
+    <string name="k_no">K No</string>
+    <string name="consumer_number">Consumer Number</string>
+    <string name="service_number">Service Number</string>
+    <string name="tenement_no">Tenement No</string>
+    <string name="e_commerce">E-Commerce</string>
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="to_make_the_most_of_your_rubymobile_account">To make the most of your RubyMobile account</string>
+    <string name="finish_setup">Finish Setup</string>
+    <string name="transfer_to_ruby_mobile_wallet">Transfer To Ruby Mobile Wallet</string>
 </resources>

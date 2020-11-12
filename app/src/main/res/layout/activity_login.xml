@@ -19,16 +19,15 @@
             android:layout_width="@dimen/dp_25"
             android:layout_height="@dimen/dp_25"/>
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_centerInParent="true"
-            android:textSize="@dimen/dp_15"
+            android:textSize="@dimen/sp_18"
             android:textColor="@color/colorWhite"
+            android:textAllCaps="true"
             android:text="@string/login"
+            android:fontFamily="@font/sanfransiso_semibold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
-
 
     </RelativeLayout>
 
@@ -36,83 +35,94 @@
         android:orientation="vertical"
         android:layout_below="@+id/relativeLayout_statusBar"
         android:layout_width="match_parent"
+        android:layout_above="@+id/btn_next"
         android:layout_height="match_parent">
+
         <androidx.appcompat.widget.AppCompatTextView
             android:fontFamily="@font/sanfransiso_semibold"
             android:text="@string/enter_your_phone_number"
-            android:textColor="@color/textForColorGreen"
-            android:textSize="@dimen/sp_18"
+            android:textColor="@color/top_color"
+            android:textSize="@dimen/sp_20"
             android:gravity="center"
             android:layout_marginTop="@dimen/dp_50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:fontFamily="@font/sanfransiso_regular"
             android:text="@string/use_the_phone"
-            android:textColor="@color/textForColorGrey"
-            android:textSize="@dimen/sp_13"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_15"
             android:gravity="center"
-            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:fontFamily="@font/sanfransiso_regular"
+            android:fontFamily="@font/sanfransiso_bold"
             android:text="@string/ruby_mobile"
             android:textColor="@color/textForColorGreen"
-            android:textSize="@dimen/sp_13"
+            android:textSize="@dimen/sp_20"
+            android:layout_marginTop="@dimen/dp_10"
             android:gravity="center"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
-
 
         <LinearLayout
             android:layout_marginTop="@dimen/dp_70"
             android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
            <com.hbb20.CountryCodePicker
                android:id="@+id/countryCodePicker"
                app:ccp_textSize="@dimen/sp_15"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content">
            </com.hbb20.CountryCodePicker>
+
             <androidx.appcompat.widget.AppCompatEditText
                 android:fontFamily="@font/sanfransiso_regular"
                 android:id="@+id/et_mobileNumber"
                 android:maxLines="1"
                 android:background="@null"
                 android:maxLength="10"
+                android:textColor="@color/text_color"
+                android:padding="@dimen/dp_10"
+                android:textSize="@dimen/sp_15"
                 android:inputType="number"
                 android:imeOptions="actionDone"
-                android:layout_width="@dimen/dp_135"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
         <View
             android:layout_gravity="center"
-            android:background="@color/textForColorGrey"
-            android:layout_width="@dimen/dp_230"
+            android:background="@color/lightGrey"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
             android:layout_height="@dimen/dp_1"/>
-        
-        <androidx.appcompat.widget.AppCompatButton
-            android:fontFamily="@font/sanfransiso_regular"
-            android:id="@+id/btn_next"
-            android:textColor="@color/colorWhite"
-            android:text="@string/next_capital"
-            android:background="@drawable/button_rounded_login"
-            android:layout_marginTop="@dimen/dp_80"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_width="@dimen/dp_190"
-            android:layout_height="@dimen/dp_45"/>
 
     </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:paddingTop="@dimen/dp_20"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dp_20"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/textForColorGreen"
+        android:text="@string/next_capital"
+        android:fontFamily="@font/sanfransiso_bold"
+        android:textSize="@dimen/sp_15"
+        android:textAllCaps="true"/>
 
 </RelativeLayout>

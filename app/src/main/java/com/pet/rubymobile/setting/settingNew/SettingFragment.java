@@ -141,7 +141,7 @@ public class SettingFragment extends Fragment {
 
     @OnClick(R.id.btnSignOut)
     public void btnSignOutClicked(View view){
-        Intent intent=new Intent(getContext(),LoginActivity.class);
+        Intent intent=new Intent(getActivity(),LoginActivity.class);
         startActivity(intent);
         getActivity().finish();
     }

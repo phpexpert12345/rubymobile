@@ -68,8 +68,8 @@ public class ReceivePointsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        receivePointsAdapter = new ReceivePointsAdapter(getContext(), ReceivePointsFragment.this);
-        rvRPoints.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        receivePointsAdapter = new ReceivePointsAdapter(getActivity(), ReceivePointsFragment.this);
+        rvRPoints.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         rvRPoints.setAdapter(receivePointsAdapter);
     }
 }

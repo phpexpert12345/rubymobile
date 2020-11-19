@@ -25,62 +25,51 @@
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"/>
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_centerInParent="true"
-            android:textSize="@dimen/dp_15"
+            android:textSize="@dimen/sp_18"
             android:textColor="@color/colorWhite"
             android:text="@string/details"
+            android:textAllCaps="true"
+            android:fontFamily="@font/sanfransiso_semibold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
-
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_marginRight="@dimen/dp_40"
             android:id="@+id/ivFavourite"
-
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             app:srcCompat="@drawable/circle_search"
-            android:layout_width="@dimen/dp_20"
-            android:layout_height="@dimen/dp_20"/>
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_marginRight="@dimen/dp_10"
-            android:layout_width="@dimen/dp_20"
-            android:layout_height="@dimen/dp_20"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-
             app:srcCompat="@drawable/cart" />
-
-
-
-
-
-
-
 
     </RelativeLayout>
     <ScrollView android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/relativeLayout_statusBar"
+        android:layout_above="@+id/btnBuyNow"
         android:fillViewport="true"
         >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
     <androidx.viewpager.widget.ViewPager
-
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_220">
 
     </androidx.viewpager.widget.ViewPager>
+
     <com.google.android.material.tabs.TabLayout
         android:layout_below="@+id/viewPager"
         android:layout_marginTop="@dimen/dp_10"
@@ -92,19 +81,20 @@
         android:layout_height="20dp"/>
 
     <LinearLayout
-
         android:orientation="vertical"
         android:layout_below="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <androidx.appcompat.widget.AppCompatTextView
             android:textColor="@color/colorBlack"
             android:text="Apple iPhone 11 128 GB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_15"
             android:fontFamily="@font/sanfransiso_semibold"
             android:gravity="center"/>
+
         <LinearLayout
             android:layout_marginTop="@dimen/dp_5"
             android:gravity="center"
@@ -112,50 +102,55 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:textColor="@color/colorBlack"
                 android:text="Price:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
+                android:textSize="@dimen/sp_15"
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:gravity="center"/>
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:textColor="@color/colorLightGreen"
                 android:text="   UGC 2000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
+                android:textSize="@dimen/sp_15"
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:gravity="center"/>
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_marginTop="@dimen/dp_5"
             android:layout_gravity="center"
-            android:textColor="@color/textForColorGrey"
+            android:textColor="@color/darkGrey"
             android:text="inclusive All Taxes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_10"
+            android:textSize="@dimen/sp_13"
             android:fontFamily="@font/sanfransiso_regular"
             android:gravity="center"/>
 
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="@dimen/dp_5"
             app:cardElevation="@dimen/dp_5"
-            android:layout_marginLeft="@dimen/dp_25"
-            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_15"
             android:background="@drawable/et_rounded"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_40">
+            android:layout_height="wrap_content">
+
             <androidx.appcompat.widget.AppCompatTextView
-                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_20"
                 android:textColor="@color/colorBlack"
                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sanfransiso_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/productDetails"/>
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_margin="@dimen/dp_15"
                 android:layout_gravity="end"
@@ -170,12 +165,66 @@
             </Spinner>-->
 
         </androidx.cardview.widget.CardView>
+
         <LinearLayout
-            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_20"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <View
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:background="@drawable/dot_textview_starting"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textColor="@color/textForColorGrey"
+                android:text="Camera: 12+12 MP rear/12 MP Front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_13"
+                android:fontFamily="@font/sanfransiso_regular"
+               />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:background="@drawable/dot_textview_starting"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="@dimen/dp_15"
+                android:textColor="@color/textForColorGrey"
+                android:text="Camera: 12+12 MP rear/12 MP Front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_13"
+                android:fontFamily="@font/sanfransiso_regular"
+               />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <View
                 android:layout_gravity="center_vertical"
                 android:layout_width="@dimen/dp_10"
@@ -188,13 +237,37 @@
                 android:text="Camera: 12+12 MP rear/12 MP Front"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_10"
+                android:textSize="@dimen/sp_13"
+                android:fontFamily="@font/sanfransiso_regular"
+               />
+
+        </LinearLayout><LinearLayout
+            android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:background="@drawable/dot_textview_starting"/>
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textColor="@color/textForColorGrey"
+                android:text="Camera: 12+12 MP rear/12 MP Front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_13"
                 android:fontFamily="@font/sanfransiso_regular"
                />
 
         </LinearLayout>
         <LinearLayout
-            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_5"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -211,139 +284,76 @@
                 android:text="Camera: 12+12 MP rear/12 MP Front"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_10"
-                android:fontFamily="@font/sanfransiso_regular"
-               />
-
-        </LinearLayout><LinearLayout
-            android:layout_marginLeft="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_5"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <View
-                android:layout_gravity="center_vertical"
-                android:layout_width="@dimen/dp_10"
-                android:layout_height="@dimen/dp_10"
-                android:background="@drawable/dot_textview_starting"/>
-            <androidx.appcompat.widget.AppCompatTextView
-
-                android:layout_marginLeft="@dimen/dp_15"
-                android:textColor="@color/textForColorGrey"
-                android:text="Camera: 12+12 MP rear/12 MP Front"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_10"
-                android:fontFamily="@font/sanfransiso_regular"
-               />
-
-        </LinearLayout><LinearLayout
-            android:layout_marginLeft="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_5"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <View
-                android:layout_gravity="center_vertical"
-                android:layout_width="@dimen/dp_10"
-                android:layout_height="@dimen/dp_10"
-                android:background="@drawable/dot_textview_starting"/>
-            <androidx.appcompat.widget.AppCompatTextView
-
-                android:layout_marginLeft="@dimen/dp_15"
-                android:textColor="@color/textForColorGrey"
-                android:text="Camera: 12+12 MP rear/12 MP Front"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_10"
-                android:fontFamily="@font/sanfransiso_regular"
-               />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginLeft="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_5"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <View
-                android:layout_gravity="center_vertical"
-                android:layout_width="@dimen/dp_10"
-                android:layout_height="@dimen/dp_10"
-                android:background="@drawable/dot_textview_starting"/>
-            <androidx.appcompat.widget.AppCompatTextView
-
-                android:layout_marginLeft="@dimen/dp_15"
-                android:textColor="@color/textForColorGrey"
-                android:text="Camera: 12+12 MP rear/12 MP Front"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_10"
+                android:textSize="@dimen/sp_13"
                 android:fontFamily="@font/sanfransiso_regular"
                />
 
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_10"
             android:gravity="right"
             android:textColor="@color/textForColorGreen"
+            android:layout_marginTop="@dimen/dp_10"
             android:text="@string/viewDetails"
+            android:textSize="@dimen/sp_13"
             android:layout_width="match_parent"
+            android:fontFamily="@font/sanfransiso_regular"
             android:layout_height="wrap_content"/>
 
         <View
             android:layout_marginTop="@dimen/dp_5"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_1"
-            android:layout_marginLeft="@dimen/dp_25"
-            android:layout_marginRight="@dimen/dp_25"
-            android:background="@color/textForColorGrey"/>
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/lightGrey"/>
 
         <LinearLayout
-            android:layout_marginRight="@dimen/dp_25"
-            android:layout_marginLeft="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
-
-                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_10"
                 android:textColor="@color/colorBlack"
                 android:text="Delivery Details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
-                android:fontFamily="@font/sanfransiso_regular"
-                />
+                android:textSize="@dimen/sp_15"
+                android:fontFamily="@font/sanfransiso_regular"/>
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:gravity="end"
-                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_10"
                 android:textColor="@color/colorBlack"
                 android:text="Delivery by 10th Sep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
-                android:fontFamily="@font/sanfransiso_regular"
-                />
+                android:textSize="@dimen/sp_15"
+                android:fontFamily="@font/sanfransiso_regular"/>
 
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_margin="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_20"
             android:layout_width="match_parent"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_20"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatEditText
-
                 android:background="@null"
-                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_10"
                 android:textColor="@color/colorBlack"
                 android:hint="201301"
                 android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
+                android:textSize="@dimen/sp_13"
                 android:fontFamily="@font/sanfransiso_regular"
                 />
             <androidx.appcompat.widget.AppCompatButton
@@ -361,32 +371,34 @@
             <View
                 android:layout_marginTop="@dimen/dp_10"
                 android:layout_below="@+id/btnChange"
-                android:background="@color/textForColorGrey"
+                android:background="@color/lightGrey"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_1">
 
             </View>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"/>
+
         </RelativeLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnBuyNow"
-            android:layout_marginBottom="@dimen/dp_20"
-            android:text="@string/buyNow"
-            android:textSize="@dimen/sp_15"
-            android:fontFamily="@font/sanfransiso_semibold"
-            android:textColor="@color/colorWhite"
-            android:background="@drawable/button_rounded_login_typed"
-            android:layout_gravity="center"
-            android:layout_width="@dimen/dp_150"
-            android:layout_height="@dimen/dp_40"
-            />
-
-
-
 
     </LinearLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
     </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuyNow"
+        android:text="@string/buyNow"
+        android:textSize="@dimen/sp_15"
+        android:fontFamily="@font/sanfransiso_semibold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:padding="@dimen/dp_20"
+        android:background="@color/textForColorGreen"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"            />
 </RelativeLayout>

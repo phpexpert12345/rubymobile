@@ -5,73 +5,81 @@
     android:layout_height="wrap_content"
     android:id="@+id/rvOrders">
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cvMyOrder"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_100">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content">
 
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivMainImage"
                 android:layout_width="@dimen/dp_80"
                 android:layout_height="@dimen/dp_100"
                 android:background="@drawable/iphone"/>
-            <LinearLayout
-                android:layout_toRightOf="@+id/ivMainImage"
-                android:layout_marginLeft="@dimen/dp_20"
-                android:layout_marginRight="@dimen/dp_20"
-                android:layout_marginTop="@dimen/dp_10"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:textSize="@dimen/sp_10"
+                    android:id="@+id/tvName"
+                    android:textSize="@dimen/sp_15"
                     android:textColor="@color/colorBlack"
                     android:fontFamily="@font/sanfransiso_semibold"
+                    android:layout_toRightOf="@+id/ivMainImage"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:text="Apple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
                     android:layout_marginTop="@dimen/dp_5"
-                    android:textSize="@dimen/sp_8"
+                    android:layout_below="@+id/tvName"
+                    android:textSize="@dimen/sp_13"
                     android:textColor="@color/textForColorGrey"
                     android:fontFamily="@font/sanfransiso_semibold"
                     android:text="Apple iPhone 128GB Black"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/ivMainImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAmount"
                     android:layout_marginTop="@dimen/dp_5"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_below="@+id/tvDescription"
                     android:textColor="@color/colorLightGreen"
                     android:fontFamily="@font/sanfransiso_semibold"
                     android:text="UGX 2000"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/ivMainImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_marginTop="@dimen/dp_10"
-                    android:textSize="@dimen/sp_8"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textSize="@dimen/sp_11"
                     android:textColor="@color/color_orange"
+                    android:layout_below="@+id/tvAmount"
                     android:fontFamily="@font/sanfransiso_semibold"
                     android:text="Delivery On Sep 1 2020"
                     android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/ivMainImage"
                     android:layout_height="wrap_content"/>
 
-
-
-            </LinearLayout>
-           <androidx.appcompat.widget.AppCompatButton
-               android:textColor="@color/colorLightGreen"
+            <androidx.appcompat.widget.AppCompatButton
+               android:textColor="@color/lightGrey"
                android:background="@drawable/button_rounded_login_typed"
-               android:layout_marginRight="@dimen/dp_10"
-               android:layout_marginBottom="@dimen/dp_20"
-               android:layout_alignParentBottom="true"
-               android:layout_alignParentRight="true"
+               android:layout_marginEnd="@dimen/dp_10"
+               android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvAmount"
                android:text="Delivered"
                android:fontFamily="@font/sanfransiso_semibold"
                android:textAllCaps="false"

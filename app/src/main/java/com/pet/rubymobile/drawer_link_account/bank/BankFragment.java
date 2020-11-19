@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -80,8 +81,8 @@ public class BankFragment extends Fragment {
     }
 
     @OnClick(R.id.btnNext)
-    public void  btnNextClicked(View view){
-        AtmCardFragment atmCardFragment=new AtmCardFragment();
+    public void btnNextClicked(View view) {
+        AtmCardFragment atmCardFragment = new AtmCardFragment();
         FragmentManager manager = getParentFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, atmCardFragment);
@@ -90,7 +91,7 @@ public class BankFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

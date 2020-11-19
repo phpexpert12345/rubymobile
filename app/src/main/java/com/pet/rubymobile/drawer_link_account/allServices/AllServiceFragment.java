@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -38,13 +39,11 @@ public class AllServiceFragment extends Fragment {
     @BindView(R.id.rvPayBills)
     RecyclerView rvPayBills;
 
-
     PayBillsAdapter payBillsAdapter;
 
     public AllServiceFragment() {
 
     }
-
 
     public static AllServiceFragment newInstance(String param1, String param2) {
         AllServiceFragment fragment = new AllServiceFragment();
@@ -65,9 +64,7 @@ public class AllServiceFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_all_service, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -85,21 +82,20 @@ public class AllServiceFragment extends Fragment {
     }
 
     private void viewFinds() {
-
         //for Function Data adapter
-        allServicesFunctionAdapter = new AllServicesFunctionAdapter(getActivity(),AllServiceFragment.this);
+        allServicesFunctionAdapter = new AllServicesFunctionAdapter(getActivity(), AllServiceFragment.this);
         rvAllSrvcFnc.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvAllSrvcFnc.setAdapter(allServicesFunctionAdapter);
 
         //for Function Data adapter
-        payBillsAdapter = new PayBillsAdapter(getActivity(),AllServiceFragment.this);
+        payBillsAdapter = new PayBillsAdapter(getActivity(), AllServiceFragment.this);
         rvPayBills.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         rvPayBills.setAdapter(payBillsAdapter);
 
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

@@ -71,7 +71,6 @@ public class ProfileActivity extends AppCompatActivity implements BottomNavigati
         bottomNavigation.getMenu().findItem(R.id.action_profile).setChecked(true);
     }
 
-
     @OnClick(R.id.ivEdit)
     public void ivEditClicked(View view) {
         dialogOpen();

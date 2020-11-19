@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
-
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +8,7 @@
     android:background="@color/colorLightGrey"
     tools:context=".drawer_ecommerce.singleDetails.SingleDetailsFragment"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_20"
         android:id="@+id/relativeLayout_statusBar"
@@ -24,66 +24,66 @@
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"/>
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:fontFamily="@font/sanfransiso_regular"
             android:layout_centerInParent="true"
-            android:textSize="@dimen/dp_15"
+            android:textSize="@dimen/sp_18"
+            app:fontFamily="@font/sanfransiso_semibold"
             android:textColor="@color/colorWhite"
+            android:textAllCaps="true"
             android:text="@string/payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-
-
-
-
-
-
-
-
-
-
-
     </RelativeLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_below="@+id/relativeLayout_statusBar"
         android:fillViewport="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <androidx.appcompat.widget.AppCompatTextView
-
                 android:layout_marginTop="@dimen/dp_40"
                 android:gravity="center"
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:textSize="@dimen/sp_25"
                 android:layout_width="match_parent"
+                android:textColor="@color/top_color"
                 android:layout_height="wrap_content"
                 android:text="@string/ruby_mobile_color"
                 />
-            <androidx.appcompat.widget.AppCompatEditText
 
-                android:inputType="number"
-                android:imeOptions="actionDone"
-                android:background="@null"
-                android:textColor="@color/textForColorGreen"
-                android:layout_marginTop="@dimen/dp_50"
-                android:gravity="center"
-                android:fontFamily="@font/sanfransiso_regular"
-                android:textSize="@dimen/sp_16"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_your_phone_number"
-                android:textColorHint="@color/textForColorGreen"
-                />
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:hintTextAppearance="@style/HintText"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/sanfransiso_regular"
+                    android:textSize="@dimen/sp_15"
+                    app:backgroundTint="@color/lightGrey"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:hint="@string/enter_your_phone_number"
+                    android:textColor="@color/textForColorGreen"
+                    android:textColorHint="@color/top_color"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <androidx.appcompat.widget.AppCompatTextView
-                android:textColor="@color/textForColorGrey"
+                android:textColor="@color/darkGrey"
                 android:layout_marginTop="@dimen/dp_10"
                 android:gravity="center"
                 android:fontFamily="@font/sanfransiso_regular"
@@ -92,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/register_name"
                 />
-            <androidx.appcompat.widget.AppCompatTextView
 
+            <androidx.appcompat.widget.AppCompatTextView
                 android:textColor="@color/textForColorGreen"
                 android:layout_marginTop="@dimen/dp_10"
                 android:gravity="center"
@@ -104,7 +104,6 @@
                 android:text="@string/ruby_mobile"
                 />
             <androidx.appcompat.widget.AppCompatTextView
-
                 android:textColor="@color/colorBlack"
                 android:layout_marginTop="@dimen/dp_40"
                 android:gravity="center"
@@ -122,13 +121,13 @@
                 android:layout_marginRight="@dimen/dp_40"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_1"
-                android:background="@color/colorBlack"/>
-            <androidx.appcompat.widget.AppCompatTextView
+                android:background="@color/lightGrey"/>
 
+            <androidx.appcompat.widget.AppCompatTextView
                 android:textColor="@color/colorLightGreen"
                 android:layout_marginTop="@dimen/dp_30"
                 android:gravity="center"
-                android:fontFamily="@font/sanfransiso_regular"
+                android:fontFamily="@font/sanfransiso_semibold"
                 android:textSize="@dimen/sp_18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -142,22 +141,24 @@
                 android:layout_marginRight="@dimen/dp_40"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_1"
-                android:background="@color/colorBlack"/>
-            
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnPaySecurely"
-                android:textColor="@color/colorWhite"
-                android:text="@string/paySecurely"
-                android:background="@drawable/button_rounded_login_typed"
-                android:layout_marginTop="@dimen/dp_20"
-                android:textSize="@dimen/sp_15"
-                android:fontFamily="@font/sanfransiso_semibold"
-                android:layout_gravity="center"
-                android:layout_width="@dimen/dp_210"
-                android:layout_height="@dimen/dp_45"
-                android:gravity="center"/>
+                android:background="@color/lightGrey"/>
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPaySecurely"
+        android:textColor="@color/colorWhite"
+        android:text="@string/paySecurely"
+        android:background="@color/textForColorGreen"
+        android:padding="@dimen/dp_20"
+        android:textSize="@dimen/sp_15"
+        android:fontFamily="@font/sanfransiso_semibold"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:textAllCaps="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"/>
 
 </RelativeLayout>

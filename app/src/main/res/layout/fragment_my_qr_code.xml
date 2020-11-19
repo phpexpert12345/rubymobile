@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     android:background="@color/colorLightGrey"
     android:layout_marginTop="@dimen/dp_20"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".drawer_wallet.PersonalInformationFragment">
+
     <RelativeLayout
         android:id="@+id/relativeLayout_statusBar"
         android:background="@drawable/status_bar_login"
@@ -16,37 +17,27 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivBack"
-            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
             android:layout_centerVertical="true"
             android:background="@drawable/back_status"
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"/>
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_centerInParent="true"
-            android:textSize="@dimen/dp_15"
+            android:textSize="@dimen/sp_18"
+            android:textAllCaps="true"
             android:textColor="@color/colorWhite"
             android:fontFamily="@font/sanfransiso_semibold"
             android:text="@string/myQrCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-
-
-
-
-
-
-
-
-
-
-
     </RelativeLayout>
     <LinearLayout
         android:orientation="vertical"
         android:layout_gravity="center"
+        android:layout_below="@+id/relativeLayout_statusBar"
         android:layout_margin="@dimen/dp_20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -77,31 +68,31 @@
             android:layout_width="@dimen/dp_250"
             android:layout_height="@dimen/dp_250"/>
 
-
-        <androidx.appcompat.widget.AppCompatButton
-
-            android:layout_marginTop="@dimen/dp_40"
-            android:layout_gravity="center"
-            android:fontFamily="@font/sanfransiso_semibold"
-            android:id="@+id/btnChooseGlr"
-            android:background="@drawable/button_rounded_login_typed"
-            android:text="@string/enterAmount"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/sp_15"
-            android:layout_width="@dimen/dp_160"
-            android:layout_height="@dimen/dp_40"/>
-
         <androidx.appcompat.widget.AppCompatTextView
             android:fontFamily="@font/sanfransiso_regular"
             android:layout_marginTop="@dimen/dp_30"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_15"
             android:gravity="center"
             android:layout_width="match_parent"
+            android:padding="@dimen/dp_10"
             android:layout_height="wrap_content"
-            android:textColor="@color/textForColorGreen"
+            android:textColor="@color/top_color"
             android:text="@string/saveImage"
             />
     </LinearLayout>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_gravity="center"
+        android:fontFamily="@font/sanfransiso_semibold"
+        android:id="@+id/btnChooseGlr"
+        android:background="@color/textForColorGreen"
+        android:text="@string/enterAmount"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_15"
+        android:textAllCaps="true"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp_20"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"/>
 
-</LinearLayout>
+</RelativeLayout>

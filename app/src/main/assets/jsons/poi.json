@@ -1,0 +1,24 @@
+{
+  "poi": [
+    {
+      "id": "1",
+      "name": "Passport"
+    },
+    {
+      "id": "2",
+      "name": "Voter Id"
+    },
+    {
+      "id": "3",
+      "name": "Aadhar Card"
+    },
+    {
+      "id": "5",
+      "name": "Driving Licence"
+    },
+    {
+      "id": "6",
+      "name": "Ration Card"
+    }
+  ]
+}

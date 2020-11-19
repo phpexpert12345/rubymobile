@@ -1,0 +1,32 @@
+{
+  "poi": [
+    {
+      "id": "1",
+      "name": "Passport"
+    },
+    {
+      "id": "2",
+      "name": "Voter Id"
+    },
+    {
+      "id": "3",
+      "name": "Aadhar Card"
+    },
+    {
+      "id": "4",
+      "name": "Driving Licence"
+    },
+    {
+      "id": "5",
+      "name": "Latest Telephone Bill"
+    },
+    {
+      "id": "6",
+      "name": "Latest Electricity Bill"
+    },
+    {
+      "id": "7",
+      "name": "Latest Piped Gas Connection Bill"
+    }
+  ]
+}

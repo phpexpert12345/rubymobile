@@ -39,7 +39,6 @@ public class DepositInToTheWalletFragment extends Fragment {
 
     }
 
-
     public static DepositInToTheWalletFragment newInstance(String param1, String param2) {
         DepositInToTheWalletFragment fragment = new DepositInToTheWalletFragment();
         Bundle args = new Bundle();
@@ -59,9 +58,7 @@ public class DepositInToTheWalletFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_deposit_in_to_the_wallet, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {

@@ -27,12 +27,9 @@ import com.pet.rubymobile.welcome.WelcomeActivity;
 
 
 public class MyWallet extends Fragment {
-
-
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -43,7 +40,6 @@ public class MyWallet extends Fragment {
     public MyWallet() {
 
     }
-
 
     public static MyWallet newInstance(String param1, String param2) {
         MyWallet fragment = new MyWallet();

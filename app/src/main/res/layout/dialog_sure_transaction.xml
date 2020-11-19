@@ -3,6 +3,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -12,40 +13,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-
-
             android:orientation="vertical">
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:text="@string/areYouSure"
-                android:textColor="@color/textForColorGreen"
-                android:textSize="@dimen/sp_16"
+                android:textColor="@color/top_color"
+                android:textSize="@dimen/sp_18"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-
-
-
-
-
             <RelativeLayout
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_100">
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:fontFamily="@font/sanfransiso_regular"
                     android:drawablePadding="@dimen/dp_5"
                     android:drawableLeft="@drawable/drawable_left_for_close"
                     android:id="@+id/tv_dialog_cancel"
                     android:layout_marginLeft="@dimen/dp_70"
-                    android:textSize="@dimen/dp_16"
+                    android:textSize="@dimen/sp_15"
+                    android:gravity="center"
                     android:text="@string/close"
                     android:textColor="@color/textForColorGreen"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_height="@dimen/dp_40"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:fontFamily="@font/sanfransiso_semibold"
@@ -59,11 +55,10 @@
                     android:layout_width="@dimen/dp_100"
                     android:layout_height="@dimen/dp_40"/>
 
-
-
             </RelativeLayout>
 
         </LinearLayout>
+
         <ProgressBar
             android:id="@+id/progressBar1"
             android:visibility="gone"
@@ -71,6 +66,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-
     </RelativeLayout>
+
 </ScrollView>

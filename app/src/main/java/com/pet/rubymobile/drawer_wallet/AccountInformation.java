@@ -7,6 +7,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -22,14 +23,11 @@ import com.pet.rubymobile.R;
 
 public class AccountInformation extends Fragment {
 
-
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
 
     @BindView(R.id.btnUnlink)
     AppCompatButton btnUnlink;
@@ -39,7 +37,6 @@ public class AccountInformation extends Fragment {
     public AccountInformation() {
         // Required empty public constructor
     }
-
 
     public static AccountInformation newInstance(String param1, String param2) {
         AccountInformation fragment = new AccountInformation();
@@ -60,21 +57,19 @@ public class AccountInformation extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_account_information, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_account_information, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @OnClick(R.id.btnUnlink)
-    public void btnUnlinkClicked(View view){
+    public void btnUnlinkClicked(View view) {
         dialogUnlinkOpen();
     }
 
@@ -84,7 +79,7 @@ public class AccountInformation extends Fragment {
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        AppCompatButton btnYes=dialog.findViewById(R.id.btnYes);
+        AppCompatButton btnYes = dialog.findViewById(R.id.btnYes);
         btnYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +97,7 @@ public class AccountInformation extends Fragment {
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        AppCompatButton btn_dialog_next=dialog.findViewById(R.id.btn_dialog_next);
+        AppCompatButton btn_dialog_next = dialog.findViewById(R.id.btn_dialog_next);
         btn_dialog_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,12 +115,12 @@ public class AccountInformation extends Fragment {
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        AppCompatButton btnFaceId=dialog.findViewById(R.id.btnFaceId);
+        AppCompatButton btnFaceId = dialog.findViewById(R.id.btnFaceId);
         btnFaceId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.cancel();
-                BillFragment personalInformationFragment=new BillFragment();
+                BillFragment personalInformationFragment = new BillFragment();
                 FragmentManager manager = getParentFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.add(android.R.id.content, personalInformationFragment);
@@ -138,7 +133,7 @@ public class AccountInformation extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 

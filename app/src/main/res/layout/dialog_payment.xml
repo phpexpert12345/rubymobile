@@ -23,18 +23,15 @@
                 android:layout_width="@dimen/dp_70"
                 android:layout_height="@dimen/dp_70"/>
 
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:text="@string/youArePaying"
-                android:textColor="@color/textForColorGreen"
-                android:textSize="@dimen/sp_16"
+                android:textColor="@color/top_color"
+                android:textSize="@dimen/sp_18"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
-
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_regular"
@@ -45,8 +42,6 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
-
 
             <RelativeLayout
                 android:gravity="center_vertical"
@@ -60,11 +55,11 @@
                     android:fontFamily="@font/sanfransiso_semibold"
                     android:background="@drawable/button_rounded_login_typed"
                     android:text="@string/proceed"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
                     android:textColor="@color/colorWhite"
-                    android:layout_width="@dimen/dp_150"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/dp_40"/>
-
-
 
             </RelativeLayout>
 

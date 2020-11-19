@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -35,7 +36,6 @@ public class CardBankAccFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     public static CardBankAccFragment newInstance(String param1, String param2) {
         CardBankAccFragment fragment = new CardBankAccFragment();
         Bundle args = new Bundle();
@@ -55,22 +55,20 @@ public class CardBankAccFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_card_bank_acc, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_card_bank_acc, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @OnClick(R.id.rlBankAccount)
-    public void rlBankAccountClicked(View view){
-        AccountInformation personalInformationFragment=new AccountInformation();
+    public void rlBankAccountClicked(View view) {
+        AccountInformation personalInformationFragment = new AccountInformation();
         FragmentManager manager = getParentFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(android.R.id.content, personalInformationFragment);
@@ -79,7 +77,7 @@ public class CardBankAccFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

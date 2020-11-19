@@ -34,6 +34,8 @@ public class ScanQRActivity extends AppCompatActivity implements BottomNavigatio
     AppCompatImageView ivScanCode;
     @BindView(R.id.bottom_navigation)
     BottomNavigationView bottomNavigation;
+    @BindView(R.id.rlScan)
+    RelativeLayout rlScan;
     private Context mContext;
 
     @Override
@@ -49,6 +51,11 @@ public class ScanQRActivity extends AppCompatActivity implements BottomNavigatio
     @OnClick(R.id.ivBack)
     public void ivBackClicked(View view) {
         onBackPressed();
+    }
+
+    @OnClick(R.id.rlScan)
+    public void rlScanClicked(View view) {
+        startActivity(new Intent(ScanQRActivity.this, ScanQRCodeActivity.class));
     }
 
     @Override

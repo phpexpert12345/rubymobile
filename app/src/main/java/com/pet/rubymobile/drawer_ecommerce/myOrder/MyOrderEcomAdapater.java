@@ -19,11 +19,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyOrderEcomAdapater extends RecyclerView.Adapter<MyOrderEcomAdapater.HomeProfile> {
 
-   Context context;
+    Context context;
     MyOrderFragment ecomCatDetailsFragment;
-    public MyOrderEcomAdapater(Context context, MyOrderFragment ecomCatDetailsFragment){
-        this.context=context;
-        this.ecomCatDetailsFragment=ecomCatDetailsFragment;
+
+    public MyOrderEcomAdapater(Context context, MyOrderFragment ecomCatDetailsFragment) {
+        this.context = context;
+        this.ecomCatDetailsFragment = ecomCatDetailsFragment;
 
     }
 
@@ -31,10 +32,8 @@ public class MyOrderEcomAdapater extends RecyclerView.Adapter<MyOrderEcomAdapate
     @NonNull
     @Override
     public MyOrderEcomAdapater.HomeProfile onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_my_order,parent,false);
-        MyOrderEcomAdapater.HomeProfile homeProfile=new MyOrderEcomAdapater.HomeProfile(view);
-
-
+        View view = LayoutInflater.from(context).inflate(R.layout.item_my_order, parent, false);
+        MyOrderEcomAdapater.HomeProfile homeProfile = new MyOrderEcomAdapater.HomeProfile(view);
         return homeProfile;
     }
 
@@ -53,26 +52,23 @@ public class MyOrderEcomAdapater extends RecyclerView.Adapter<MyOrderEcomAdapate
         });
 
 
-
-
     }
 
     @Override
     public int getItemCount() {
         return 4;
     }
-    public class HomeProfile extends RecyclerView.ViewHolder{
+
+    public class HomeProfile extends RecyclerView.ViewHolder {
         CardView cvMyOrder;
 
         public HomeProfile(@NonNull View itemView) {
             super(itemView);
-            cvMyOrder=itemView.findViewById(R.id.cvMyOrder);
-
+            cvMyOrder = itemView.findViewById(R.id.cvMyOrder);
 
 
         }
     }
-
 
 
 }

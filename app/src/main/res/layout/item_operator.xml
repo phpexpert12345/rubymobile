@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_10"
+    android:layout_marginEnd="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_10"
+    app:cardElevation="@dimen/dp_5"
+    app:cardCornerRadius="@dimen/dp_5">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:padding="@dimen/dp_15"
+        android:padding="@dimen/dp_10"
         android:layout_marginStart="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_10"
         android:layout_height="wrap_content">
@@ -22,19 +27,32 @@
             android:id="@+id/tvOperatorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:textColor="@color/top_color"
+            android:layout_toRightOf="@+id/ivOperator"
+            android:textSize="@dimen/sp_15"
+            android:text="aaaaaa"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOperatorDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/sanfransiso_regular"
-            android:textColor="@color/darkGrey"
-            android:padding="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textColor="@color/colorBlack"
+            android:layout_below="@+id/tvOperatorName"
             android:layout_toRightOf="@+id/ivOperator"
             android:textSize="@dimen/sp_13"
             android:text="aaaaaa"/>
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_right_arrow"/>
+
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/lightGrey"/>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

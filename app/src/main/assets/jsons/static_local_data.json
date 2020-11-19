@@ -1,0 +1,86 @@
+{
+	"contact_details": {
+		"india": {
+			"address": "C-95, Sector 2 Noida, Uttar Pradesh, 201301",
+			"phone_no": "+91 120 411 0376",
+			"email_id": "info@afinoz.com",
+			"support_no": [
+				"+91 991 149 7772",
+				"+91 991 149 7773"
+			]
+		},
+		"us": {
+			"address": "Suite 424 | 2603, Bishop Ranch, Camino Ramon San Ramon, CA 94583",
+			"phone_no": "+1 (925) 804-6248",
+			"email_id": "support.usa@afinoz.com"
+		}
+	},
+	"ads_status": {
+		"india": {
+			"refresh_time": "20000",
+			"banner_ads": {
+				"news_detail": true,
+				"blog_detail": true,
+				"ifsc_detail": true,
+				"compare_detail": true,
+				"emi_detail": true,
+				"track_app": true,
+				"faq_list": true,
+				"about": true,
+				"browser": true,
+				"contact_us": true,
+				"feedback": true
+			},
+			"native": {
+				"notification_list": true,
+				"blog_list": true,
+				"community_list": true
+			}
+		}
+	},
+	"extra_data": {
+		"india": {
+			"pl_salary_min_amount": "15000",
+			"pl_loan_min_amount": "2000"
+		},
+		"us": {
+			"featured_rates": {
+				"head": {
+					"title": "Featured Rates",
+					"last_update": "<b>Date:</b> February 14, 2020"
+				},
+				"list_head": ["PROGRAM", "INT. RATE", "APR"],
+				"list_data": [{
+						"program": "Conf 30",
+						"int.rate": "3.250%",
+						"apr": "3.247%"
+					},
+					{
+						"program": "Super/Conf 30",
+						"int.rate": "3.375%",
+						"apr": "3.365%"
+					},
+					{
+						"program": "Conf 15",
+						"int.rate": "2.875%",
+						"apr": "2.902%"
+					},
+					{
+						"program": "Super/Conf 15",
+						"int.rate": "3.000%",
+						"apr": "2.996%"
+					},
+					{
+						"program": "Conf 7/1 LOBOR (5/2/5)",
+						"int.rate": "3.250%",
+						"apr": "3.182%"
+					}
+				],
+				"notes": [
+					"<p><strong>Note:&nbsp;</strong>Above int rates are for Primary Residence, Credit score 740+, LTV&nbsp;&lt;= 60&nbsp;%, With Impounds/Escrow account.</p>",
+					"<p><strong>Note:&nbsp;</strong>Interest Rates are subject to change without notice based on market conditions. Rate/APR and terms may vary based on the loan amount &amp; credit worthiness of the individual.</p>"
+				]
+			}
+		}
+	}
+}

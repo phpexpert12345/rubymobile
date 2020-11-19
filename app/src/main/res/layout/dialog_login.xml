@@ -66,7 +66,7 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_dialog_next"
-                    android:layout_width="@dimen/dp_100"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/dp_50"

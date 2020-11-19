@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_black_bg"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/txtBarcodeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/sanfransiso_semibold"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_20"
+            android:text="Scan Any QR Code"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20"/>
+
+        <LinearLayout
+            android:id="@+id/ivClose"
+            android:background="@drawable/light_black_bg_circle"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:padding="@dimen/dp_5"
+            android:gravity="center"
+            android:layout_margin="@dimen/dp_20">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/colorWhite"
+            app:srcCompat="@drawable/drawable_left_for_close"
+            android:backgroundTint="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ivFlash"
+            android:layout_width="@dimen/dp_40"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_170"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/light_black_bg_circle"
+            android:layout_height="@dimen/dp_40">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:padding="@dimen/dp_5"
+            app:srcCompat="@drawable/ic_flashlight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ivGallery"
+            android:layout_width="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_below="@+id/ivFlash"
+            android:layout_marginTop="@dimen/dp_40"
+            android:padding="@dimen/dp_5"
+            android:background="@drawable/light_black_bg_circle"
+            android:layout_alignParentEnd="true"
+            android:layout_height="@dimen/dp_40">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_30"
+            android:padding="@dimen/dp_5"
+            app:srcCompat="@drawable/ic_gallery" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_200"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtBarcodeValue"
+            android:layout_height="@dimen/dp_200"
+            android:background="@drawable/light_white_bg"
+            android:layout_marginTop="@dimen/dp_80">
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ivScan"
+            android:layout_width="@dimen/dp_200"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtBarcodeValue"
+            android:layout_height="@dimen/dp_200"
+            android:background="@drawable/blue_border"
+            android:layout_marginTop="@dimen/dp_80">
+
+            <View
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:rotation="180"
+                android:background="@drawable/ic_scanner_anim"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivScan"
+            android:padding="@dimen/dp_10"
+            android:fontFamily="@font/sanfransiso_regular"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_black_bg"
+            android:text="Show Payment Code"
+            android:textColor="#00BEF2"
+            android:textSize="@dimen/sp_12"/>
+
+    </RelativeLayout>
+
+    <!-- Adding bottom sheet after main content -->
+    <include layout="@layout/bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

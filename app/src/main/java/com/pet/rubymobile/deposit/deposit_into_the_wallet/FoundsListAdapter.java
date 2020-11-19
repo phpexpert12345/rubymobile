@@ -18,11 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class FoundsListAdapter extends RecyclerView.Adapter<FoundsListAdapter.HomeProfile> {
 
-   Context context;
+    Context context;
     DepositInToTheWalletFragment ecomCatDetailsFragment;
-    public FoundsListAdapter(Context context, DepositInToTheWalletFragment ecomCatDetailsFragment){
-        this.context=context;
-        this.ecomCatDetailsFragment=ecomCatDetailsFragment;
+
+    public FoundsListAdapter(Context context, DepositInToTheWalletFragment ecomCatDetailsFragment) {
+        this.context = context;
+        this.ecomCatDetailsFragment = ecomCatDetailsFragment;
 
     }
 
@@ -30,8 +31,8 @@ public class FoundsListAdapter extends RecyclerView.Adapter<FoundsListAdapter.Ho
     @NonNull
     @Override
     public FoundsListAdapter.HomeProfile onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_founds_list,parent,false);
-        FoundsListAdapter.HomeProfile homeProfile=new FoundsListAdapter.HomeProfile(view);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_founds_list, parent, false);
+        FoundsListAdapter.HomeProfile homeProfile = new FoundsListAdapter.HomeProfile(view);
 
 
         return homeProfile;
@@ -40,13 +41,13 @@ public class FoundsListAdapter extends RecyclerView.Adapter<FoundsListAdapter.Ho
     @Override
     public void onBindViewHolder(@NonNull FoundsListAdapter.HomeProfile holder, int position) {
 
-        if (position==2){
+        if (position == 2) {
             holder.ivAero.setVisibility(View.GONE);
             holder.ivInfo.setVisibility(View.VISIBLE);
-        }else if (position==3){
+        } else if (position == 3) {
             holder.ivAero.setVisibility(View.VISIBLE);
             holder.ivInfo.setVisibility(View.GONE);
-        }else{
+        } else {
             holder.ivAero.setVisibility(View.GONE);
             holder.ivInfo.setVisibility(View.GONE);
         }
@@ -61,16 +62,14 @@ public class FoundsListAdapter extends RecyclerView.Adapter<FoundsListAdapter.Ho
                 fragmentTransaction.commit();
             }
         });
-
-
-
     }
 
     @Override
     public int getItemCount() {
         return 4;
     }
-    public class HomeProfile extends RecyclerView.ViewHolder{
+
+    public class HomeProfile extends RecyclerView.ViewHolder {
         //CardView cvMyOrder;
 
         AppCompatImageView ivInfo;
@@ -80,16 +79,9 @@ public class FoundsListAdapter extends RecyclerView.Adapter<FoundsListAdapter.Ho
         public HomeProfile(@NonNull View itemView) {
             super(itemView);
             //cvMyOrder=itemView.findViewById(R.id.cvMyOrder);
-            ivInfo=itemView.findViewById(R.id.ivInfo);
-            ivAero=itemView.findViewById(R.id.ivAero);
-            rvIdChange=itemView.findViewById(R.id.rvIdChange);
-
-
-
-
+            ivInfo = itemView.findViewById(R.id.ivInfo);
+            ivAero = itemView.findViewById(R.id.ivAero);
+            rvIdChange = itemView.findViewById(R.id.rvIdChange);
         }
     }
-
-
-
 }

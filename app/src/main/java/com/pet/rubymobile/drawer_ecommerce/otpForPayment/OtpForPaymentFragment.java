@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -25,6 +26,7 @@ import com.pet.rubymobile.R;
 import com.pet.rubymobile.drawer_ecommerce.orderDetails.OrderDetailsEcomAdapater;
 import com.pet.rubymobile.drawer_ecommerce.orderDetails.OrderDetailsFragment;
 import com.pet.rubymobile.drawer_ecommerce.payment.PaymentFragment;
+import com.pet.rubymobile.drawer_ecommerce.paymentSuccess.PaymentSuccessFragment;
 import com.pet.rubymobile.signup.VerificationOtpActivity;
 
 /**
@@ -54,15 +56,6 @@ public class OtpForPaymentFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment OtpForPaymentFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static OtpForPaymentFragment newInstance(String param1, String param2) {
         OtpForPaymentFragment fragment = new OtpForPaymentFragment();
         Bundle args = new Bundle();
@@ -82,9 +75,7 @@ public class OtpForPaymentFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_otp_for_payment, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -136,13 +127,13 @@ public class OtpForPaymentFragment extends Fragment {
         Window window = dialog.getWindow();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        AppCompatButton btnSure=dialog.findViewById(R.id.btnSure);
+        AppCompatButton btnSure = dialog.findViewById(R.id.btnSure);
         btnSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.cancel();
-                OrderDetailsFragment fragment2 = new OrderDetailsFragment();
-                FragmentManager fragmentManager =getParentFragmentManager();
+                Fragment fragment2 = new PaymentSuccessFragment();
+                FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.add(android.R.id.content, fragment2);
                 fragmentTransaction.addToBackStack(null);
@@ -154,7 +145,7 @@ public class OtpForPaymentFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

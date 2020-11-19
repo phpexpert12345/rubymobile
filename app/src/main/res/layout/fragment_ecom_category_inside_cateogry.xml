@@ -8,7 +8,6 @@
     tools:context=".drawer_ecommerce.allCategorywithfilter.EcomCategoryInsideCateogryFragment">
 
     <RelativeLayout
-        android:layout_marginTop="@dimen/dp_20"
         android:id="@+id/relativeLayout_statusBar"
         android:background="@drawable/status_bar_login"
         android:layout_width="match_parent"

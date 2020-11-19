@@ -1,8 +1,10 @@
 package com.pet.rubymobile.drawer_ecommerce.purchaseOrder;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -12,10 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.view.MainActivity;
 
 
 public class PurchaseOrderFragment extends Fragment {
-
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -27,7 +29,6 @@ public class PurchaseOrderFragment extends Fragment {
     public PurchaseOrderFragment() {
 
     }
-
 
     public static PurchaseOrderFragment newInstance(String param1, String param2) {
         PurchaseOrderFragment fragment = new PurchaseOrderFragment();
@@ -48,22 +49,28 @@ public class PurchaseOrderFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        View view= inflater.inflate(R.layout.fragment_purchase_order, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_purchase_order, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
 
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
+    }
+
+    @OnClick(R.id.btnProceed)
+    public void btnProceedClicked(View view) {
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

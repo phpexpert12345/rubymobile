@@ -7,6 +7,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -19,6 +20,7 @@ import android.view.Window;
 import android.widget.LinearLayout;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.drawer_ecommerce.otpForPayment.OtpForPaymentFragment;
 import com.pet.rubymobile.drawer_ecommerce.payment.PaymentFragment;
 import com.pet.rubymobile.drawer_ecommerce.paymentSuccess.PaymentSuccessFragment;
 import com.pet.rubymobile.welcome.WelcomeActivity;
@@ -47,7 +49,6 @@ public class PaymentNextFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     public static PaymentNextFragment newInstance(String param1, String param2) {
         PaymentNextFragment fragment = new PaymentNextFragment();
         Bundle args = new Bundle();
@@ -67,24 +68,21 @@ public class PaymentNextFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_payment_next, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_payment_next, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @OnClick(R.id.btnPaySecurely)
-    public void btnPaySecurelyClicked(View view){
+    public void btnPaySecurelyClicked(View view) {
         dialogOpen();
     }
-
 
     private void dialogOpen() {
         dialog = new Dialog(getActivity());
@@ -93,7 +91,7 @@ public class PaymentNextFragment extends Fragment {
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
-        AppCompatButton btnProceed=dialog.findViewById(R.id.btnProceed);
+        AppCompatButton btnProceed = dialog.findViewById(R.id.btnProceed);
         btnProceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +110,7 @@ public class PaymentNextFragment extends Fragment {
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
-        AppCompatButton btn_dialog_next=dialog.findViewById(R.id.btn_dialog_next);
+        AppCompatButton btn_dialog_next = dialog.findViewById(R.id.btn_dialog_next);
         btn_dialog_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,13 +129,13 @@ public class PaymentNextFragment extends Fragment {
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
-        AppCompatButton btnFaceId=dialog.findViewById(R.id.btnFaceId);
+        AppCompatButton btnFaceId = dialog.findViewById(R.id.btnFaceId);
         btnFaceId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.cancel();
-                PaymentSuccessFragment fragment2 = new PaymentSuccessFragment();
-                FragmentManager fragmentManager =getParentFragmentManager();
+                Fragment fragment2 = new OtpForPaymentFragment();
+                FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.add(android.R.id.content, fragment2);
                 fragmentTransaction.addToBackStack(null);
@@ -149,7 +147,7 @@ public class PaymentNextFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 

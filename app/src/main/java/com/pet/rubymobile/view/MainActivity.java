@@ -1,7 +1,9 @@
 package com.pet.rubymobile.view;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -11,15 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
-import androidx.core.widget.NestedScrollView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,9 +30,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.pet.rubymobile.R;
 import com.pet.rubymobile.drawer_ecommerce.EcomHomeFragment;
 import com.pet.rubymobile.drawer_money_transfer.transfer.TransferFragment;
-import com.pet.rubymobile.drawer_wallet.PersonalInformationFragment;
 import com.pet.rubymobile.home.DrawerAdapater;
-import com.pet.rubymobile.home.HomeActivity;
 import com.pet.rubymobile.home.ui.home.CategoryFirstAdapater;
 import com.pet.rubymobile.home.ui.home.CategoryFourthAdapater;
 import com.pet.rubymobile.home.ui.home.CategoryScndAdapater;
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //    @BindView(R.id.nsv)
 //    NestedScrollView nsv;
     @BindView(R.id.rvNavigationDrawer)
-    RecyclerView rvNavigationDrawer;
+RecyclerView rvNavigationDrawer;
     @BindView(R.id.nav_view)
     NavigationView navView;
     @BindView(R.id.drawer_layout)
@@ -142,7 +138,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onResume() {
         super.onResume();
         bottomNavigation.getMenu().findItem(R.id.action_home).setChecked(true);
+
+        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+
+        } else {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST);
+        }
     }
+    private static final int CAMERA_REQUEST = 123;
 
     private void setViewPger() {
 //        categoryFirstAdapater = new CategoryFirstAdapater(mContext);
@@ -291,7 +294,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 startActivity(intent);
                 break;
             case R.id.action_scan_qr:
-                Intent intent3 = new Intent(MainActivity.this, ScanQRActivity.class);
+                Intent intent3 = new Intent(MainActivity.this, ScanQRCodeActivity.class);
                 intent3.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent3);
                 break;

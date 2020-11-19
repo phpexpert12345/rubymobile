@@ -12,8 +12,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-
-
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -23,30 +21,25 @@
                 android:layout_width="@dimen/dp_80"
                 android:layout_height="@dimen/dp_80"/>
 
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:text="@string/finger_print"
-                android:textColor="@color/textForColorGreen"
-                android:textSize="@dimen/sp_20"
+                android:textColor="@color/top_color"
+                android:textSize="@dimen/sp_18"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_regular"
                 android:layout_marginTop="@dimen/dp_5"
                 android:text="@string/use_finger_print"
-                android:textColor="@color/textForColorGrey"
-                android:textSize="@dimen/sp_12"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/sp_15"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
-
 
             <RelativeLayout
                 android:gravity="center_vertical"
@@ -57,18 +50,19 @@
                     android:fontFamily="@font/sanfransiso_semibold"
                     android:id="@+id/btn_dialog_next"
                     android:layout_centerInParent="true"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
                     android:textSize="@dimen/sp_15"
                     android:background="@drawable/button_rounded_login_typed"
                     android:text="@string/cancel_capital"
                     android:textColor="@color/colorWhite"
-                    android:layout_width="@dimen/dp_100"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/dp_40"/>
-
-
 
             </RelativeLayout>
 
         </LinearLayout>
+
         <ProgressBar
             android:id="@+id/progressBar1"
             android:visibility="gone"
@@ -76,6 +70,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-
     </RelativeLayout>
+
 </ScrollView>

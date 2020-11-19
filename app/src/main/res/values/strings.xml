@@ -353,4 +353,8 @@
     <string name="to_make_the_most_of_your_rubymobile_account">To make the most of your RubyMobile account</string>
     <string name="finish_setup">Finish Setup</string>
     <string name="transfer_to_ruby_mobile_wallet">Transfer To Ruby Mobile Wallet</string>
+    <string name="enter_mobile_number_or_name">Enter Mobile Number or Name</string>
+    <string name="recents">Recents</string>
+    <string name="send_money_again">Send Money Again</string>
+    <string name="check_detail">Check Detail</string>
 </resources>

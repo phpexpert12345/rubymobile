@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -43,7 +44,6 @@ public class TrackOrderFragment extends Fragment {
 
     }
 
-
     public static TrackOrderFragment newInstance(String param1, String param2) {
         TrackOrderFragment fragment = new TrackOrderFragment();
         Bundle args = new Bundle();
@@ -63,8 +63,7 @@ public class TrackOrderFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_track_order, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -80,13 +79,23 @@ public class TrackOrderFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         trackOrderEcomAdapater = new TrackOrderEcomAdapater(getActivity());
-        rvDeliveryStatus.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        rvDeliveryStatus.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false){
+            @Override
+            public boolean canScrollHorizontally() {
+                return false;
+            }
+
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        });
         rvDeliveryStatus.setAdapter(trackOrderEcomAdapater);
     }
 
 
     @OnClick(R.id.cvOrderDetails)
-    public void cvOrderDetailsClicked(View view){
+    public void cvOrderDetailsClicked(View view) {
         MyOrderFragment fragment2 = new MyOrderFragment();
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -96,7 +105,7 @@ public class TrackOrderFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }

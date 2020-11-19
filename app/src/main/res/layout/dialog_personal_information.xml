@@ -27,16 +27,12 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:fontFamily="@font/sanfransiso_semibold"
                 android:text="@string/choosePrfl"
-                android:textColor="@color/textForColorGreen"
+                android:textColor="@color/top_color"
                 android:textSize="@dimen/sp_20"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dp_25"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
-
-
-
 
             <RelativeLayout
                 android:layout_marginTop="@dimen/dp_25"
@@ -65,8 +61,6 @@
                     android:textColor="@color/colorWhite"
                     android:layout_width="@dimen/dp_140"
                     android:layout_height="@dimen/dp_40"/>
-
-
 
             </RelativeLayout>
 

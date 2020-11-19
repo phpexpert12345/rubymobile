@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pet.rubymobile.R;
+import com.pet.rubymobile.drawer_ecommerce.orderDetails.OrderDetailsFragment;
 import com.pet.rubymobile.drawer_ecommerce.otpForPayment.OtpForPaymentFragment;
 
 
@@ -54,23 +56,21 @@ public class PaymentSuccessFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        View view= inflater.inflate(R.layout.fragment_payment_success, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_payment_success, container, false);
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
     @OnClick(R.id.btnMainScreen)
-    public void btnMainScreenClicked(View view){
-        OtpForPaymentFragment fragment2 = new OtpForPaymentFragment();
-        FragmentManager fragmentManager =getParentFragmentManager();
+    public void btnMainScreenClicked(View view) {
+        Fragment fragment2 = new OrderDetailsFragment();
+        FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(android.R.id.content, fragment2);
         fragmentTransaction.addToBackStack(null);
@@ -78,7 +78,7 @@ public class PaymentSuccessFragment extends Fragment {
     }
 
     @OnClick(R.id.ivBack)
-    public void ivBackClicked(View view){
+    public void ivBackClicked(View view) {
         getActivity().onBackPressed();
     }
 }
